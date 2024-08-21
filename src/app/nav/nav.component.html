@@ -1,4 +1,4 @@
-<nav class="navbar-expand-md border-bottom mb-3">
+<!-- <nav class="navbar-expand-md border-bottom mb-3">
     <div class="container">
         <ul class="nav justify-content-center">
             <li class="nav-item">
@@ -15,4 +15,27 @@
             </li>
         </ul>
     </div> 
-</nav>
+</nav> -->
+
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="#"> About me </a>
+            <a href="#"> Experience </a>
+            <a href="#"> Projects </a>
+            <a href="#"> Contact </a>
+            <a href="../../../src/assets/cv/tu_archivo.pdf" class="button" target="_blank">
+                Resume
+              </a>
+              
+              <script>
+                const resumeButton = document.querySelector('button');
+              
+                resumeButton.addEventListener('click', function(event) {
+                  event.preventDefault(); // Evita la acción predeterminada del enlace
+                });
+              </script>
+        </div>
+    </div>
+</body>
