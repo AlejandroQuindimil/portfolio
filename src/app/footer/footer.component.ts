@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ToastrModule } from 'ngx-toastr';
-
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-footer',
@@ -22,7 +22,12 @@ export class FooterComponent {
       if (correoElectronicoText) {
         navigator.clipboard.writeText(correoElectronicoText);
         // this.toastr.success('Correo electrónico copiado!');
+        alert('Correo electrónico copiado!');
       }
     }
   }
+
 }
+
+  
+
