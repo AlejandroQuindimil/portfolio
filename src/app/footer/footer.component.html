@@ -1,33 +1,32 @@
-<footer class="bg-dark text-white pt-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h5>Alejandro Quindimil</h5>
-          <p> Software Engineer</p>
-        </div>
-        <div class="col-md-6 text-md-end">
-          <ul class="list-inline">
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between align-items-center">
+        <div class="social-icons">
+          <ul class="list-inline d-flex flex-column align-items-center">
             <li class="list-inline-item">
               <a href="https://github.com/AlejandroQuindimil" class="text-white"><i class="fab fa-github fa-lg"></i></a>
             </li>
             <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/alejandroquindimilcancio" class="text-white"> <i class="fab fa-linkedin fa-lg"></i></a>
+              <a href="https://www.linkedin.com/in/alejandroquindimilcancio" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
             </li>
             <li class="list-inline-item">
-                <a href="https://www.kaggle.com/alexquindi/code" class="text-white"><i class="fab fa-kaggle fa-lg"></i></a>
-              </li>
-            <li class="list-inline-item">
-                <a id="correo-electronico" href="mailto:alejandro.quindimil.cancio@gmail.com" class="text-white" (click)="copiarCorreo()">alejandro.quindimil.cancio&#64;gmail.com</a>
+              <a href="https://www.kaggle.com/alexquindi/code" class="text-white"><i class="fab fa-kaggle fa-lg"></i></a>
             </li>
-            <li class="list-inline-item"  (click)="copiarCorreo()" class="button" target="_blank"><i class="fas fa-envelope fa-lg"></i>
-                
-            </li>
-            
           </ul>
         </div>
-      </div>
-      <div class="text-center mt-3">
-        <p>&copy; 2024 Alejandro Quindimil. All rights reserved.</p>
+        <div class="email">
+          <!-- <a id="correo-electronico" href="mailto:alejandro.quindimil.cancio@gmail.com" class="text-white">alejandro.quindimil.cancio&#64;gmail.com</a> -->
+          
+          <li class="list-inline-item"  (click)="copiarCorreo()" class="button" target="_blank"><i class="fas fa-envelope fa-lg"></i>
+            
+        </li>
+        </div>
       </div>
     </div>
-  </footer>
+    <div class="text-center mt-3">
+      <p>&copy; 2024 Alejandro Quindimil. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
