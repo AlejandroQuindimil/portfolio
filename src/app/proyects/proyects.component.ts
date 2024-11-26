@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './proyects.component.css'
 })
 export class ProyectsComponent {
-
+  imagePath = 'assets/images/descarga.jpg';
 }
