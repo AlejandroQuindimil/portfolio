@@ -1,4 +1,9 @@
 /* src/app/projects/projects.component.css */
+.project-card{
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
 .projects-section {
   width: 70%; /* Ocupa el 70% de la pantalla */
   margin: 0 auto; /* Centra la sección */
@@ -36,6 +41,46 @@
   }
 }
 
+#Carrusel
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+  /* transform: translateX(-{{ currentIndex * 100 }}%); */
+}
+
+.carousel-image {
+  min-width: 100%;
+  border-radius: 8px;
+  display: none; /* Oculta todas las imágenes por defecto */
+}
+
+.carousel-image.active {
+  display: block; /* Muestra solo la imagen activa */
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
 
 /* --------------------------------------------------------------------------------------------------------------- */
   #other-projects
@@ -125,4 +170,26 @@ p {
 
 .icon-link i {
     font-size: 1.2rem;
+}
+
+.project-card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #55E6C1;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
