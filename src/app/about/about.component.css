@@ -52,8 +52,11 @@
         font-size: 14px;
     }
 }
-
-
+/* Eliminar flechas en la sección "Sobre mí" */
+.carousel-control-prev,
+.carousel-control-next {
+  display: none; /* Oculta las flechas */
+}
 .container {
     width: 70%;
     margin: 0 auto;
