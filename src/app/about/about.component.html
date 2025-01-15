@@ -1,9 +1,9 @@
-<div class="intro">
+<div class="aboutme">
     <p></p>
-    <p>Hello! My name is</p>
-    <h2>Alejandro Quindimil.</h2>
-    <h3>Software Developer | Specializing in Big Data, AI & Full Stack Development</h3>
-    <p>I have 4+ years of experience developing systems, interfaces, bots, and technological solutions to make the web a better place. I am dedicated to writing and refactoring clean, reusable, and scalable code in <a href="#">Angular</a>, <a href="#">React</a>, <a href="#">NodeJS</a>, <a href="#">ExpressJS</a> and <a href="#">NestJS</a> and sometimes in <a href="#">Python</a> applying good practices and development standards.</p>
+    <p>{{ hello }}</p>
+    <h2 class="home-author">Alejandro Quindimil, <span id="dynamic-text">{{ dynamicText }}</span></h2>
+    <!-- <h3>Software Developer | Specializing in Big Data, AI & Full Stack Development</h3> -->
+    <p>{{ summaryAbout }} Mi stack principal incluye <a href="#">Angular</a>, <a href="#">Java</a>, <a href="#">JavaScript</a>, <a href="#">typescript</a>, <a href="#">Node.js</a> y a veces <a href="#">Python</a> aplicando buenas practicas y estandares de desarrollo para garantizar soluciones de alta calaidad.</p>
     <div class="buttons">
         <button class="button" onclick="window.location.href='mailto:tu-email@example.com'">Enviar correo</button>
         <button class="button" onclick="copiarAlPortapapeles('tu-email@example.com')">Copiar correo</button>
@@ -24,8 +24,8 @@
 <div class="container">
     <div class="text">
         <h1>01. Sobre mí</h1>
-        <p>En mis más de 4 años como desarrollador, busco entrenar cada día. He trabajado escribiendo pruebas unitarias, realizando integración continua y cubriendo roles de desarrollador backend con ExpressJS, NestJS, MongoDB y MySQL. He liderado equipos teniendo empatía, motivando a los socios y estableciendo planes y metas juntos.</p>
-        <p>Mis habilidades también incluyen implementar mejoras en el sistema, optimizar sitios, estandarizar patrones y sugerir y ejecutar ideas que agreguen valor al proyecto en el que estoy trabajando. Algunas de las tecnologías que he entrenado y con las que he trabajado incluyen (pero no se limitan a):</p>
+        <p> {{summaryAbout2}}</p>
+        <p> {{summaryAbout3}}</p>
         <ul>
             <li>Lenguajes de programación: <a href="#">Java</a>, <a href="#">JavaScript</a>, <a href="#">Python</a></li>
             <li>Big Data: <a href="#">Hadoop</a>, <a href="#">PySpark</a>, <a href="#">HDFS</a>, <a href="#">Apache Kafka</a>, <a href="#">Flume</a></li>

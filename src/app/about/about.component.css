@@ -1,4 +1,4 @@
-.intro {
+.aboutme {
     width: 70%;
     margin: 0 auto;
     padding: 20px;
@@ -7,20 +7,20 @@
     border-radius: 8px;
     margin-bottom: 20px;
 }
-.intro h2 {
+.aboutme h2 {
     margin: 0;
     font-size: 24px;
 }
-.intro h3 {
+.aboutme h3 {
     margin: 5px 0;
     font-size: 18px;
     font-weight: normal;
 }
-.intro p {
+.aboutme p {
     font-size: 16px;
     margin: 10px 0;
 }
-.intro a {
+.aboutme a {
     color: #55E6C1;
     text-decoration: none;
 }
@@ -39,16 +39,16 @@
     cursor: pointer;
 }
 @media (max-width: 600px) {
-    .intro {
+    .aboutme {
         width: 90%;
     }
-    .intro h2 {
+    .aboutme h2 {
         font-size: 20px;
     }
-    .intro h3 {
+    .aboutme h3 {
         font-size: 16px;
     }
-    .intro p {
+    .aboutme p {
         font-size: 14px;
     }
 }
@@ -96,16 +96,28 @@ a {
     }
 }
 
-.intro {
+.aboutme {
     margin-bottom: 40px; /* Espacio debajo de la sección */
     padding: 20px; /* Espacio interno para evitar que el texto esté pegado a los bordes */
 }
 
-.intro h2 {
+.aboutme h2 {
     margin-top: 20px; /* Espacio superior para el título */
     margin-bottom: 20px; /* Espacio inferior para el título */
 }
 
-.intro p {
+.aboutme p {
     margin-bottom: 20px; /* Espacio inferior para los párrafos */
+}
+
+
+#dynamic-text {
+    border-right: 2px solid #55E6C1;
+    padding-right: 5px;
+    animation: blink-caret 0.7s step-end infinite;
+    color: #55E6C1;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    display: none; /* Oculta las flechas */
 }
