@@ -1,12 +1,17 @@
 <body>
     <div class="container">
-        <div class="nav">
-            <a href="#about"> About me </a>
-            <a href="#experience"> Experience </a>
-            <a href="#proyects"> Projects </a>
-            <a href="#contact"> Contact </a>
+          
+          <div class="nav">
+          <div class="icon">
+            <img src="favicon.ico" alt="Icono" />
+          </div>
+            <a href="#aboutme">{{ aboutme }}</a>
+            <a href="#education"> {{ education }} </a>
+            <a href="#experience"> {{ experience }} </a>
+            <a href="#personal-projects"> {{ proyects }} </a>
+            <a href="#contact"> {{ contact }} </a>
             <a href="cv/CV_AlejandroQuindimilCancio2024.pdf" class="button" target="_blank">
-                Resume
+                {{ cv }}
               </a>
               
               <script>
@@ -16,6 +21,14 @@
                   event.preventDefault(); 
                 });
               </script>
+              <!-- <script>
+                const menuToggle = document.getElementById('mobile-menu');
+                const navLinks = document.getElementById('nav-links');
+
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            </script> -->
         </div>
     </div>
 </body>

@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
+  public aboutme: string = 'Sobre mi';
+  public education: string = 'Educación';
+  public experience: string = 'Experiencia';
+  public proyects: string = 'Proyectos';
+  public contact: string = 'Contacto';
+  public cv: string = 'Curriculum';
+
   
+
 }

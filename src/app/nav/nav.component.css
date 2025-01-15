@@ -1,5 +1,5 @@
 body {
-    background-color: #181818;
+    background-color: #ffffff;
     color: #d8d8d8;
     font-family: sans-serif;
     margin: 0;
@@ -11,13 +11,17 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #181818;
+    background: linear-gradient(135deg, #181818, #2c2c2c);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center; /* Center items vertically */
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    padding-right: 170px; /* Añadir padding a la derecha */
+    box-sizing: border-box;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .nav a {
@@ -25,17 +29,55 @@ body {
     text-decoration: none;
     transition: color 0.3s ease;
     margin: 0 1rem;
+    position: relative; /* Necesario para el pseudo-elemento */
+    font-size: 0.9rem; /* Aumentar tamaño de fuente */
+    padding: 0.3rem 0.8rem;/* Espaciado adicional */
+    margin-left: 1rem;
 }
 
 .nav a:hover {
     color: #55e6c1;
+    /* text-shadow: 0 0 5px rgba(85, 230, 193, 0.5); */
+    text-shadow: none;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Ajusta la posición vertical de la barra */
+    width: 0;
+    height: 1.5px; /* Altura de la barra */
+    background-color: #55e6c1; /* Color de la barra */
+    transition: width 0.3s ease, left 0.3s ease; /* Transiciones suaves */
+}
+
+.nav a:hover::after {
+    width: 100%; /* Expande la barra al 100% en hover */
+    left: 0; /* Alinea la barra a la izquierda */
+    height: 2px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+        align-items: center;
+        overflow-x: auto; /* Permite el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+
+    }
+
+    .nav a {
+        margin: 0 1rem; /* Espaciado vertical entre enlaces */
+    }
 }
 
 .button {
     background-color: transparent;
     border: 1px solid #55e6c1;
-    padding: 0.75rem 1.5rem; /* Padding horizontal */
-    border-radius: 3px;
+    padding: 0.5rem 1rem; /* Padding horizontal */
+    border-radius: 2px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -43,13 +85,26 @@ body {
     justify-content: center;
     align-items: center;
     line-height: 1; /* Reset line height */
-    height: 2.25rem;
+    height: 1.25em;
+    margin-left: 1rem;
+
 }
 
 .button:hover {
-    background-color: #55e6c1;
+    background-color: #000000;
 }
 
 .container {
     padding-top: 4rem;
+}
+
+.icon {
+    margin-right: auto; /* Espaciado entre el ícono y los enlaces */
+    display: flex; /* Alinear verticalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-left: 180px; 
+}
+.icon img {
+    width: 24px; /* Ajustar el ancho del ícono */
+    height: auto; /* Mantener la proporción */
 }
