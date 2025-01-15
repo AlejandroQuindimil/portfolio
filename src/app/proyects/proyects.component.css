@@ -172,6 +172,10 @@ p {
     font-size: 1.2rem;
 }
 
+.icon-size {
+  font-size: 1.5rem; 
+}
+
 .project-card {
   background-color: #f8f9fa;
   padding: 20px;
@@ -192,4 +196,21 @@ p {
   color: #666;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las etiquetas se ajusten en varias líneas si es necesario */
+  margin-top: 10px;
+  
+}
+
+.project-tags .badge {
+  margin-right: 5px; /* Espacio entre las etiquetas */
+  margin-bottom: 5px; /* Espacio entre filas de etiquetas */
+  padding: 5px 10px; /* Espaciado interno para las etiquetas */
+  font-size: 0.9rem; /* Tamaño de fuente ajustado */
+  border-radius: 0.75rem; /* Bordes redondeados */
+  color: #55E6C1;
+  background-color: #000;
 }
