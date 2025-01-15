@@ -1,33 +1,282 @@
-<!-- src/app/experience/experience.component.html -->
-<section id="experience" class="experience-section">
-  <div class="container">
-      <h2 class="text-center">Experience</h2>
-      <div class="experience-item">
-          <h3>Fullstack Developer | Emblem</h3>
-          <p class="text-muted">March 2022 - Present</p>
-          <ul>
-              <li>Developed and maintained a web-based application using Angular, Node.js, and MongoDB, resulting in improved user experience and increased performance.</li>
-              <li>Designed and implemented RESTful APIs to support multiple applications, using Node.js and Express.</li>
-              <li>Built a real-time chat application using WebSockets and Node.js, increasing communication and collaboration among team members.</li>
-              <li>Implementation of continuous integration and daily backups.</li>
-              <li>Leading a team of 4 people in the development of an E-commerce platform made in React, Node, and MySQL.</li>
-              <li>Planning meetings and reports.</li>
-          </ul>
-      </div>
-      <div class="experience-item">
-          <h3>Frontend Developer | BCM</h3>
-          <p class="text-muted">May 2020 - February 2022</p>
-          <ul>
-              <li>Developed responsive web applications using React.js and Bootstrap.</li>
-              <li>Collaborated with designers to create a seamless user experience.</li>
-          </ul>
-      </div>
-      <div class="experience-item">
-          <h3>Freelancer</h3>
-          <p class="text-muted">Jan 2019 - Apr 2020</p>
-          <ul>
-              <li>Worked on various projects, enhancing skills in web development.</li>
-          </ul>
-      </div>
-  </div>
+
+<!-- src/app/education/education.component.html -->
+<section id="education" class="education-section">
+    <div class="container">
+        <h2 class="text-center">{{edu}}</h2>
+        <p>{{infoeducation}}</p>
+        
+        <div class="accordion">
+            <button class="accordion-button">{{lang}}</button>
+            <div class="accordion-content">
+                <div class="language-card">
+                    <img src="Flag_of_Spain.svg.png" alt="Castellano" class="language-icon">
+                    <div class="language-info">
+                        <h4>{{esp}}</h4>
+                        <p>{{nat}}</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <img src="Flag_of_Galicia.svg.png" alt="Gallego" class="language-icon">
+                    <div class="language-info">
+                        <h4>{{gal}}</h4>
+                        <p>{{nat}} | Celga 4</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <img src="Flag_of_uk.png" alt="Inglés" class="language-icon">
+                    <div class="language-info">
+                        <h4>{{eng}}</h4>
+                        <p>{{eng_lvl}}</p>
+                    </div>
+                </div>
+            </div>
+  
+            <button class="accordion-button">{{studies}}</button>
+            <div class="accordion-content">
+                
+                <p>2023 - 2024  <strong>{{studies1}}</strong>{{coleg1}}</p>
+                <ul>
+                    <li>proyecto</li>
+                </ul>
+                <p>2019 - 2021 - <strong>{{studies2}}</strong>{{coleg2}}</p>
+                <ul>
+                    <li>proyecto</li>
+                </ul>
+                    <p>2017 - 2019 - <strong>{{studies3}}</strong>{{coleg3}}</p>
+                
+            </div>
+  
+            <button class="accordion-button">{{curses}}</button>
+            <div class="accordion-content">
+                <p>{{curses1}}<strong>{{curses2}}</strong> - 253h</p>
+                <p>{{resumcurse}}</p>
+               
+            </div>
+  
+            <button class="accordion-button">{{tec}}</button>
+            <div class="accordion-content">
+            <div><h2 class="section-title">{{lang_programing}}</h2> </div>
+            <div class="tech-icons">
+                <div class="tech-icon">
+                    <i class="devicon-java-plain-wordmark"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-javascript-plain"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-python-plain"></i>
+                </div>
+                <div class="tech-icon">
+                    <p>{{java}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{javascripts}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{python}}</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-c-plain-wordmark"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-typescript-plain"></i>
+                </div>
+                
+                <div class="tech-icon">
+                    <i class="devicon-html5-plain"></i>
+                </div>
+                <div class="tech-icon">
+                    <p>{{c}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{typescript}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{html}}</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-css3-plain"></i>
+                </div>
+                
+            </div>
+            <div><h2 class="section-title">{{bbdd}}</h2></div>
+            <div><h2 class="section-title">SQL</h2></div>
+            <div class="tech-icons">
+                <div class="tech-icon">    
+                    <i class="devicon-mysql-plain-wordmark"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-mariadb-original-wordmark colored"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-sqlite-plain-wordmark"></i>
+                </div>
+                <div class="tech-icon">
+                    <p>{{mysql}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{mariadb}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{sqlito}}</p>
+                </div>
+            </div>
+            <div><h2 class="section-title">No SQL</h2></div>
+            <div class="tech-icons">    
+                <div class="tech-icon">
+                    <i class="devicon-mongodb-plain-wordmark"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-firebase-plain"></i>
+                </div>
+                <div class="tech-icon">
+                    
+                </div>
+                <div class="tech-icon">
+                    <p>{{mondongo}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{firebase}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p></p>
+                </div>
+            </div>
+            
+            <div><h2 class="section-title">FRAMEWORKS</h2></div> 
+            <div class="tech-icons">
+                <div class="tech-icon">    
+                    <i class="devicon-angularjs-plain colored"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-spring-original"></i> 
+                </div>
+                <div class="tech-icon">
+                    
+                </div>
+                <div class="tech-icon">
+                    <p>{{angular}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{spring}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p></p>
+                </div>
+            </div>
+            <div><h2 class="section-title">{{data_manage}}</h2> </div>
+            <div class="tech-icons">
+                <div class="tech-icon">
+                    <i class="devicon-hadoop-plain-wordmark"></i> <!-- Hadoop -->
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-apachespark-plain-wordmark colored"></i>
+                </div>
+                <div class="tech-icon">
+                    <img src="sparql.png" alt="" class="">
+                </div>
+                <div class="tech-icon">
+                    <p>{{hadoop}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{spark}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{sparql}}</p>
+                </div>
+                <div class="tech-icon">
+                    <img src="hive.png" alt="" class=""> <!-- Hive -->
+                </div>
+                <div class="tech-icon">
+                    <img src="sqoop.png" alt="" class=""> <!-- Sqoop -->
+                </div>
+                <div class="tech-icon">
+                    <i class=""></i> <!-- Spring Boot -->
+                </div>
+                <div class="tech-icon">
+                    <p>{{hive}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{sqoop}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p></p>
+                </div>
+            </div>
+            <div><h2 class="section-title">{{data_treat}}</h2> </div>
+            <div class="tech-icons">
+                <div class="tech-icon">
+                    <i class="devicon-apachekafka-original colored"></i>
+                </div>
+                <div class="tech-icon">
+                    <img src="flume.jpg" alt="" class="">
+                </div>
+                <div class="tech-icon">
+                    
+                </div>
+                <div class="tech-icon">
+                    <p>{{kafka}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p>{{flume}}</p>
+                </div>
+                <div class="tech-icon">
+                    <p></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 </section>
+<section id="experience" class="experience-section">
+    <div class="container">
+        <h2 class="text-center">{{exp}}</h2>
+        <div class="experience-wrapper">
+            <div class="experience-buttons">
+                <button class="experience-button" data-target="experience1">{{exp1}}</button>
+                <button class="experience-button" data-target="experience2">{{exp2}}</button>
+                
+            </div>
+            <div class="experience-content">
+                <div id="experience1" class="experience-item">
+                    <h3>{{exp1}}</h3>
+                    <p class="text-muted">{{exp1_date}}</p>
+                    <ul>
+                        <li>{{exp1_resum1}}</li>
+                        <li>{{exp1_resum2}}</li>
+                        <li>{{exp1_resum3}}</li>
+                        <li>{{exp1_resum4}}</li>
+                        <li>{{exp1_resum5}}</li>
+                        <li>{{exp1_resum6}}</li>
+                    </ul>
+                </div>
+                <div id="experience2" class="experience-item" style="display: none;">
+                    <h3>{{exp2}}</h3>
+                    <p class="text-muted">{{exp2_date}}</p>
+                    <ul>
+                        <li>{{exp2_resum1}}</li>
+                        <li>{{exp2_resum2}}</li>
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.accordion-button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    });
+</script>

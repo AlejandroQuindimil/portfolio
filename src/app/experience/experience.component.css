@@ -31,3 +31,148 @@
         width: 90%;
     }
 }
+
+.experience-wrapper {
+    display: flex;
+}
+
+.experience-buttons {
+    flex: 1; /* Ocupa el 1/3 del espacio */
+    display: flex;
+    flex-direction: column; /* Alinea los botones verticalmente */
+    margin-right: 20px; /* Espacio entre botones y contenido */
+}
+
+.experience-button {
+    margin-bottom: 10px; /* Espacio entre botones */
+    padding: 12px; /* Tamaño uniforme */
+    width: 100%; /* Botones ocupan todo el ancho */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    background-color: #55E6C1; /* Color de fondo (verde) */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 15px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente */
+    transition: background-color 
+}
+
+.experience-content {
+    flex: 3; /* Ocupa el 2/3 del espacio */
+}
+
+/* src/app/education/education.component.css */
+.education-section {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.accordion {
+    margin-bottom: 20px;
+}
+
+.accordion-button {
+    background-color: #1c1c1c; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.accordion-content {
+    display: none; /* Ocultar contenido por defecto */
+    padding: 10px;
+    border: 1px solid #55E6C1; /* Borde del contenido */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tech-icon {
+    width: 80px; /* Ajusta el tamaño según sea necesario */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.accordion-content {
+    display: none; /* Ocultar contenido por defecto */
+}
+
+
+
+.tech-icons {
+    display: flex;
+    justify-content: space-between; /* Cambiado para que haya espacio entre los íconos */
+    flex-wrap: wrap;
+}
+
+.tech-icon {
+    width: 30%; /* Ajusta el tamaño para que haya 3 íconos por fila */
+    height: 150px; /* Aumenta la altura según sea necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-icon i {
+    font-size: 90px; /* Aumenta el tamaño del ícono */
+}
+
+.section-title {
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Espacio arriba y abajo del texto */
+    font-size: 24px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Negrita */
+}
+
+.language-card {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa; /* Color de fondo */
+    border: 1px solid #dee2e6; /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.language-icon {
+    width: 40px; /* Ancho del icono */
+    height: 40px; /* Alto del icono */
+    border-radius: 50%; /* Icono redondeado */
+    margin-right: 15px; /* Espacio entre icono y texto */
+}
+
+.language-info h4 {
+    margin: 0; /* Sin margen */
+    font-size: 1.2rem; /* Tamaño de fuente */
+}
+
+.language-info p {
+    margin: 0; /* Sin margen */
+    color: #6c757d; /* Color del texto secundario */
+}
