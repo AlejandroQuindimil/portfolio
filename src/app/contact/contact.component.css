@@ -1,4 +1,4 @@
-.intro {
+.contact {
     width: 70%;
     margin: 0 auto;
     padding: 20px;
@@ -6,27 +6,30 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
 }
-.intro h2 {
+.contact h2 {
     margin: 0;
     font-size: 24px;
 }
-.intro h3 {
+.contact h3 {
     font-size: 20px;
     margin: 10px 0;
 }
-.intro p {
+.contact p {
     font-size: 16px;
     margin: 10px 0;
 }
-.intro a {
-    color: #55E6C1;
+.contact a {
+    color: #000000; /* Color texto*/
     text-decoration: none;
 }
 .buttons {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center
 }
 .button {
     background-color: #55E6C1;
@@ -37,17 +40,37 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.buttonLinkedin {
+    background-color: #0e76a8;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 10px 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
 @media (max-width: 600px) {
-    .intro {
+    .contact {
         width: 90%;
     }
-    .intro h2 {
+    .contact h2 {
         font-size: 20px;
     }
-    .intro h3 {
+    .contact h3 {
         font-size: 18px;
     }
-    .intro p {
+    .contact p {
         font-size: 14px;
     }
+}
+
+
+.icon-row {
+    display: flex;
+    gap: 5px; 
+    justify-content: center;
+}
+
+.icon-link {
+    font-size: 24px; /* Tamaño de los íconos */
 }
