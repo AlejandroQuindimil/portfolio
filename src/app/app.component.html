@@ -1,4 +1,5 @@
 <app-nav></app-nav>
+<router-outlet></router-outlet>
 
 <app-header></app-header>
 <app-about></app-about>
@@ -6,7 +7,7 @@
 <app-proyects></app-proyects>
 <app-contact></app-contact>
 <app-footer></app-footer>
-<div class="sidebar-left">
+<div class="sidebar-left" *ngIf="!isMobile">
     <a href="https://github.com/AlejandroQuindimil" class="icon-link">
       <i class="fab fa-github"></i>
     </a>
@@ -16,7 +17,7 @@
     <div class="vertical-line"></div>
   </div>
   
-  <div class="sidebar-right">
+  <div class="sidebar-right" *ngIf="!isMobile">
     <a href="https://www.kaggle.com/alexquindi/code" class="icon-link">
       <i class="fab fa-kaggle"></i>
     </a>
@@ -25,3 +26,4 @@
     </a>
     <div class="vertical-line"></div>
   </div>
+  

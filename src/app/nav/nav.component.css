@@ -1,82 +1,69 @@
+/* General */
 body {
     background-color: #ffffff;
     color: #d8d8d8;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-}
-
-.nav {
+  }
+  
+  .nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    margin: 0 auto;
+    padding-right: 0;
+    box-sizing: border-box;
     background: linear-gradient(135deg, #181818, #2c2c2c);
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* Center items vertically */
-    
+    justify-content: space-between; /* Asegura que el contenido se distribuya correctamente */
+    align-items: center;
+    padding: 20px 40px; /* Reduce el padding general */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    padding-right: 170px; /* Añadir padding a la derecha */
     box-sizing: border-box;
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-
-.nav a {
+    padding-top: 13px; 
+    padding-bottom: 13px;
+  }
+  
+  .nav a {
     color: #d8d8d8;
     text-decoration: none;
-    transition: color 0.3s ease;
-    margin: 0 1rem;
+    margin: 0 0.5rem; /* Espaciado horizontal */
+    font-size: 1rem; /* Asegúrate de que el tamaño sea legible */
+    white-space: nowrap; /* Evita que los enlaces se envuelvan */
     position: relative; /* Necesario para el pseudo-elemento */
-    font-size: 0.9rem; /* Aumentar tamaño de fuente */
+    
     padding: 0.3rem 0.8rem;/* Espaciado adicional */
     margin-left: 1rem;
-}
-
-.nav a:hover {
+  }
+  
+  .nav a:hover {
     color: #55e6c1;
-    /* text-shadow: 0 0 5px rgba(85, 230, 193, 0.5); */
-    text-shadow: none;
-}
-
-.nav a::after {
+  }
+  
+  .nav a::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -5px; /* Ajusta la posición vertical de la barra */
+    bottom: -5px;
     width: 0;
-    height: 1.5px; /* Altura de la barra */
-    background-color: #55e6c1; /* Color de la barra */
-    transition: width 0.3s ease, left 0.3s ease; /* Transiciones suaves */
-}
-
-.nav a:hover::after {
-    width: 100%; /* Expande la barra al 100% en hover */
-    left: 0; /* Alinea la barra a la izquierda */
+    height: 1.5px;
+    background-color: #55e6c1;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav a:hover::after {
+    width: 100%;
+    left: 0;
     height: 2px;
-}
-
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: row; /* Cambia la dirección a columna en pantallas pequeñas */
-        align-items: flex-start; /* Alinea los elementos al inicio */
-        align-items: center;
-        overflow-x: auto; /* Permite el desplazamiento horizontal */
-    white-space: nowrap; /* Evita que los elementos se envuelvan */
-
-    }
-
-    .nav a {
-        margin: 0 1rem; /* Espaciado vertical entre enlaces */
-    }
-}
-
-.button {
+  }
+  
+  .button {
     background-color: transparent;
     border: 1px solid #55e6c1;
-    padding: 0.5rem 1rem; /* Padding horizontal */
+    padding: 0.5rem 1rem;
     border-radius: 2px;
     font-weight: bold;
     cursor: pointer;
@@ -84,27 +71,128 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1; /* Reset line height */
+    line-height: 1;
     height: 1.25em;
     margin-left: 1rem;
-
-}
-
-.button:hover {
+  }
+  
+  .button:hover {
     background-color: #000000;
-}
+  }
 
-.container {
-    padding-top: 4rem;
-}
+  .icon {
+    margin-right: auto; /* Ajusta el espacio correctamente */
+    display: flex;
+    align-items: center;
+  }
 
-.icon {
-    margin-right: auto; /* Espaciado entre el ícono y los enlaces */
-    display: flex; /* Alinear verticalmente */
-    align-items: center; /* Centrar verticalmente */
-    margin-left: 180px; 
-}
-.icon img {
-    width: 24px; /* Ajustar el ancho del ícono */
-    height: auto; /* Mantener la proporción */
+  .icon img {
+    width: 24px;
+    height: auto;
+  }
+  
+  /* Mobile Navigation */
+  .mobile-nav .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  
+  .mobile-nav .menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #55e6c1;
+    cursor: pointer;
+  }
+  
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: linear-gradient(135deg, #181818, #2c2c2c);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    padding-top: 2rem;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+  }
+  
+  .mobile-menu.open {
+    display: flex;
+  }
+  
+  .mobile-nav .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #181818, #2c2c2c);
+    padding: 1rem;
+  }
+  
+  
+  .menu-button span {
+    font-size: 2rem;
+    color: #55e6c1;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: #55e6c1;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-menu .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #55e6c1;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  
+  .mobile-menu a {
+    color: #d8d8d8;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.3);
+  }
+  
+  .mobile-menu a:hover {
+    color: #55e6c1;
+    border-color: #55e6c1;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: flex;
+    }
+    .mobile-nav {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+
+    .nav a {
+        margin: 0 0.25rem; 
+        font-size: 0.8rem; 
+    }
 }

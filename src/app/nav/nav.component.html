@@ -1,35 +1,62 @@
-<body>
+<!-- <body>
     <div class="container">
           
           <div class="nav">
           <div class="icon">
             <img src="favicon.ico" alt="Icono" />
           </div>
-            <a href="#aboutme">{{ aboutme }}</a>
+            <a href="#aboutme2"> {{ aboutme }} </a>
             <a href="#education"> {{ education }} </a>
             <a href="#experience"> {{ experience }} </a>
             <a href="#personal-projects"> {{ proyects }} </a>
             <a href="#contact"> {{ contact }} </a>
             <a href="cv/CV_AlejandroQuindimilCancio2024.pdf" class="button" target="_blank">
                 {{ cv }}
-              </a>
+            </a>
               
-              <script>
-                const resumeButton = document.querySelector('button');
               
-                resumeButton.addEventListener('click', function(event) {
-                  event.preventDefault(); 
-                });
-              </script>
-              <!-- <script>
-                const menuToggle = document.getElementById('mobile-menu');
-                const navLinks = document.getElementById('nav-links');
-
-                menuToggle.addEventListener('click', function() {
-                    navLinks.classList.toggle('active');
-                });
-            </script> -->
         </div>
     </div>
-</body>
+</body> -->
 
+<body>
+  <div class="container">
+    <!-- Navegación para escritorio -->
+    <div class="nav desktop-nav" *ngIf="!isMobile">
+      <div class="icon">
+        <img src="favicon.ico" alt="Icono" />
+      </div>
+      <a href="#aboutme"> {{ aboutme }} </a>
+      <a href="#education"> {{ education }} </a>
+      <a href="#experience"> {{ experience }} </a>
+      <a href="#personal-projects"> {{ proyects }} </a>
+      <a href="#contact"> {{ contact }} </a>
+      <a href="cv/CV_AlejandroQuindimilCancio2024.pdf" class="button" target="_blank"> 
+        {{ cv }}
+      </a>
+    </div>
+
+    <!-- Navegación para móvil -->
+    <div class="nav mobile-nav" *ngIf="isMobile">
+      <div class="top-bar">
+        <div class="icon">
+          <img src="favicon.ico" alt="Icono" />
+        </div>
+        <button class="menu-button" (click)="toggleMenu()">
+          <span>&#9776;</span>
+        </button>
+      </div>
+      <div class="mobile-menu" [class.open]="menuOpen">
+        <button class="close-button" (click)="toggleMenu()">&#10005;</button>
+        <a href="#aboutme" (click)="toggleMenu()"> {{ aboutme }} </a>
+        <a href="#education" (click)="toggleMenu()"> {{ education }} </a>
+        <a href="#experience" (click)="toggleMenu()"> {{ experience }} </a>
+        <a href="#personal-projects" (click)="toggleMenu()"> {{ proyects }} </a>
+        <a href="#contact" (click)="toggleMenu()"> {{ contact }} </a>
+        <a href="cv/CV_AlejandroQuindimilCancio2024.pdf" class="button" target="_blank" (click)="toggleMenu()"> 
+          {{ cv }}
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
