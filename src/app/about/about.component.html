@@ -1,4 +1,4 @@
-<div class="aboutme">
+<div id="aboutme" class="aboutme">
     <p></p>
     <p>{{ hello }}</p>
     <h2 class="home-author">Alejandro Quindimil, <span id="dynamic-text">{{ dynamicText }}</span></h2>
@@ -6,25 +6,16 @@
     <p>{{ summaryAbout }} Mi stack principal incluye <a href="#">Angular</a>, <a href="#">Java</a>, <a href="#">JavaScript</a>, <a href="#">typescript</a>, <a href="#">Node.js</a> y a veces <a href="#">Python</a> aplicando buenas practicas y estandares de desarrollo para garantizar soluciones de alta calaidad.</p>
     <div class="buttons">
         <button class="button" onclick="window.location.href='mailto:tu-email@example.com'">Enviar correo</button>
-        <button class="button" onclick="copiarAlPortapapeles('tu-email@example.com')">Copiar correo</button>
+        <button class="button" (click)="copiarAlPortapapeles('tu-email@example.com')">Copiar correo</button>
     </div>
 </div>
 
-<!-- Mover mas adelante  -->
-<script>
-    function copiarAlPortapapeles(texto) {
-        navigator.clipboard.writeText(texto).then(() => {
-            alert('Correo copiado al portapapeles');
-        }, (err) => {
-            console.error('Error al copiar: ', err);
-        });
-    }
-</script>
 
-<div class="container">
+
+<div class="aboutme2">
     <div class="text">
         <h1>01. Sobre mí</h1>
-        <p> {{summaryAbout2}}</p>
+        <!-- <p> {{summaryAbout2}}</p> -->
         <p> {{summaryAbout3}}</p>
         <ul>
             <li>Lenguajes de programación: <a href="#">Java</a>, <a href="#">JavaScript</a>, <a href="#">Python</a></li>
@@ -35,6 +26,7 @@
         </ul>
     </div>
     <div class="image">
-        <img src="Resumen.png" alt="Paisaje">
+        <img  src="Resumen.png">
+        
     </div>
 </div>

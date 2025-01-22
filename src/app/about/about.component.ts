@@ -66,6 +66,12 @@ export class AboutComponent {
     }
   }
 
-
+  copiarAlPortapapeles(texto: string) {
+    navigator.clipboard.writeText(texto).then(() => {
+      alert('Correo copiado al portapapeles');
+    }, (err) => {
+      console.error('Error al copiar: ', err);
+    });
+  }
 
 }

@@ -6,6 +6,7 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-bottom: 20px;
+    margin-top: 100px;
 }
 .aboutme h2 {
     margin: 0;
@@ -57,7 +58,7 @@
 .carousel-control-next {
   display: none; /* Oculta las flechas */
 }
-.container {
+.aboutme2 {
     width: 70%;
     margin: 0 auto;
     display: flex;
@@ -119,5 +120,10 @@ a {
 }
 .carousel-control-prev,
 .carousel-control-next {
+    display: none; /* Oculta las flechas */
+}
+.flecha-izquierda,
+.flecha-derecha,
+.arrow {
     display: none; /* Oculta las flechas */
 }
