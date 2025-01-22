@@ -45,6 +45,9 @@
 .carousel {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin:auto;
 }
 
 .carousel-images {
@@ -60,11 +63,12 @@
 }
 
 .carousel-image.active {
-  display: block; /* Muestra solo la imagen activa */
+  display: flex; /* Muestra solo la imagen activa */
 }
 
+/* Ocultar las flechas por defecto */
 .carousel-control {
-  position: absolute;
+  position: absolute; /* Cambiar a posición absoluta */
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.7);
@@ -72,14 +76,21 @@
   cursor: pointer;
   font-size: 24px;
   padding: 10px;
+  opacity: 0; /* Oculta las flechas */
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* Mostrar las flechas al pasar el ratón sobre el carrusel */
+.carousel:hover .carousel-control {
+  opacity: 1; /* Muestra las flechas */
 }
 
 .prev {
-  left: 10px;
+  left: 10px; /* Ajusta la posición a la izquierda */
 }
 
 .next {
-  right: 10px;
+  right: 10px; /* Ajusta la posición a la derecha */
 }
 
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -105,7 +116,7 @@
 
   @media (max-width: 768px) {
     .other-projects-section {
-        width: 90%; /* Ajusta el ancho al 90% en pantallas pequeñas */
+        width: 100%; /* Ajusta el ancho al 90% en pantallas pequeñas */
     }
 }
 .project-list {

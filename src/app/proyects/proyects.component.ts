@@ -21,6 +21,15 @@ export class ProyectsComponent {
   ];
   currentIndex2 = 0;
 
+  isMobile: boolean = false;
+
+  constructor() {
+    this.isMobile = window.innerWidth <= 768;
+    window.addEventListener('resize', () => {
+      this.isMobile = window.innerWidth <= 768;
+    });
+  }
+
   next() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
     this.updateTransform('--current-index1', this.currentIndex);
