@@ -233,14 +233,27 @@
         <h2 class="text-center">{{exp}}</h2>
         <div class="experience-wrapper">
             <div class="experience-buttons">
-                <button class="experience-button" data-target="experience1">{{exp1}}</button>
-                <button class="experience-button" data-target="experience2">{{exp2}}</button>
-                
+                <!-- as<button class="experience-button" data-target="experience1">{{exp1}}</button>
+                <button cls="experience-button" data-target="experience2">{{exp2}}</button>
+                 -->
+                 <button 
+                 class="experience-button"  data-target="experience1"
+                 [class.selected]="selectedExperience === 'experience1'" 
+                 (click)="selectExperience('experience1')">
+                 {{exp1}}
+               </button>
+               <button 
+                 class="experience-button"  data-target="experience2"
+                 [class.selected]="selectedExperience === 'experience2'" 
+                 (click)="selectExperience('experience2')">
+                 {{exp2}}
+               </button>
             </div>
             <div class="experience-content">
                 <div id="experience1" class="experience-item">
                     <h3>{{exp1}}</h3>
                     <p class="text-muted">{{exp1_date}}</p>
+                    <p class="work">{{work1}}</p>
                     <ul>
                         <li>{{exp1_resum1}}</li>
                         <li>{{exp1_resum2}}</li>
@@ -253,9 +266,12 @@
                 <div id="experience2" class="experience-item" style="display: none;">
                     <h3>{{exp2}}</h3>
                     <p class="text-muted">{{exp2_date}}</p>
+                    <p class="work">{{work2}}</p>
                     <ul>
                         <li>{{exp2_resum1}}</li>
                         <li>{{exp2_resum2}}</li>
+                        <li>{{exp2_resum3}}</li>
+                        <li>{{exp2_resum4}}</li>
                     </ul>
                 </div>
                

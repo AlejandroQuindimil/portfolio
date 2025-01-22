@@ -44,22 +44,32 @@
 }
 
 .experience-button {
-    margin-bottom: 10px; /* Espacio entre botones */
-    padding: 12px; /* Tamaño uniforme */
-    width: 100%; /* Botones ocupan todo el ancho */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    background-color: #55E6C1; /* Color de fondo (verde) */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 15px; /* Bordes redondeados */
-    font-size: 1em; /* Tamaño de fuente */
-    transition: background-color 
+    background-color: #1a1a1a;
+    border: 2px solid #55E6C1;
+    color: #00ffcc;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: rgba(0, 255, 204, 0.3);
+        color: #1a1a1a;
+    }
+
+    &.selected {
+        background-color: #00ffcc;
+        color: #1a1a1a;
+    }
 }
 
 .experience-content {
     flex: 3; /* Ocupa el 2/3 del espacio */
 }
 
+.work {
+    color: #55E6C1;
+}
 /* src/app/education/education.component.css */
 .education-section {
     width: 70%;

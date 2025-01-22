@@ -58,18 +58,21 @@ export class ExperienceComponent {
   public exp2: string = 'Administrativo';
   public exp1_date: string = 'sept. 2021 - dic. 2021 · 4 meses';
   public exp2_date: string = 'abr. 2022 - oct. 2022 · 7 meses';
+  public work1: string = 'ctBarbanza - Centro Tecnoloxíco do Barbanza Sociedade Cooperativa Galega';
+  public work2: string = 'Juan Flórez 129.';
   public exp1_resum1: string = 'Developed and maintained a web-based application using Angular, Node.js, and MongoDB, resulting in improved user experience and increased performance.';
   public exp1_resum2: string = 'Designed and implemented RESTful APIs to support multiple applications, using Node.js and Express.';
   public exp1_resum3: string = 'Built a real-time chat application using WebSockets and Node.js, increasing communication and collaboration among team members.';
   public exp1_resum4: string = 'Implementation of continuous integration and daily backups.';
   public exp1_resum5: string = 'Leading a team of 4 people in the development of an E-commerce platform made in React, Node, and MySQL.';
   public exp1_resum6: string = 'Planning meetings and reports.';
-  public exp2_resum1: string = 'Developed responsive web applications using React.js and Bootstrap.';
-  public exp2_resum2: string = 'Collaborated with designers to create a seamless user experience.';
-  public exp2_resum3: string = '';
-  public exp2_resum4: string = '';
+  public exp2_resum1: string = 'Introducir y gestionar apuntes contables de forma eficiente y precisa (Programa A3Asesor).';
+  public exp2_resum2: string = 'Realizar liquidaciones de impuestos, asegurando el cumplimiento de las normativas fiscales.';
+  public exp2_resum3: string = 'Gestionar y archivar documentación';
+  public exp2_resum4: string = 'Gestión de trámites y presentación de documentos ante administraciones';
   public exp2_resum5: string = '';
   public exp2_resum6: string = '';
+  public selectedExperience: string = 'experience1';
 
   ngOnInit() {
     document.addEventListener('DOMContentLoaded', () => {
@@ -113,4 +116,8 @@ export class ExperienceComponent {
     });
 
 }
+
+  selectExperience(experience: string) {
+    this.selectedExperience = experience;
+  }
 }
