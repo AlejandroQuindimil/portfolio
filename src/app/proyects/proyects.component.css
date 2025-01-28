@@ -100,15 +100,17 @@
     width: 70%; /* Ocupa el 70% de la pantalla */
     margin: 0 auto; /* Centra la sección */
     padding: 20px; /* Espaciado interno */
+    margin-bottom: 50px; /* Espacio inferior para evitar superposición */
 }
 
   
   .other-projects-container {
-    width: 100%; /* Limitar el ancho del contenedor al 70% */
+    width: 90%; /* Limitar el ancho del contenedor al 70% */
     margin: 0 auto; /* Centrar el contenedor horizontalmente */
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    overflow-x: auto;
     justify-content: center; /* Centrar las tarjetas de proyecto */
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -116,30 +118,56 @@
 
   @media (max-width: 768px) {
     .other-projects-section {
-        width: 100%; /* Ajusta el ancho al 90% en pantallas pequeñas */
+        width: 90%; /* Ajusta el ancho al 90% en pantallas pequeñas */
     }
 }
 .project-list {
   margin: 0 auto; 
   display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto; 
   flex-direction: row;
   gap: 20px;
-  width: 70%;
+  width: 100%;
   justify-content: center;
 }
 
 .project-card2 {
-  flex: 1;
-  padding: 30px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease,   
-  box-shadow 0.3s ease;
-  margin-bottom: 20px;
-  width: 70%; /* Set the card width to 70% */
-  justify-content: right;
-  align-items: right;
+    padding: 20px; /* Reduce el espaciado interno */
+    background-color: #f0f0f0; /* Color de fondo */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacio entre los elementos */
+    height: 100%; /* Asegura que ocupe toda la altura disponible */
+    
+}
+
+.project-header {
+    display: flex; /* Usar flexbox para alinear el ícono y el título */
+    align-items: center; /* Centra verticalmente */
+    margin-bottom: 5px; /* Reduce el espacio inferior */
+}
+
+.project-header h3 {
+    color: #55E6C1; /* Color del título */
+    margin-left: 10px; /* Espacio entre el ícono y el título */
+}
+
+.project-tags {
+    margin-top: 5px; /* Reduce el espacio superior para las etiquetas */
+}
+
+.project-icons {
+    display: flex;
+    justify-content: flex-end; /* Alinea los íconos a la derecha */
+    margin-top: 10px; /* Espacio superior para los íconos */
+}
+
+.project-icons a {
+    color: #55E6C1; /* Color de los íconos */
+    margin-left: 10px; /* Espacio entre íconos */
 }
 
 .project-card:hover {
@@ -156,12 +184,14 @@ h3 {
     color: #55E6C1;
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
+    text-align: left;
 }
 
 p {
     color: #333;
     font-size: 1rem;
     margin-bottom: 10px;
+    text-align: start;
 }
 
 .project-icons {
@@ -207,6 +237,7 @@ p {
   color: #666;
   line-height: 1.6;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .project-tags {
@@ -224,4 +255,68 @@ p {
   border-radius: 0.75rem; /* Bordes redondeados */
   color: #55E6C1;
   background-color: #000;
+}
+
+.row {
+    display: flex; /* Asegura que los elementos en la fila se alineen horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+    justify-content:  center; /* Espacio entre columnas */
+}
+
+.col-md-4 {
+    flex: 0 0 25%; /* Permite que ocupen el 30% y se ajusten */
+    max-width: 22%;
+    margin-bottom: 50px; /* Espaciado entre filas */
+    margin-inline: 15px;
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+      flex: 0 0 90%; /* Ocupa el 90% del ancho */
+      max-width: 100%; /* Máximo ancho */
+      margin-inline: 15px; /* Espaciado lateral */
+      margin-top: 10px;
+  }
+  
+  .project-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .project-card2 {
+      margin: 20px 0; /* Espaciado arriba y abajo */
+      padding: 15px; /* Ajusta el padding interno */
+      text-align: center; /* Centra el contenido */
+  }
+
+  .project-header {
+      display: flex; /* Usar flexbox para alinear el ícono y el título */
+      align-items: center; /* Centra verticalmente */
+      justify-content: center; /* Centra horizontalmente */
+      margin-bottom: 5px; /* Espacio inferior */
+  }
+
+  .project-header h3 {
+      margin-left: 10px; /* Espacio entre el ícono y el título */
+      color: #55E6C1; /* Color del título */
+  }
+
+  .project-tags {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap; /* Permite que las etiquetas se acomoden mejor */
+      justify-content: center;
+      gap: 5px; /* Espaciado entre etiquetas */
+  }
+
+  .project-icons {
+      justify-content: center;
+  }
+
+  .other-projects-section {
+      width: 100%;
+      max-width: 90%;
+      margin: 30px auto; /* Espaciado superior e inferior */
+      padding: 20px 0; /* Espaciado superior e inferior adicional */
+  }
 }

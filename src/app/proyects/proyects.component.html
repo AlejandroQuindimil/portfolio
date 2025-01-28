@@ -79,15 +79,19 @@
 </section>
 
 <div id="other-projects" class="other-projects-section">
-  <h2>Other Proyects</h2>
-  <div class="row" *ngIf="!isMobile">
-    <div class="col-md-4">
+  <h2>Other Projects</h2>
+  <div class="row justify-content-center"> <!-- Nuevo contenedor -->
+    
+    <!-- Proyecto 1 -->
+    <div class="col-md-4 d-flex">
       <div class="project-card2">
-        <h3>Proyecto 1</h3>
+        <div class="project-header">
+          <i class='far fa-folder-open' style='font-size:36px'></i>
+          <h3>Covid Tracker</h3>
+        </div>
         <p>
           Covid Tracker is a web app which is built using the 3rd Party API integration...
         </p>
-        <p>Angular SASS Material RxJS ExpressJS</p>
         <div class="project-tags">
           <span class="badge bg-secondary">Angular</span>
           <span class="badge bg-secondary">Typescript</span>
@@ -96,108 +100,53 @@
           <span class="badge bg-secondary">Bootstrap</span>
         </div>
         <div class="project-icons">
-          <a href="https://example.com" target="_blank" class="icon-link">
-            <i class="fa fa-link" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com" target="_blank" class="icon-link">
-            <i class="fab fa-github"></i>
-          </a>
+          <a href="#" class="icon-link"><i class="fa fa-link"></i></a>
+          <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+
+    <!-- Proyecto 2 -->
+    <div class="col-md-4 d-flex">
       <div class="project-card2">
-        <h3>Proyecto 2</h3>
-        <p>
-          Covid Tracker is a web app which is built using the 3rd Party Api integration. This app shows the records from worldwide and countrywise that shows how many patients are suffering from covid, how many died from covid, and how many are recovered from covid.
-        </p>
-        <p>Angular SASS Material RxJS ExpressJS</p>
-        <div class="project-icons">
-          <a href="https://example.com" target="_blank" class="icon-link">
-            <i class="fa fa-link" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com" target="_blank" class="icon-link">
-            <i class="fab fa-github"></i>
-          </a>
+        <div class="project-header">
+          <i class='far fa-folder-open' style='font-size:36px'></i>
+          <h3>Proyecto 2</h3>
         </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="project-card2">
-        <h3>Proyecto 3</h3>
-        <p>
-          Covid Tracker is a web app which is built using the 3rd Party API integration...
-        </p>
-        <p>Angular SASS Material RxJS ExpressJS</p>
-        <div class="project-icons">
-          <a href="https://example.com" target="_blank" class="icon-link">
-            <i class="fa fa-link" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com" target="_blank" class="icon-link">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div *ngIf="isMobile">
-    <div class="col-12">
-      <div class="project-card2">
-        <h3>Proyecto 1</h3>
-        <p>
-          Covid Tracker is a web app which is built using the 3rd Party API integration...
-        </p>
-        <p>Angular SASS Material RxJS ExpressJS</p>
+        <p>Proyecto 2 es una aplicación web que utiliza integración de API de terceros...</p>
         <div class="project-tags">
           <span class="badge bg-secondary">Angular</span>
-          <span class="badge bg-secondary">Typescript</span>
-          <span class="badge bg-secondary">HTML5</span>
-          <span class="badge bg-secondary">CSS3</span>
+          <span class="badge bg-secondary">RxJS</span>
+          <span class="badge bg-secondary">API</span>
           <span class="badge bg-secondary">Bootstrap</span>
         </div>
         <div class="project-icons">
-          <a href="https://example.com" target="_blank" class="icon-link">
-            <i class="fa fa-link" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com" target="_blank" class="icon-link">
-            <i class="fab fa-github"></i>
-          </a>
+          <a href="#" class="icon-link"><i class="fa fa-link"></i></a>
+          <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
         </div>
       </div>
     </div>
-    <div class="col-12">
-      <div class="project-card2 text-center">
-        <h3>Proyecto 2</h3>
-        <p>
-          Covid Tracker is a web app which is built using the 3rd Party Api integration. This app shows the records from worldwide and countrywise that shows how many patients are suffering from covid, how many died from covid, and how many are recovered from covid.
-        </p>
-        <p>Angular SASS Material RxJS ExpressJS</p>
+
+    <!-- Proyecto 3 -->
+    <div class="col-md-4 d-flex">
+      <div class="project-card2">
+        <div class="project-header">
+          <i class='far fa-folder-open' style='font-size:36px'></i>
+          <h3>Proyecto 3</h3>
+        </div>
+        <p>Proyecto 3 es una aplicación web que utiliza integración de API de terceros...</p>
+        <div class="project-tags">
+          <span class="badge bg-secondary">Angular</span>
+          <span class="badge bg-secondary">SASS</span>
+          <span class="badge bg-secondary">Material</span>
+          <span class="badge bg-secondary">ExpressJS</span>
+        </div>
         <div class="project-icons">
-          <a href="https://example.com" target="_blank" class="icon-link">
-            <i class="fa fa-link" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com" target="_blank" class="icon-link">
-            <i class="fab fa-github"></i>
-          </a>
+          <a href="#" class="icon-link"><i class="fa fa-link"></i></a>
+          <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
         </div>
       </div>
     </div>
-    <div class="col-12">
-      <div class="project-card2 text-center">
-        <h3>Proyecto 3</h3>
-        <p>
-          Covid Tracker is a web app which is built using the 3rd Party API integration...
-        </p>
-        <p>Angular SASS Material RxJS ExpressJS</p>
-        <div class="project-icons">
-          <a href="https://example.com" target="_blank" class="icon-link">
-            <i class="fa fa-link" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com" target="_blank" class="icon-link">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  </div> <!-- Cierre de .row -->
 </div>
