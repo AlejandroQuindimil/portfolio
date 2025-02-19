@@ -30,14 +30,11 @@
 .project-item p {
   color: #6c757d; /* Color del texto */
 }
-
 @media (max-width: 768px) {
   .projects-section {
       width: 90%; /* Ajusta el ancho al 90% en pantallas pequeñas */
   }
 }
-
-#Carrusel
 .carousel {
   position: relative;
   overflow: hidden;
@@ -45,7 +42,6 @@
   max-width: 800px;
   margin:auto;
 }
-
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease;
@@ -58,7 +54,6 @@
 .carousel-image.active {
   display: flex; /* Muestra solo la imagen activa */
 }
-/* Ocultar las flechas por defecto */
 .carousel-control {
   position: absolute; /* Cambiar a posición absoluta */
   top: 50%;
@@ -71,7 +66,6 @@
   opacity: 0; /* Oculta las flechas */
   transition: opacity 0.3s ease; /* Transición suave */
 }
-/* Mostrar las flechas al pasar el ratón sobre el carrusel */
 .carousel:hover .carousel-control {
   opacity: 1; /* Muestra las flechas */
 }
@@ -87,8 +81,7 @@
     margin: 0 auto; /* Centra la sección */
     padding: 20px; /* Espaciado interno */
     margin-bottom: 50px; /* Espacio inferior para evitar superposición */
-}
-  
+  }
   .other-projects-container {
     width: 90%; /* Limitar el ancho del contenedor al 70% */
     margin: 0 auto; /* Centrar el contenedor horizontalmente */
@@ -100,12 +93,10 @@
     padding: 20px;
     font-family: Arial, sans-serif;
   }
-
   @media (max-width: 768px) {
     .other-projects-section {
         width: 90%; /* Ajusta el ancho al 90% en pantallas pequeñas */
-    }
-}
+    }}
 .project-list {
   margin: 0 auto; 
   display: flex;
@@ -116,7 +107,6 @@
   width: 100%;
   justify-content: center;
 }
-
 .project-card2 {
   padding: 20px;
   background-color: #f0f0f0;
@@ -132,36 +122,31 @@
   cursor: pointer;
 }
 
-/* Oculta las etiquetas y los íconos al hacer hover */
-.project-card2:hover .tags-and-icons {
+.project-card2:hover .tags-and-icons {/* Oculta las etiquetas y los íconos al hacer hover */
   opacity: 0; /* Desvanece el contenido al hacer hover */
   transition: opacity 0.3s ease-in-out; /* Transición suave */
 }
 
-/* Expande la tarjeta al hacer hover */
-.project-card2:hover {
+.project-card2:hover {/* Expande la tarjeta al hacer hover */
   max-height: 900px; /* Se expande */
   background-color: #e6f7f2;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Descripción visible por defecto */
-.project-card2 .description {
+.project-card2 .description {/* Descripción visible por defecto */
   opacity: 1;
   max-height: 100px;
   transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
 
-/* Sección de etiquetas que se reutiliza */
-.project-tags {
+.project-tags {/* Sección de etiquetas que se reutiliza */
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
   gap: 5px;
 }
 
-/* Por defecto, las etiquetas muestran solo los nombres */
-.project-tags .badge {
+.project-tags .badge {/* Por defecto, las etiquetas muestran solo los nombres */
   padding: 5px 10px;
   font-size: 0.9rem;
   border-radius: 0.75rem;
@@ -169,8 +154,7 @@
   background-color: #000;
 }
 
-/* Íconos de enlace */
-.project-icons {
+.project-icons {/* Íconos de enlace */
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
