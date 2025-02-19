@@ -9,13 +9,11 @@
   margin: 0 auto; /* Centra la sección */
   padding: 20px; /* Espaciado interno */
 }
-
 .projects-container {
   display: flex; /* Utiliza flexbox para el diseño */
   flex-direction: column; /* Coloca los elementos en columna */
   align-items: center; /* Centra los elementos horizontalmente */
 }
-
 .project-item {
   background-color: #f8f9fa; /* Color de fondo */
   border-radius: 8px; /* Bordes redondeados */
@@ -25,12 +23,10 @@
   width: 100%; /* Ocupa el 100% del contenedor */
   max-width: 600px; /* Limita el ancho máximo de cada proyecto */
 }
-
 .project-item h3 {
   margin: 0; /* Elimina margen */
   font-size: 1.5em; /* Tamaño de fuente */
 }
-
 .project-item p {
   color: #6c757d; /* Color del texto */
 }
@@ -53,19 +49,15 @@
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease;
-  /* transform: translateX(-{{ currentIndex * 100 }}%); */
 }
-
 .carousel-image {
   min-width: 100%;
   border-radius: 8px;
   display: none; /* Oculta todas las imágenes por defecto */
 }
-
 .carousel-image.active {
   display: flex; /* Muestra solo la imagen activa */
 }
-
 /* Ocultar las flechas por defecto */
 .carousel-control {
   position: absolute; /* Cambiar a posición absoluta */
@@ -79,22 +71,17 @@
   opacity: 0; /* Oculta las flechas */
   transition: opacity 0.3s ease; /* Transición suave */
 }
-
 /* Mostrar las flechas al pasar el ratón sobre el carrusel */
 .carousel:hover .carousel-control {
   opacity: 1; /* Muestra las flechas */
 }
-
 .prev {
   left: 10px; /* Ajusta la posición a la izquierda */
 }
-
 .next {
   right: 10px; /* Ajusta la posición a la derecha */
 }
-
 /* --------------------------------------------------------------------------------------------------------------- */
-
   .other-projects-section {
     width: 70%; /* Ocupa el 70% de la pantalla */
     margin: 0 auto; /* Centra la sección */
@@ -359,7 +346,6 @@ p {
     max-height: 900px; /* Expandirse menos en pantallas pequeñas */
   }
 }
-
 .hidden {
   display: none; /* Oculta el contenido */
 }
