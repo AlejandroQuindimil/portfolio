@@ -133,41 +133,73 @@
 }
 
 .project-card2 {
-    padding: 20px; /* Reduce el espaciado interno */
-    background-color: #f0f0f0; /* Color de fondo */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Espacio entre los elementos */
-    height: 100%; /* Asegura que ocupe toda la altura disponible */
-    
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  max-height: 480px; /* Altura inicial para mostrar solo la descripción */
+  cursor: pointer;
 }
 
-.project-header {
-    display: flex; /* Usar flexbox para alinear el ícono y el título */
-    align-items: center; /* Centra verticalmente */
-    margin-bottom: 5px; /* Reduce el espacio inferior */
+/* Oculta las etiquetas y los íconos al hacer hover */
+.project-card2:hover .tags-and-icons {
+  opacity: 0; /* Desvanece el contenido al hacer hover */
+  transition: opacity 0.3s ease-in-out; /* Transición suave */
 }
 
-.project-header h3 {
-    color: #55E6C1; /* Color del título */
-    margin-left: 10px; /* Espacio entre el ícono y el título */
+/* Expande la tarjeta al hacer hover */
+.project-card2:hover {
+  max-height: 900px; /* Se expande */
+  background-color: #e6f7f2;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Descripción visible por defecto */
+.project-card2 .description {
+  opacity: 1;
+  max-height: 100px;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+/* Sección de etiquetas que se reutiliza */
 .project-tags {
-    margin-top: 5px; /* Reduce el espacio superior para las etiquetas */
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 5px;
 }
 
+/* Por defecto, las etiquetas muestran solo los nombres */
+.project-tags .badge {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 0.75rem;
+  color: #55E6C1;
+  background-color: #000;
+}
+
+
+/* Íconos de enlace */
 .project-icons {
-    display: flex;
-    justify-content: flex-end; /* Alinea los íconos a la derecha */
-    margin-top: 10px; /* Espacio superior para los íconos */
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
 }
 
 .project-icons a {
-    color: #55E6C1; /* Color de los íconos */
-    margin-left: 10px; /* Espacio entre íconos */
+  color: #55E6C1;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.project-icons a:hover {
+  color: #007bff;
 }
 
 .project-card:hover {
@@ -319,4 +351,18 @@ p {
       margin: 30px auto; /* Espaciado superior e inferior */
       padding: 20px 0; /* Espaciado superior e inferior adicional */
   }
+}
+
+@media (max-width: 768px) {
+  .project-card2 {
+    max-height: 380px; /* Reducir altura inicial */
+  }
+
+  .project-card2:hover, .project-card2:focus-within {
+    max-height: 900px; /* Expandirse menos en pantallas pequeñas */
+  }
+}
+
+.hidden {
+  display: none; /* Oculta el contenido */
 }

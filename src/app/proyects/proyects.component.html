@@ -5,10 +5,8 @@
       <!-- Proyecto 1 -->
       <div class="col-12 mb-4">
         <div class="project-card" >
-          <h3>Proyecto 1</h3>
-          <p class="text-muted">
-            Mazhr es una compañía finlandesa de Gestión de Potencial y Talento Inteligente que ayuda a las organizaciones a construir equipos mejores y más eficientes mediante la combinación de su talento y potencial. Tiene varias instalaciones hechas desde cero con auth flexible, configuración dinámica, configuración de usuario, gestión de datos y geolocalización con openlayers.
-          </p>
+          <h3>My Fit Meal</h3>
+          <p class="text-muted">{{resumen_app1}}</p>
           
           <div class="carousel">
             <div class="carousel-images carousel1">
@@ -23,9 +21,9 @@
           <div class="project-tags">
             <span class="badge bg-secondary">Angular</span>
             <span class="badge bg-secondary">Typescript</span>
-            <span class="badge bg-secondary">HTML5</span>
-            <span class="badge bg-secondary">CSS3</span>
-            <span class="badge bg-secondary">Bootstrap</span>
+            <span class="badge bg-secondary">HTML</span>
+            <span class="badge bg-secondary">CSS</span>
+            <span class="badge bg-secondary">Ionic</span>
           </div>
           <div class="mt-3">
             <a href="#" class="btn btn-outline-dark btn-sm me-2">
@@ -84,23 +82,42 @@
     
     <!-- Proyecto 1 -->
     <div class="col-md-4 d-flex">
-      <div class="project-card2">
+      <div class="project-card2" 
+           (mouseenter)="setHover(1, true)" 
+           (mouseleave)="setHover(1, false)" 
+           (click)="handleClick(1, 'https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy')">
         <div class="project-header">
           <i class='far fa-folder-open' style='font-size:36px'></i>
-          <h3>Covid Tracker</h3>
+          <h3>{{titleotherproyect1}}</h3>
         </div>
-        <p>
-          Covid Tracker is a web app which is built using the 3rd Party API integration...
-        </p>
-        <div class="project-tags">
-          <span class="badge bg-secondary">Angular</span>
-          <span class="badge bg-secondary">Typescript</span>
-          <span class="badge bg-secondary">HTML5</span>
-          <span class="badge bg-secondary">CSS3</span>
-          <span class="badge bg-secondary">Bootstrap</span>
+        <p>{{otherproyect1}}</p>
+        
+        <div class="project-tags default-tags" id="defaultTags" [class.hidden]="isExpanded[1] || hover[1]">
+          <span class="badge">Python</span>
+          <span class="badge">TensorFlow & Keras</span>
+          <span class="badge">OpenCV (cv2)</span>
+          <span class="badge">Matplotlib & Seaborn</span>
+          <span class="badge">Scikit-learn</span>
+        </div>
+        <div class="project-icons" [class.hidden]="isExpanded[1] || hover[1]">
+          <a href="https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy" class="icon-link"><i class="fa fa-link"></i></a>
+          <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
+        </div>
+    
+        <!-- Contenido oculto al inicio -->
+        <div class="extra-content" id="extraContent">
+          <div class="project-tags" style="display: flex;">
+            <span class="badge">Python</span> 
+            <span class="badge">TensorFlow & Keras</span> <p>Construcción y entrenamiento de la CNN.</p>
+            <span class="badge">OpenCV (cv2)</span> <p>Preprocesamiento y manipulación de imágenes.</p>
+            <span class="badge">Matplotlib & Seaborn</span> <p>Análisis y visualización de resultados.</p>
+            <span class="badge">Scikit-learn</span> <p>Evaluación y validación del modelo.</p>
+          </div>
+          <p>🎯 <strong>Objetivo:</strong></p>
+          <p>{{infootherproyect1}}</p>
         </div>
         <div class="project-icons">
-          <a href="#" class="icon-link"><i class="fa fa-link"></i></a>
+          <a href="https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy" class="icon-link"><i class="fa fa-link"></i></a>
           <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
         </div>
       </div>
@@ -108,20 +125,39 @@
 
     <!-- Proyecto 2 -->
     <div class="col-md-4 d-flex">
-      <div class="project-card2">
+      <div class="project-card2" (mouseenter)="setHover(2, true)" (mouseleave)="setHover(2, false)" (click)="toggleExpand(2)">
         <div class="project-header">
           <i class='far fa-folder-open' style='font-size:36px'></i>
-          <h3>Proyecto 2</h3>
+          <h3>{{titleotherproyect1}}</h3>
         </div>
-        <p>Proyecto 2 es una aplicación web que utiliza integración de API de terceros...</p>
-        <div class="project-tags">
-          <span class="badge bg-secondary">Angular</span>
-          <span class="badge bg-secondary">RxJS</span>
-          <span class="badge bg-secondary">API</span>
-          <span class="badge bg-secondary">Bootstrap</span>
+        <p>{{otherproyect1}}</p>
+        
+        <div class="project-tags default-tags" id="defaultTags" [class.hidden]="isExpanded[2] || hover[2]">
+          <span class="badge">Python</span>
+          <span class="badge">TensorFlow & Keras</span>
+          <span class="badge">OpenCV (cv2)</span>
+          <span class="badge">Matplotlib & Seaborn</span>
+          <span class="badge">Scikit-learn</span>
+        </div>
+        <div class="project-icons" [class.hidden]="isExpanded[2] || hover[2]">
+          <a href="#https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy" class="icon-link"><i class="fa fa-link"></i></a>
+          <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
+        </div>
+    
+        <!-- Contenido oculto al inicio -->
+        <div class="extra-content" id="extraContent">
+          <div class="project-tags" style="display: flex;">
+            <span class="badge">Python</span> 
+            <span class="badge">TensorFlow & Keras</span> <p>Construcción y entrenamiento de la CNN.</p>
+            <span class="badge">OpenCV (cv2)</span> <p>Preprocesamiento y manipulación de imágenes.</p>
+            <span class="badge">Matplotlib & Seaborn</span> <p>Análisis y visualización de resultados.</p>
+            <span class="badge">Scikit-learn</span> <p>Evaluación y validación del modelo.</p>
+          </div>
+          <p>🎯 <strong>Objetivo:</strong></p>
+          <p>{{infootherproyect1}}</p>
         </div>
         <div class="project-icons">
-          <a href="#" class="icon-link"><i class="fa fa-link"></i></a>
+          <a href="#https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy" class="icon-link"><i class="fa fa-link"></i></a>
           <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
         </div>
       </div>
@@ -129,17 +165,36 @@
 
     <!-- Proyecto 3 -->
     <div class="col-md-4 d-flex">
-      <div class="project-card2">
+      <div class="project-card2" (mouseenter)="setHover(3, true)" (mouseleave)="setHover(3, false)" (click)="toggleExpand(3)">
         <div class="project-header">
           <i class='far fa-folder-open' style='font-size:36px'></i>
-          <h3>Proyecto 3</h3>
+          <h3>{{titleotherproyect1}}</h3>
         </div>
-        <p>Proyecto 3 es una aplicación web que utiliza integración de API de terceros...</p>
-        <div class="project-tags">
-          <span class="badge bg-secondary">Angular</span>
-          <span class="badge bg-secondary">SASS</span>
-          <span class="badge bg-secondary">Material</span>
-          <span class="badge bg-secondary">ExpressJS</span>
+        <p>{{otherproyect1}}</p>
+        
+        <div class="project-tags default-tags" id="defaultTags" [class.hidden]="isExpanded[3] || hover[3]">
+          <span class="badge">Python</span>
+          <span class="badge">TensorFlow & Keras</span>
+          <span class="badge">OpenCV (cv2)</span>
+          <span class="badge">Matplotlib & Seaborn</span>
+          <span class="badge">Scikit-learn</span>
+        </div>
+        <div class="project-icons" [class.hidden]="isExpanded[3] || hover[3]">
+          <a href="#" class="icon-link"><i class="fa fa-link"></i></a>
+          <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
+        </div>
+    
+        <!-- Contenido oculto al inicio -->
+        <div class="extra-content" id="extraContent">
+          <div class="project-tags" style="display: flex;">
+            <span class="badge">Python</span> 
+            <span class="badge">TensorFlow & Keras</span> <p>Construcción y entrenamiento de la CNN.</p>
+            <span class="badge">OpenCV (cv2)</span> <p>Preprocesamiento y manipulación de imágenes.</p>
+            <span class="badge">Matplotlib & Seaborn</span> <p>Análisis y visualización de resultados.</p>
+            <span class="badge">Scikit-learn</span> <p>Evaluación y validación del modelo.</p>
+          </div>
+          <p>🎯 <strong>Objetivo:</strong></p>
+          <p>{{infootherproyect1}}</p>
         </div>
         <div class="project-icons">
           <a href="#" class="icon-link"><i class="fa fa-link"></i></a>
