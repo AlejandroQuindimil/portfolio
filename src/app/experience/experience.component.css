@@ -19,6 +19,7 @@
 
 .experience-item p {
     color: #6c757d;
+    margin-top: 10px;
 }
 
 .experience-item ul {
@@ -26,10 +27,132 @@
     padding-left: 20px;
 }
 
+.tech-icons {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); Se ajusta a diferentes tamaños */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.tech-icon {
+    display: flex;
+    flex-direction: column; /* Asegura que el ícono esté arriba y el texto abajo */
+    align-items: center; /* Centra los elementos */
+    margin-top: 250px;
+    margin-bottom: 150px;
+}
+
+/* Aumentar tamaño de iconos */
+.tech-item i {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 80px;
+    align-items: center
+}
+
+
+.accordion-button {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.arrow {
+    margin-left: auto; /* Asegura que la flecha esté al borde derecho */
+    color: white; /* Color de la flecha */
+    font-weight: bold; /* Hace el símbolo más grueso */
+    font-size: 1.2em; 
+    
+}
+
+.expanded {
+    transform: rotate(180deg); /* Rota la flecha hacia arriba */
+}
+
 @media (max-width: 768px) {
     .experience-section {
         width: 90%;
     }
+
+    .experience-wrapper {
+        flex-direction: column;
+    }
+
+    .experience-buttons {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .experience-content {
+        flex: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .tech-icons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap; /* Permite que los íconos se envuelvan en varias líneas */
+        justify-content: center; /* Centra los íconos horizontalmente */
+        align-items: center;
+        margin-top: 30px;
+    }
+    
+    .tech-icon {
+        margin: 15px; /* Espacio alrededor de cada ícono */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px; /* Ajusta el ancho para que quepan dos íconos por fila */
+    }
+    
+    .tech-icon i {
+        margin-bottom: 10px ; 
+        font-size: 45px !important; 
+    } 
+   
+    .devicon-java-plain-wordmark,
+    .devicon-javascript-plain,
+    .devicon-python-plain,
+    .devicon-c-plain-wordmark,
+    .devicon-typescript-plain,
+    .devicon-html5-plain,
+    .devicon-css3-plain,
+    .devicon-mysql-plain-wordmark,
+    .devicon-mariadb-original-wordmark,
+    .devicon-sqlite-plain-wordmark,
+    .devicon-mongodb-plain-wordmark,
+    .devicon-firebase-plain,
+    .devicon-angularjs-plain,
+    .devicon-spring-original,
+    .devicon-hadoop-plain-wordmark,
+    .devicon-apachespark-plain-wordmark,
+    .devicon-apachekafka-original {
+         /* Aumenta el tamaño del ícono */
+         margin-bottom: 50px;
+    }
+    
+    .tech-item p {
+        margin-top: 5px;
+        max-width: 100%;
+        text-align: center;
+    }
+    .tech-icon img {
+        width: 55px !important; /* Ajusta el ancho de la imagen */
+        height: 55px !important; /* Ajusta la altura de la imagen */
+    }
+
 }
 
 .experience-wrapper {
@@ -111,28 +234,32 @@ h2 {
 
 .tech-icons {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: center; /* Centra los elementos */
 }
 
 .tech-icon {
-    width: 80px; /* Ajusta el tamaño según sea necesario */
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1 1 100%; /* Cada icono ocupa el 100% del ancho en móviles */
+    text-align: center; /* Centra el texto debajo de cada icono */
+    margin: 10px 0; /* Espaciado entre los iconos */
+}
+
+@media (min-width: 768px) {
+    .tech-icon {
+        flex: 1 1 30%; /* En pantallas más grandes, cada icono ocupa el 30% del ancho */
+    }
 }
 
 .tech-icon img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 90px; /* Ajusta el tamaño según sea necesario */
+    height: 90px; /* Ajusta el tamaño según sea necesario */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
 
 .accordion-content {
     display: none; /* Ocultar contenido por defecto */
 }
-
-
 
 .tech-icons {
     display: flex;
@@ -149,7 +276,8 @@ h2 {
 }
 
 .tech-icon i {
-    font-size: 90px; /* Aumenta el tamaño del ícono */
+    font-size: 90px; /* Tamaño del ícono */
+    margin-bottom: 10px; /* Espacio entre el ícono y el texto */
 }
 
 .section-title {
@@ -177,12 +305,20 @@ h2 {
     margin-right: 15px; /* Espacio entre icono y texto */
 }
 
+.language-info {
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espaciado interno */
+}
+
 .language-info h4 {
+    text-align: left;
     margin: 0; /* Sin margen */
     font-size: 1.2rem; /* Tamaño de fuente */
 }
 
 .language-info p {
+    text-align: left;
+
     margin: 0; /* Sin margen */
     color: #6c757d; /* Color del texto secundario */
 }

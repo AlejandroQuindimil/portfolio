@@ -7,7 +7,7 @@ import { Component, AfterViewInit , OnInit } from '@angular/core';
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css'
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnInit {
   public edu: string = 'Educación';
   public infoeducation: string = 'Consulta mi formación académica: idiomas que hablo, educación universitaria, cursos técnicos y tecnologías con las que he trabajado.';
   public lang: string = 'Idiomas';
@@ -75,30 +75,30 @@ export class ExperienceComponent {
   public selectedExperience: string = 'experience1';
 
   ngOnInit() {
-    document.addEventListener('DOMContentLoaded', () => {
-        const buttons = document.querySelectorAll('.accordion-button');
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling as HTMLElement;
-                if (content) {
-                    if (content.style.display === 'block') {
-                        content.style.display = 'none';
-                    } else {
-                        content.style.display = 'block';
-                    }
-                }
-            });
-        });
+    // Lógica del acordeón
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling as HTMLElement;
+        const arrow = button.querySelector('.arrow') as HTMLElement;
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+          arrow.textContent = '↓';
+        } else {
+          content.style.display = 'block';
+          arrow.textContent = '−';
+        }
+      });
     });
-  
-    // Esperar a que el DOM esté completamente cargado
-    const buttons = document.querySelectorAll('.experience-button');
+
+    // Lógica de experiencia
+    const experienceButtons = document.querySelectorAll('.experience-button');
     const contents = document.querySelectorAll('.experience-item');
 
     // Mostrar la primera experiencia por defecto
     (contents[0] as HTMLElement).style.display = 'block';
 
-    buttons.forEach(button => {
+    experienceButtons.forEach(button => {
       button.addEventListener('click', () => {
         const targetId = button.getAttribute('data-target');
 
