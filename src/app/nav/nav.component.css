@@ -26,7 +26,6 @@ body {
   padding-top: 13px;
   padding-bottom: 13px;
 }
-
 .nav a {
   color: #d8d8d8;
   text-decoration: none;
@@ -38,10 +37,8 @@ body {
   margin-left: 0.2rem;
   transition: color 0.3s;
 }
-
 .nav a:hover {
   color: #55e6c1;
-  /* background-color: #55e6c1; */
 }
 
 .nav a::after {
@@ -141,7 +138,6 @@ body {
   display: flex;
   transform: translateX(0);
 }
-
 /*boton cerrar el nav-movile verseion*/
 .close-button {
   background: none;
@@ -154,7 +150,6 @@ body {
   right: 55px;
 
 }
-
 .mobile-menu a {
   color: #d8d8d8;
   font-size: 1.25rem;
@@ -165,11 +160,9 @@ body {
   transition: color 0.3s;
   position: relative;
 }
-
 .mobile-menu a:hover {
   color: #55e6c1;
 }
-
 .mobile-menu a::before {
   content: attr(data-index) " ";
   color: #55e6c1;
@@ -181,7 +174,6 @@ body {
   color: #55e6c1; /* Cambia este color al del borde del botón */
   font-weight: bold;
 }
-
 /* Responsive - Solo afecta a móviles */
 @media (max-width: 768px) {
   .mobile-nav {

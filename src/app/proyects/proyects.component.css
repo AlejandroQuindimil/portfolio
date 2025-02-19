@@ -94,7 +94,6 @@
 }
 
 /* --------------------------------------------------------------------------------------------------------------- */
-  #other-projects
 
   .other-projects-section {
     width: 70%; /* Ocupa el 70% de la pantalla */
@@ -102,7 +101,6 @@
     padding: 20px; /* Espaciado interno */
     margin-bottom: 50px; /* Espacio inferior para evitar superposición */
 }
-
   
   .other-projects-container {
     width: 90%; /* Limitar el ancho del contenedor al 70% */
@@ -183,7 +181,6 @@
   color: #55E6C1;
   background-color: #000;
 }
-
 
 /* Íconos de enlace */
 .project-icons {
