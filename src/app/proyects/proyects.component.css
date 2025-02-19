@@ -1,3 +1,4 @@
+/* src/app/projects/projects.component.css */
 .project-card{
   background-color: #f8f9fa;
   padding: 20px;
@@ -120,26 +121,31 @@
   max-height: 480px; /* Altura inicial para mostrar solo la descripción */
   cursor: pointer;
 }
+
 .project-card2:hover .tags-and-icons {/* Oculta las etiquetas y los íconos al hacer hover */
   opacity: 0; /* Desvanece el contenido al hacer hover */
   transition: opacity 0.3s ease-in-out; /* Transición suave */
 }
+
 .project-card2:hover {/* Expande la tarjeta al hacer hover */
   max-height: 900px; /* Se expande */
   background-color: #e6f7f2;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
 .project-card2 .description {/* Descripción visible por defecto */
   opacity: 1;
   max-height: 100px;
   transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
+
 .project-tags {/* Sección de etiquetas que se reutiliza */
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
   gap: 5px;
 }
+
 .project-tags .badge {/* Por defecto, las etiquetas muestran solo los nombres */
   padding: 5px 10px;
   font-size: 0.9rem;
@@ -147,51 +153,70 @@
   color: #55E6C1;
   background-color: #000;
 }
+
 .project-icons {/* Íconos de enlace */
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
 }
+
 .project-icons a {
   color: #55E6C1;
   margin-left: 10px;
   transition: color 0.3s ease;
 }
+
 .project-icons a:hover {
   color: #007bff;
 }
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+
 h2 {
     text-align: center;
     margin-bottom: 30px;
 }
+
 h3 {
     color: #55E6C1;
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
     text-align: left;
 }
+
 p {
     color: #333;
     font-size: 1rem;
     margin-bottom: 10px;
     text-align: start;
 }
+
 .project-icons {
     display: flex;
     gap: 10px;
     margin-top: 10px;
 }
+
 .icon-link {
     color: #333;
     transition: color 0.3s ease;
 }
-.icon-link:hover {    color: #007bff;}
-.icon-link i {    font-size: 1.2rem;}
-.icon-size { font-size: 1.5rem; }
+
+.icon-link:hover {
+    color: #007bff;
+}
+
+.icon-link i {
+    font-size: 1.2rem;
+}
+
+.icon-size {
+  font-size: 1.5rem; 
+}
+
 .project-card {
   background-color: #f8f9fa;
   padding: 20px;
@@ -199,12 +224,14 @@ p {
   margin-bottom: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .project-card h3 {
   font-size: 24px;
   font-weight: bold;
   color: #55E6C1;
   margin-bottom: 15px;
 }
+
 .project-description {
   font-size: 16px;
   color: #666;
@@ -212,12 +239,14 @@ p {
   margin-bottom: 20px;
   text-align: left;
 }
+
 .project-tags {
   display: flex;
   flex-wrap: wrap; /* Permite que las etiquetas se ajusten en varias líneas si es necesario */
   margin-top: 10px;
   
 }
+
 .project-tags .badge {
   margin-right: 5px; /* Espacio entre las etiquetas */
   margin-bottom: 5px; /* Espacio entre filas de etiquetas */
@@ -227,17 +256,20 @@ p {
   color: #55E6C1;
   background-color: #000;
 }
+
 .row {
     display: flex; /* Asegura que los elementos en la fila se alineen horizontalmente */
     flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
     justify-content:  center; /* Espacio entre columnas */
 }
+
 .col-md-4 {
     flex: 0 0 25%; /* Permite que ocupen el 30% y se ajusten */
     max-width: 22%;
     margin-bottom: 50px; /* Espaciado entre filas */
     margin-inline: 15px;
 }
+
 @media (max-width: 768px) {
   .col-md-4 {
       flex: 0 0 90%; /* Ocupa el 90% del ancho */
@@ -245,25 +277,30 @@ p {
       margin-inline: 15px; /* Espaciado lateral */
       margin-top: 10px;
   }
+  
   .project-list {
       flex-direction: column;
       align-items: center;
   }
+
   .project-card2 {
       margin: 20px 0; /* Espaciado arriba y abajo */
       padding: 15px; /* Ajusta el padding interno */
       text-align: center; /* Centra el contenido */
   }
+
   .project-header {
       display: flex; /* Usar flexbox para alinear el ícono y el título */
       align-items: center; /* Centra verticalmente */
       justify-content: center; /* Centra horizontalmente */
       margin-bottom: 5px; /* Espacio inferior */
   }
+
   .project-header h3 {
       margin-left: 10px; /* Espacio entre el ícono y el título */
       color: #55E6C1; /* Color del título */
   }
+
   .project-tags {
       margin-top: 10px;
       display: flex;
@@ -271,9 +308,11 @@ p {
       justify-content: center;
       gap: 5px; /* Espaciado entre etiquetas */
   }
+
   .project-icons {
       justify-content: center;
   }
+
   .other-projects-section {
       width: 100%;
       max-width: 90%;
@@ -286,6 +325,7 @@ p {
   .project-card2 {
     max-height: 380px; /* Reducir altura inicial */
   }
+
   .project-card2:hover, .project-card2:focus-within {
     max-height: 900px; /* Expandirse menos en pantallas pequeñas */
   }
