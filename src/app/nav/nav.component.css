@@ -1,198 +1,194 @@
 /* General */
 body {
-    background-color: #ffffff;
-    color: #d8d8d8;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0 auto;
-    padding-right: 0;
-    box-sizing: border-box;
-    background: linear-gradient(135deg, #181818, #2c2c2c);
-    display: flex;
-    justify-content: space-between; /* Asegura que el contenido se distribuya correctamente */
-    align-items: center;
-    padding: 20px 40px; /* Reduce el padding general */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    box-sizing: border-box;
-    padding-top: 13px; 
-    padding-bottom: 13px;
-  }
-  
-  .nav a {
-    color: #d8d8d8;
-    text-decoration: none;
-    margin: 0 0.5rem; /* Espaciado horizontal */
-    font-size: 1rem; /* Asegúrate de que el tamaño sea legible */
-    white-space: nowrap; /* Evita que los enlaces se envuelvan */
-    position: relative; /* Necesario para el pseudo-elemento */
-    
-    padding: 0.3rem 0.8rem;/* Espaciado adicional */
-    margin-left: 1rem;
-  }
-  
-  .nav a:hover {
-    color: #55e6c1;
-  }
-  
-  .nav a::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 1.5px;
-    background-color: #55e6c1;
-    transition: width 0.3s ease, left 0.3s ease;
-  }
-  
-  .nav a:hover::after {
-    width: 100%;
-    left: 0;
-    height: 2px;
-  }
-  
-  .button {
-    background-color: transparent;
-    border: 1px solid #55e6c1;
-    padding: 0.5rem 1rem;
-    border-radius: 2px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1;
-    height: 1.25em;
-    margin-left: 1rem;
-  }
-  
-  .button:hover {
-    background-color: #000000;
-  }
+  background-color: #ffffff;
+  color: #d8d8d8;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .icon {
-    margin-right: auto; /* Ajusta el espacio correctamente */
-    display: flex;
-    align-items: center;
-  }
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #181818, #2c2c2c);
+  display: flex;
+  justify-content: space-between; /* Asegura que el contenido se distribuya correctamente */
+  align-items: center;
+  padding: 20px 40px; /* Reduce el padding general */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  box-sizing: border-box;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
 
-  .icon img {
-    width: 24px;
-    height: auto;
-  }
-  
-  /* Mobile Navigation */
-  .mobile-nav .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-  }
-  
-  .mobile-nav .menu-button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #55e6c1;
-    cursor: pointer;
-  }
-  
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    background: linear-gradient(135deg, #181818, #2c2c2c);
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 70%;
-    height: 100%;
-    padding-top: 2rem;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 1001;
-  }
-  
-  .mobile-menu.open {
-    display: flex;
-  }
-  
-  .mobile-nav .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(135deg, #181818, #2c2c2c);
-    padding: 1rem;
-  }
-  
-  
-  .menu-button span {
-    font-size: 2rem;
-    color: #55e6c1;
-  }
-  
-  .close-button {
-    background: none;
-    border: none;
-    color: #55e6c1;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-  .desktop-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.nav a {
+  color: #d8d8d8;
+  text-decoration: none;
+  margin: 0 0.5rem; /* Espaciado horizontal */
+  font-size: 1rem; /* Asegúrate de que el tamaño sea legible */
+  white-space: nowrap; /* Evita que los enlaces se envuelvan */
+  position: relative; /* Necesario para el pseudo-elemento */
+  padding: 0.3rem 0.8rem; /* Espaciado adicional */
+  margin-left: 0.2rem;
+  transition: color 0.3s;
+}
 
-  .mobile-menu .close-button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #55e6c1;
-    align-self: flex-end;
-    cursor: pointer;
-  }
+.nav a:hover {
+  color: #55e6c1;
+  /* background-color: #55e6c1; */
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 1.5px;
+  background-color: #55e6c1;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+  left: 0;
+  height: 2px;
+}
+
+.nav a::before {
+  content: attr(data-index) " "; /* Añade el número antes del texto */
+  color: #55e6c1;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid #55e6c1;
+  padding: 0.5rem 0.1rem;
+  border-radius: 5px;
+  color: #000;
+  margin-top: 0; /* Ajusta el margen superior */
+  transition: background-color 0.3s ease; /* Añade transición para el color */
+  margin-right: 14%;
   
-  .mobile-menu a {
-    color: #d8d8d8;
-    font-size: 1.2rem;
-    text-decoration: none;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(216, 216, 216, 0.3);
-  }
-  
-  .mobile-menu a:hover {
-    color: #55e6c1;
-    border-color: #55e6c1;
-  }
-  
-  /* Responsiveness */
-  @media (max-width: 768px) {
-    .desktop-nav {
-      display: flex;
-    }
-    .mobile-nav {
+}
+
+.button:hover {
+  background-color: #55e6c1;
+  color: #000; 
+}
+
+
+.icon {
+  margin-right: auto; /* Ajusta el espacio correctamente */
+  display: flex;
+  align-items: center;
+  margin-left: 14% ;
+}
+
+.etiquetas {
+  margin-right: 14%;
+}
+.icon img {
+  width: 24px;
+  height: auto;
+}
+
+/* Mobile Navigation */
+.mobile-nav .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #181818, #2c2c2c);
+}
+
+.mobile-nav .menu-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #55e6c1;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #0d0d0d;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100%;
+  padding-top: 2rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  padding: 2rem;
+}
+
+.mobile-menu.open {
+  display: flex;
+  transform: translateX(0);
+}
+
+/*boton cerrar el nav-movile verseion*/
+.close-button {
+  background: none;
+  border: none;
+  color: #55e6c1;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 55px;
+
+}
+
+.mobile-menu a {
+  color: #d8d8d8;
+  font-size: 1.25rem;
+  text-decoration: none;
+  padding: 1rem 0;
+  text-align: left;
+  width: 100%;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.mobile-menu a:hover {
+  color: #55e6c1;
+}
+
+.mobile-menu a::before {
+  content: attr(data-index) " ";
+  color: #55e6c1;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+.number {
+  color: #55e6c1; /* Cambia este color al del borde del botón */
+  font-weight: bold;
+}
+
+/* Responsive - Solo afecta a móviles */
+@media (max-width: 768px) {
+  .mobile-nav {
       display: block;
-    }
   }
-  
-  @media (max-width: 768px) {
-    .nav {
-        padding-left: 10px; 
-        padding-right: 10px;
-    }
 
-    .nav a {
-        margin: 0 0.25rem; 
-        font-size: 0.8rem; 
-    }
+  .desktop-nav {
+      display: none;
+  }
 }

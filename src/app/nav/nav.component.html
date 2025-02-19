@@ -26,14 +26,16 @@
       <div class="icon">
         <img src="favicon.ico" alt="Icono" />
       </div>
-      <a href="#aboutme"> {{ aboutme }} </a>
-      <a href="#education"> {{ education }} </a>
-      <a href="#experience"> {{ experience }} </a>
-      <a href="#personal-projects"> {{ proyects }} </a>
-      <a href="#contact"> {{ contact }} </a>
-      <a href="cv/CV_AlejandroQuindimilCancio2024.pdf" class="button" target="_blank"> 
-        {{ cv }}
-      </a>
+      <div class="etiquetas">
+        <a href="#aboutme"> {{ aboutme }} </a>
+        <a href="#education"> {{ education }} </a>
+        <a href="#experience"> {{ experience }} </a>
+        <a href="#personal-projects"> {{ proyects }} </a>
+        <a href="#contact"> {{ contact }} </a>
+        <a href="cv/CV_AlejandroQuindimilCancio2024.pdf" class="button" target="_blank"> 
+          {{ cv }}
+        </a>
+    </div>
     </div>
 
     <!-- Navegación para móvil -->
@@ -48,11 +50,11 @@
       </div>
       <div class="mobile-menu" [class.open]="menuOpen">
         <button class="close-button" (click)="toggleMenu()">&#10005;</button>
-        <a href="#aboutme" (click)="toggleMenu()"> {{ aboutme }} </a>
-        <a href="#education" (click)="toggleMenu()"> {{ education }} </a>
-        <a href="#experience" (click)="toggleMenu()"> {{ experience }} </a>
-        <a href="#personal-projects" (click)="toggleMenu()"> {{ proyects }} </a>
-        <a href="#contact" (click)="toggleMenu()"> {{ contact }} </a>
+        <a href="#aboutme" (click)="toggleMenu()"><span class="number">01.</span> Sobre mi</a>
+        <a href="#education" (click)="toggleMenu()"><span class="number">02.</span> Educación</a>
+        <a href="#experience" (click)="toggleMenu()"><span class="number">03.</span> Experiencia</a>
+        <a href="#personal-projects" (click)="toggleMenu()"><span class="number">04.</span> Proyectos</a>
+        <a href="#contact" (click)="toggleMenu()"><span class="number">05.</span> Contacto</a>
         <a href="cv/CV_AlejandroQuindimilCancio2024.pdf" class="button" target="_blank" (click)="toggleMenu()"> 
           {{ cv }}
         </a>
