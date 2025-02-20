@@ -8,6 +8,7 @@ import { ProyectsComponent } from "./proyects/proyects.component";
 import { ContactComponent } from "./contact/contact.component";
 import { ExperienceComponent } from "./experience/experience.component";
 import { CommonModule } from '@angular/common';
+import { OtherproyectsComponent } from './otherproyects/otherproyects.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     ProyectsComponent,
     ContactComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    OtherproyectsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
