@@ -17,8 +17,8 @@ export class ProyectsComponent {
   public resumen_app1: string ='My Fit Meal es una aplicación innovadora que permite a los usuarios gestionar su alimentación de manera personalizada, calculando su requerimiento calórico y distribuyendo macronutrientes de forma equilibrada. Desarrollada en Ionic con Angular y utilizando Firebase para almacenamiento, ofrece un seguimiento detallado del progreso en tiempo real. Ideal para nutricionistas, deportistas y cualquier persona interesada en mejorar su bienestar, la app facilita la planificación de dietas y optimiza el rendimiento físico. Con un mercado en constante crecimiento, My Fit Meal destaca como un desarrollo tecnológico con gran impacto en la salud digital.';
 
   images = [
-    '/proyecto1parte1.png',
-    '/proyecto1parte2.png'
+    '/../proyecto1parte1.png',
+    '/../proyecto1parte2.png'
   ];
   currentIndex = 0;
 
