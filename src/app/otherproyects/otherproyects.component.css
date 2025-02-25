@@ -1,12 +1,12 @@
 .other-projects-section {
-    width: 100%; /* Ocupa el 70% de la pantalla */
+    width:90%; /* Ocupa el 70% de la pantalla */
     margin: 0 auto; /* Centra la sección */
     padding: 20px; /* Espaciado interno */
     margin-bottom: 50px; /* Espacio inferior para evitar superposición */
 }
   
   .other-projects-container {
-    width: 90%; /* Limitar el ancho del contenedor al 70% */
+    width: 60%; /* Limitar el ancho del contenedor al 70% */
     margin: 0 auto; /* Centrar el contenedor horizontalmente */
     align-items: center;
     display: flex;

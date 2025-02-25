@@ -1,5 +1,5 @@
 .experience-section {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -195,7 +195,7 @@
 }
 /* src/app/education/education.component.css */
 .education-section {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     padding: 20px;
     background-color: #f8f9fa;

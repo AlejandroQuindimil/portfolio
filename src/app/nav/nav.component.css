@@ -87,11 +87,24 @@ body {
   margin-right: auto; /* Ajusta el espacio correctamente */
   display: flex;
   align-items: center;
-  margin-left: 14% ;
+  margin-left: 20% ;
 }
 
 .etiquetas {
-  margin-right: 14%;
+  margin-right: 20%;
+}
+
+@media (max-width: 2000px) {
+  .icon {
+    margin-right: auto; /* Ajusta el espacio correctamente */
+    display: flex;
+    align-items: center;
+    margin-left: 18% ;
+  }
+  
+  .etiquetas {
+    margin-right: 18%;
+  }
 }
 .icon img {
   width: 24px;

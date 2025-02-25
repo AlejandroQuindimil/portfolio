@@ -1,5 +1,5 @@
 .aboutme {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -41,7 +41,7 @@
 }
 @media (max-width: 600px) {
     .aboutme {
-        width: 90%;
+        width: 60%;
     }
     .aboutme h2 {
         font-size: 20px;
@@ -59,7 +59,7 @@
   display: none; /* Oculta las flechas */
 }
 .aboutme2 {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
