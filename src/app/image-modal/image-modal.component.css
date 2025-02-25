@@ -1,0 +1,57 @@
+.image-modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Añadir padding para evitar que el contenido toque los bordes */
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%; /* Ajustar el ancho máximo para pantallas pequeñas */
+    max-height: 90%; /* Ajustar la altura máxima para pantallas pequeñas */
+    /* overflow: auto; Permitir desplazamiento si el contenido es demasiado grande */
+}
+
+.close {
+    position: absolute;
+    top: -10px;
+    right: -47px;
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+    border: 2px;
+}
+
+.modal-image {
+    max-width: 200%;
+    max-height: 200%;
+    border: 25px solid #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        max-width: 200%; /* Aumentar el ancho máximo en móviles */
+        max-height: 200%; /* Aumentar la altura máxima en móviles */
+        position: fixed;
+        overflow: auto; 
+    }
+
+    .close {
+        position: absolute;
+        top: -5px;
+        right: -47px;
+        color: black;
+        font-size: 30px;
+        cursor: pointer;
+        border: 2px;
+    }
+}

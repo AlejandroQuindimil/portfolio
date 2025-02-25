@@ -1,0 +1,6 @@
+<div class="image-modal" *ngIf="isVisible" (click)="close()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="close" (click)="close()">&times;</span>
+      <img class="modal-image" [src]="imageUrl" style="width:100%">
+    </div>
+</div>

@@ -1,14 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ImageModalComponent } from '../image-modal/image-modal.component';
 
 @Component({
   selector: 'app-proyects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    ImageModalComponent
+  ],
   templateUrl: './proyects.component.html',
   styleUrl: './proyects.component.css'
 })
 export class ProyectsComponent {
+  @ViewChild(ImageModalComponent) imageModal!: ImageModalComponent;
+
   public titleotherproyect1: string = '🦠 Malaria Detector';
   public otherproyect1: string = 'Malaria Detector es una web app basada en Machine Learning que utiliza una Red Neuronal Convolucional (CNN) para la detección de malaria en imágenes microscópicas de células. Aprovecha el poder de TensorFlow y OpenCV para lograr una precisión del 95% en la clasificación de células infectadas y no infectadas.';
   public infootherproyect1: string = 'Clasificar imágenes microscópicas de células como infectadas o no infectadas, proporcionando una herramienta de detección temprana de malaria.';
@@ -86,5 +92,9 @@ export class ProyectsComponent {
         this.clickTimeout = null;
       }, 300);
     }
+  }
+
+  openImage(image: string) {
+    this.imageModal.open(image);
   }
 }

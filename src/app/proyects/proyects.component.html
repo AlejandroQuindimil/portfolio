@@ -4,7 +4,7 @@
     <div class="projects-section">
       <!-- Proyecto 1 -->
       <div class="col-12 mb-4">
-        <div class="project-card" >
+        <div class="project-card">
           <h3>My Fit Meal</h3>
           <p class="text-muted">{{resumen_app1}}</p>
           
@@ -13,7 +13,8 @@
               <img *ngFor="let image of images; let i = index" 
                    [src]="image" 
                    [class.active]="i === currentIndex" 
-                   class="carousel-image">
+                   class="carousel-image"
+                   (click)="openImage(image)">
             </div>
             <button (click)="prev()" class="carousel-control prev">❮</button>
             <button (click)="next()" class="carousel-control next">❯</button>
@@ -48,7 +49,8 @@
               <img *ngFor="let image of images2; let i = index" 
                    [src]="image" 
                    [class.active]="i === currentIndex2" 
-                   class="carousel-image">
+                   class="carousel-image"
+                   (click)="openImage(image)">
             </div>
             <button (click)="prev2()" class="carousel-control prev">❮</button>
             <button (click)="next2()" class="carousel-control next">❯</button>
@@ -72,6 +74,6 @@
       </div>
       
     </div>
+    <app-image-modal></app-image-modal>
   </div>
-
 </section>
