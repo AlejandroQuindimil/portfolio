@@ -12,9 +12,8 @@ export class AboutComponent {
   
   public hello: string = 'Hola! Mi nombre es ';
   public summaryAbout: string = 'Soy una persona proactiva y apasionada por el desarrollo de software y la tecnología. Mi objetivo es crear soluciones innovadoras y funcionales, enfrentando desafíos que me permitan seguir mejorando mis habilidades y conocimientos.';
-  public summaryAbout2: string = 'Soy una persona proactiva y apasionada por el desarrollo de software y la tecnología. Mi objetivo es crear soluciones innovadoras y funcionales, enfrentando desafíos que me permitan seguir mejorando mis habilidades y conocimientos.';
-  public summaryAbout3: string = 'Durante mis prácticas profesionales, participé activamente en el desarrollo de funcionalidades en fronted utilizando Java, JavaScript y Angular, así como en el mantenimiento de bases de datos con Node.js y MongoDB. Además, trabajé en pruebas y depuración de código para garantizar la calidad del software. Me comprometo profundamente con cada proyecto, desde la planificación hasta su implementación, siempre enfocado en la excelencia y la mejora continua.';
-  public summaryAbout4: string = '';
+  public summaryAbout2: string = 'Durante mis prácticas profesionales, participé activamente en el desarrollo de funcionalidades en fronted utilizando Java, JavaScript y Angular, así como en el mantenimiento de bases de datos con Node.js y MongoDB. Además, trabajé en pruebas y depuración de código para garantizar la calidad del software. Me comprometo profundamente con cada proyecto, desde la planificación hasta su implementación, siempre enfocado en la excelencia y la mejora continua.';
+  public summaryAbout3: string = '';
 
   // public hello: string = 'Hola! Mi nombre es ';
   
@@ -22,9 +21,8 @@ export class AboutComponent {
   phrases: string[] =[
     "Team Player.",
     "Software Developer.",
-    "Backend Engineer.",
-    "Software Engineer.",
-    "Code Enthusiast.",
+    "Data Engineer.",
+    "Specialised in Big Data and IA",
   ];
 
   currentPhraseIndex: number = 0;
