@@ -9,13 +9,13 @@ import { Component, AfterViewInit , OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
   public edu: string = 'Educación';
-  public infoeducation: string = 'Consulta mi formación académica: idiomas que hablo, educación universitaria, cursos técnicos y tecnologías con las que he trabajado.';
+  public infoeducation: string = 'Consulta mi formación académica: idiomas que hablo, educación, cursos técnicos y tecnologías con las que he trabajado.';
   public lang: string = 'Idiomas';
   public esp: string = 'Castellano';
   public gal: string = 'Galego';
   public eng: string = 'Ingles';
   public nat: string = 'Nativo';
-  public eng_lvl: string = 'Intermedio-Avanzado | B2 ';
+  public eng_lvl: string = 'Intermedio-Avanzado | B1 ';
   public studies: string = 'Estudios';
   public studies1: string = 'Curso de Especialización en Intelixencia Artificial e BigData.';
   public studies2: string = 'FP de Grado Superior en Desarrollo de Aplicaciones Multiplataforma.';
