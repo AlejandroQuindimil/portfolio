@@ -71,16 +71,16 @@ body {
   padding: 0.5rem 0.1rem;
   border-radius: 5px;
   color: #000;
-  margin-top: 0; /* Ajusta el margen superior */
-  transition: background-color 0.3s ease; /* Añade transición para el color */
+  margin-top: 0;
   margin-right: 14%;
-  
+ 
 }
 
 .button:hover {
-  background-color: #55e6c1;
-  color: #000; 
-}
+  background-color: transparent;
+  color: #000;
+  box-shadow: inset 0 0 8px rgba(85, 230, 193, 0.7); /* Sombreado interno más intenso al pasar el mouse */ 
+  }
 
 
 .icon {
@@ -96,14 +96,21 @@ body {
 
 @media (max-width: 2000px) {
   .icon {
-    margin-right: auto; /* Ajusta el espacio correctamente */
+    margin-right: 5px; /* Ajusta el margen derecho para reducir el espacio */
     display: flex;
     align-items: center;
-    margin-left: 18% ;
+    margin-left: 11%;
   }
   
   .etiquetas {
-    margin-right: 18%;
+    margin-right: 11%;
+     /* Ajusta el margen derecho para reducir el espacio */
+  }
+
+  .mobile-menu a {
+    
+    font-size: smaller;
+    margin: 0 1px; /* Ajusta el margen de los enlaces para reducir el espacio */
   }
 }
 .icon img {
@@ -196,4 +203,15 @@ body {
   .desktop-nav {
       display: none;
   }
+
+  .mobile-menu a::after {
+    position: fixed;
+  }
+
+}
+
+
+/* Eliminar el pseudo-elemento que crea la línea */
+.nav a.button::after {
+  content: none; /* Elimina el contenido del pseudo-elemento */
 }
