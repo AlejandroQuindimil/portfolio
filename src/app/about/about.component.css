@@ -84,10 +84,13 @@
     object-fit: cover; /* Mantiene la proporción de la imagen y la recorta si es necesario */
     display: block; /* Elimina el espacio debajo de la imagen */
 }
-h1 {
-    color: #55E6C1;
+h2 {
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
+}
+
+.number{
+    color: #55E6C1;
 }
 ul {
     list-style-type: none;
