@@ -1,19 +1,19 @@
 # Angular Portfolio
 
-Este es mi portfolio-web personal desarrollado con **Angular, Typescript, HTML5, CSS3, Bootstrap, DevIcons y Angular Material.** Actualmente está desplegado en la web: https://alejandroquindimil.github.io/portfolio/
+Este es mi portfolio web personal desarrollado con **Angular, TypeScript, HTML5, CSS3, Bootstrap, DevIcons y Angular Material.** Actualmente, está desplegado en la web: https://alejandroquindimil.github.io/portfolio/
 
 (imagen)
 
 > [!IMPORTANT]
-> Este proyecto esta generado con Angular version 18.0.0.
+> Este proyecto está generado con Angular versión 18.0.0.
 >
-> Asegurate de tener la version correcta.
+> Asegúrate de tener la version correcta.
 
 ## 📌 Sobre el proyecto  
 
-Este portfolio es una aplicacion web dinamica y responsive desarrollada con Angular, donde muestro mis habilidades y proyectos como desarrollador de software. El diseño y desarrollo de este portfolio tiene de objetivo proporcionar una experiencia fluida en diferentes dispositivos y mostrar proyectos diversos que he realidado en  mi trayectoria profesional.
+Este portfolio es una aplicación web dinamica y responsive desarrollada con Angular, donde muestro mis habilidades y proyectos como desarrollador de software. El diseño y desarrollo de este portfolio tiene como objetivo proporcionar una experiencia fluida en diferentes dispositivos y mostrar proyectos diversos que he realizado en  mi trayectoria profesional.
 
-El portfolio esta extructurado en secciones : sobre mi, educacion, experiencia, proyectos y contacto.
+El portfolio está estructurado en secciones : sobre mí, educacion, experiencia, proyectos y contacto.
 
 
 ## Tecnologias usadas
@@ -22,20 +22,20 @@ El portfolio esta extructurado en secciones : sobre mi, educacion, experiencia, 
 
 ## Development server
 
-Tambien puedes ejecutar este proyecto en local.
+También puedes ejecutar este proyecto en local.
 
 Clona este repositorio.
 
-Ejecuta este proyecto en dev server con el siguiente comando:
+Ejecuta el proyecto en el servidor de desarrollo con el siguiente comando:
 > ```sh
->  ng server
+>  ng serve --open
 > ```
 
-Navega a : http://localhost:4200/
+Navega a: http://localhost:4200/
 
-La aplicacion se recargara automaticamente cuando guardas un cambio en los archivos.
+La aplicación se recargará automáticamente cuando guardes un cambio en los archivos.
 
-Para generar un nuevo componente ejecuta el siguiente comando:
+Para generar un nuevo componente, ejecuta el siguiente comando:
 > ```sh
 >  ng generate component component-name
 > ```
