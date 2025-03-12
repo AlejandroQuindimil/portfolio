@@ -4,7 +4,7 @@
     <h2 class="home-author">Alejandro Quindimil, <span id="dynamic-text">{{ dynamicText }}</span></h2>
     <p>{{ summaryAbout }} Mi stack principal incluye <a href="#">Angular</a>, <a href="#">Java</a>, <a href="#">JavaScript</a>, <a href="#">typescript</a>, <a href="#">Node.js</a> y a veces <a href="#">Python</a> aplicando buenas practicas y estandares de desarrollo para garantizar soluciones de alta calidad.</p>
     <div class="buttons">
-        <button class="button" onclick="window.location.href='alejandro.quindimil.cancio@gmail.com'">Enviar correo</button>
+        <button class="button" (click)="location.href='mailto:alejandro.quindimil.cancio@gmail.com'">Enviar correo</button>
         <button class="button" (click)="copiarAlPortapapeles('alejandro.quindimil.cancio@gmail.com')">Copiar correo</button>
     </div>
 </div>

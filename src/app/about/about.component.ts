@@ -32,6 +32,8 @@ export class AboutComponent {
   deletingSpeed: number = 100;
   delayBetweenPhrases: number = 2000;
 
+  location = window.location;
+
   constructor(private titleService: Title) {
     this.titleService.setTitle('BC | Home')
   }
@@ -70,6 +72,10 @@ export class AboutComponent {
     }, (err) => {
       console.error('Error al copiar: ', err);
     });
+  }
+
+  enviarCorreo() {
+    window.location.href = 'mailto:alejandro.quindimil.cancio@gmail.com';
   }
 
 }
