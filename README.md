@@ -1,10 +1,13 @@
-# Alejandro Quindimil-Portfolio
+# Angular Portfolio
 
 Este es mi portfolio-web personal desarrollado con **Angular, Typescript, HTML5, CSS3, Bootstrap, DevIcons y Angular Material.** Actualmente está desplegado en la web: https://alejandroquindimil.github.io/portfolio/
 
 (imagen)
 
-Este proyecto esta generado con Angular version 18.0.00
+> [!IMPORTANT]
+> Este proyecto esta generado con Angular version 18.0.0.
+>
+> Asegurate de tener la version correcta.
 
 ## 📌 Sobre el proyecto  
 
