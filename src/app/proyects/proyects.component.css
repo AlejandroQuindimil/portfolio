@@ -5,7 +5,7 @@
   border-radius: 8px;
 }
 .projects-section {
-  width: 60%; /* Ocupa el 70% de la pantalla */
+  width: 50%; /* Ocupa el 70% de la pantalla */
   margin: 0 auto; /* Centra la sección */
   padding: 20px; /* Espaciado interno */
 }

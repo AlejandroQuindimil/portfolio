@@ -1,5 +1,5 @@
 .experience-section {
-    width: 60%;
+    width: 40%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -34,26 +34,37 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 150px;
+    margin: 20px 0;
 }
 
 .tech-icon {
     display: flex;
-    flex-direction: column; /* Asegura que el ícono esté arriba y el texto abajo */
-    align-items: center; /* Centra los elementos */
-    margin-top: 250px;
-    margin-bottom: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 10px;
 }
 
-/* Aumentar tamaño de iconos */
-.tech-item i {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 80px;
-    align-items: center
+.tech-icon i, 
+.tech-icon img {
+    font-size: 40px;
+    margin-bottom: 10px;
+    max-width: 40px;
+    height: auto;
 }
 
+@media (min-width: 768px) {
+    .tech-icon i,
+    .tech-icon img {
+        font-size: 60px;
+        max-width: 60px;
+    }
+    
+    .tech-icons {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
 
 .accordion-button {
     position: relative;
@@ -69,22 +80,28 @@
 }
 
 .arrow {
-    margin-left: auto; /* Asegura que la flecha esté al borde derecho */
-    color: white; /* Color de la flecha */
-    font-weight: bold; /* Hace el símbolo más grueso */
+    margin-left: auto;
+    color: white;
+    font-weight: bold;
     font-size: 1.2em; 
     
 }
 
 .expanded {
-    transform: rotate(180deg); /* Rota la flecha hacia arriba */
+    transform: rotate(180deg);
 }
 
 @media (max-width: 768px) {
-    .experience-section {
+    .education-section {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-section{  /* Agregar la sección de educación */
         width: 90%;
     }
-
     .experience-wrapper {
         flex-direction: column;
     }
@@ -103,45 +120,27 @@
     .tech-icons {
         width: 100%;
         display: flex;
-        flex-wrap: wrap; /* Permite que los íconos se envuelvan en varias líneas */
-        justify-content: center; /* Centra los íconos horizontalmente */
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
         margin-top: 30px;
     }
     
     .tech-icon {
-        margin: 15px; /* Espacio alrededor de cada ícono */
+        margin: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100px; /* Ajusta el ancho para que quepan dos íconos por fila */
+        width: 100px;
     }
     
     .tech-icon i {
-        margin-bottom: 10px ; 
-        font-size: 45px !important; 
+        margin-bottom: 10px ;
+        margin-right: 25px; 
+        font-size: 80px !important; 
+        align-items: center !important;
     } 
    
-    .devicon-java-plain-wordmark,
-    .devicon-javascript-plain,
-    .devicon-python-plain,
-    .devicon-c-plain-wordmark,
-    .devicon-typescript-plain,
-    .devicon-html5-plain,
-    .devicon-css3-plain,
-    .devicon-mysql-plain-wordmark,
-    .devicon-mariadb-original-wordmark,
-    .devicon-sqlite-plain-wordmark,
-    .devicon-mongodb-plain-wordmark,
-    .devicon-firebase-plain,
-    .devicon-angularjs-plain,
-    .devicon-spring-original,
-    .devicon-hadoop-plain-wordmark,
-    .devicon-apachespark-plain-wordmark,
-    .devicon-apachekafka-original {
-         /* Aumenta el tamaño del ícono */
-         margin-bottom: 50px;
-    }
     
     .tech-item p {
         margin-top: 5px;
@@ -195,7 +194,7 @@
 }
 /* src/app/education/education.component.css */
 .education-section {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     padding: 20px;
     background-color: #f8f9fa;

@@ -1,12 +1,12 @@
 .other-projects-section {
-    width:90%; /* Ocupa el 70% de la pantalla */
+    width:70%; /* Ocupa el 70% de la pantalla */
     margin: 0 auto; /* Centra la sección */
     padding: 20px; /* Espaciado interno */
     margin-bottom: 50px; /* Espacio inferior para evitar superposición */
 }
   
   .other-projects-container {
-    width: 60%; /* Limitar el ancho del contenedor al 70% */
+    width: 40%; /* Limitar el ancho del contenedor al 70% */
     margin: 0 auto; /* Centrar el contenedor horizontalmente */
     align-items: center;
     display: flex;
@@ -34,7 +34,7 @@
   height: auto;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  max-height: 480px; /* Altura inicial para mostrar solo la descripción */
+  max-height: 360px; /* Altura inicial para mostrar solo la descripción */
   cursor: pointer;
 }
 
@@ -253,4 +253,15 @@ p {
 }
 .hidden {
   display: none; /* Oculta el contenido */
+}
+
+
+.tech-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tech-row .badge {
+  margin-right: 10px;
 }

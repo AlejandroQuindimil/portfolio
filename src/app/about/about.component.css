@@ -1,5 +1,5 @@
 .aboutme {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -41,16 +41,26 @@
 }
 @media (max-width: 600px) {
     .aboutme {
-        width: 60%;
+        width: 90%;
     }
+    .aboutme2 {
+        width: 90% !important;
+        text-align: left;
+        flex-direction: column;  /* Hace que los elementos se apilen verticalmente */
+    }
+    
+    .text {
+        width: 100% !important;
+    }
+    
+    .image {
+        width: 100%;
+        order: 2;  /* Coloca la imagen después del texto */
+        margin: 20px auto;
+    }
+   
     .aboutme h2 {
-        font-size: 20px;
-    }
-    .aboutme h3 {
-        font-size: 16px;
-    }
-    .aboutme p {
-        font-size: 14px;
+        text-align: center; /* Asegura que todos los elementos de texto estén centrados */
     }
 }
 /* Eliminar flechas en la sección "Sobre mí" */
@@ -59,7 +69,7 @@
   display: none; /* Oculta las flechas */
 }
 .aboutme2 {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -72,17 +82,20 @@
     width: 100%;
 }
 .image {
-    width: 375px; /* Ajusta el tamaño según sea necesario */
-    height: 375px; /* Asegúrate de que el alto sea igual al ancho */
-    border-radius: 100%; /* Hace que la imagen sea circular */
-    overflow: hidden; /* Asegura que el contenido no se desborde */
-    border: 5px solid black; /* Borde negro */
+    aspect-ratio: 1 / 1;
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 5px solid black;
 }
 .image img {
-    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-    height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-    object-fit: cover; /* Mantiene la proporción de la imagen y la recorta si es necesario */
-    display: block; /* Elimina el espacio debajo de la imagen */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
 }
 h2 {
     border-bottom: 1px solid #000;
@@ -103,9 +116,15 @@ a {
     color: #55E6C1;
     text-decoration: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 
+
+68px) {
     .text, .image {
         width: 48%;
+    }
+    .image {
+        width: 100%;
+        max-width: 500px;
     }
 }
 
