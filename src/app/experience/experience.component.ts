@@ -53,27 +53,37 @@ export class ExperienceComponent implements OnInit {
   public data_treat: string = 'TRATAMIENTO DE DATOS';
   public kafka: string = 'Manejo de mensajes enviados a través del patrón de diseño Cliente-Consumidor';
   public flume: string = 'Sistema de log sencillo para Kafka y que se pueden almacenar los datos en Hadoop';
+  
   public exp: string = 'Experiencia';
   public exp1: string = 'Programador Junior';
   public exp2: string = 'Administrativo';
+  public exp3: string = 'Auxiliar de Servicios (Fines de Semana)';
   public exp1_date: string = 'sept. 2021 - dic. 2021 · 4 meses';
   public exp2_date: string = 'abr. 2022 - oct. 2022 · 7 meses';
+
+  public exp3_date: string = 'Agosto. 204 - mayo. 2025 · 9 meses';
   public work1: string = 'ctBarbanza - Centro Tecnoloxíco do Barbanza Sociedade Cooperativa Galega';
   public work2: string = 'Juan Flórez 129 S.L. ';
-  public exp1_resum1: string = 'Desarrollé y mantuve funcionalidades en frontend utilizando Java, JavaScript y Angular, mejorando el rendimiento y la escalabilidad del sistema.';
-  public exp1_resum2: string = 'Gestioné y optimicé bases de datos en MongoDB utilizando Node.js, asegurando la integridad y eficiencia de los datos.';
-  public exp1_resum3: string = 'Diseñé y ejecuté pruebas exploratorias y unitarias, mejorando la calidad del software mediante una depuración efectiva.';
-  public exp1_resum4: string = 'Uso de metodología Scrum con objetivos semanales, fomentando la colaboración y la gestión ágil de proyectos.';
+  public work3: string = 'ESC SERVICIOS GENERALES S.L.';
+  public exp1_resum1: string = 'Formé parte de 2 proyectos como desarrollador full stack, donde utilicé tecnologías como HTML, CSS, JavaScript y Angular para la creación de la interfaz de usuario en el frontend.';
+  public exp1_resum2: string = 'En el backend me encargué del mantenimiento de bases de datos con mongoDB, optimizando las consultas y mejorando el rendimiento del backend';
+  public exp1_resum3: string = 'También realicé pruebas exploratorias y unitarias, identificando y resolviendo más de 20 errores para garantizar la calidad y el correcto funcionamiento de software .';
+  public exp1_resum4: string = 'Colaboré con un equipo de desarrolladores en la implementación de nuevas funcionalidades, mejorando mis habilidades en desarrollo web y control de versiones (Git).';
   public exp1_resum5: string = '';
   public exp1_resum6: string = '';
 
-  public exp2_resum1: string = 'Introducción y gestión eficiente de apuntes contables utilizando A3Asesor, garantizando precisión en los registros financieros.';
-  public exp2_resum2: string = 'Elaboración de liquidaciones de impuestos, asegurando el cumplimiento de las normativas fiscales.';
-  public exp2_resum3: string = 'Organización y archivo de documentación para una gestión administrativa eficiente.';
-  public exp2_resum4: string = 'Tramitación y presentación de documentos ante administraciones.';
-  public exp2_resum5: string = '';
+  public exp2_resum1: string = 'Introducción y gestión de apuntes contables de forma eficiente y precisa para más de 30 empresas utilizando el programa de A3Asesor.';
+  public exp2_resum2: string = 'Realización liquidaciones y presentación de impuestos, asegurando el cumplimiento riguroso de las normativas fiscales vigentes (ejemplo: IRPF, IVA, Sociedades, Etc.) .';
+  public exp2_resum3: string = ' Gestión y archivo de documentación contable y administrativa.';
+  public exp2_resum4: string = 'Realización de trámites y presentación de documentos ante distintas administraciones públicas, tanto por vía telemática como presencial (ejemplo: legalización de libros mercantiles y societarios ante el Registro Mercantil).';
+  public exp2_resum5: string = 'Atención al cliente (presencial, telefónica, telemática...): recepción, revisión, requerimiento, seguimiento... de documentación.';
   public exp2_resum6: string = '';
   public selectedExperience: string = 'experience1';
+
+
+  public exp3_resum1: string = 'Control y Verificación de Accesos: Responsable de la identificación y control de entradas para miles de asistentes, asegurando la correcta validación de tickets y el cumplimiento de las normas de seguridad.';
+  public exp3_resum2: string = 'Gestión de Situaciones de Estrés: Habilidad demostrada para tratar y mediar con clientes en ambientes de alta afluencia y potencialmente conflictivos, priorizando siempre la seguridad del evento y la satisfacción del cliente.';
+  
 
   ngOnInit() {
     // Lógica del acordeón

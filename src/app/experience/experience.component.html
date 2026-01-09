@@ -183,6 +183,12 @@
                     (click)="selectExperience('experience2')">
                     {{exp2}}
                 </button>
+                <button 
+                    class="experience-button" data-target="experience3"
+                    [class.selected]="selectedExperience === 'experience3'" 
+                    (click)="selectExperience('experience3')">
+                    {{exp3}}
+                </button>
             </div>
             <div class="experience-content">
                 <div id="experience1" class="experience-item">
@@ -205,9 +211,20 @@
                         <li>{{exp2_resum2}}</li>
                         <li>{{exp2_resum3}}</li>
                         <li>{{exp2_resum4}}</li>
+                        <li>{{exp2_resum5}}</li>
+                    </ul>
+                </div>
+                <div id="experience3" class="experience-item"style="display: none;">
+                    <h3>{{exp3}}</h3>
+                    <p class="text-muted">{{exp3_date}}</p>
+                    <p class="work">{{work3}}</p>
+                    <ul>
+                        <li>{{exp3_resum1}}</li>
+                        <li>{{exp3_resum2}}</li>
                     </ul>
                 </div>
             </div>
+            
         </div>
     </div>
 </section>
