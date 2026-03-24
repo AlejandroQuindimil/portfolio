@@ -181,7 +181,7 @@ body {
   position: relative;
 }
 .mobile-menu a:hover {
-  color: #55e6c1;
+  color: #7ecab2;
 }
 .mobile-menu a::before {
   content: attr(data-index) " ";
