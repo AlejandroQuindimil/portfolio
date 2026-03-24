@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 export class AboutComponent {
   
   public hello: string = 'Hola! Mi nombre es ';
-  public summaryAbout: string = 'Soy una persona proactiva y apasionada por el desarrollo de software y la tecnología. Mi objetivo es crear soluciones innovadoras y funcionales, enfrentando desafíos que me permitan seguir mejorando mis habilidades y conocimientos.';
+  public summaryAbout: string = 'Desarrollador Junior especializado en entornos Full Stack (Angular, Node.js, Spring Boot), con formación en Big Data , IA y Ciberseguridad. Apasionado por el desarrollo web eficiente y orientado a buenas prácticas. Busco un puesto donde pueda aplicar mis habilidades y contribuir al desarrollo de soluciones eficientes, a la vez que sigo aprendiendo y creciendo como profesional. En este portfolio puedes observer proyectos que he ido realizando a lo largo de estos años.';
   public summaryAbout2: string = 'Durante mis prácticas profesionales, participé activamente en el desarrollo de funcionalidades en fronted utilizando Java, JavaScript y Angular, así como en el mantenimiento de bases de datos con Node.js y MongoDB. Además, trabajé en pruebas y depuración de código para garantizar la calidad del software. Me comprometo profundamente con cada proyecto, desde la planificación hasta su implementación, siempre enfocado en la excelencia y la mejora continua.';
   public summaryAbout3: string = '';
 

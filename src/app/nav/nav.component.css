@@ -79,7 +79,7 @@ body {
 .button:hover {
   background-color: transparent;
   color: #000;
-  box-shadow: inset 0 0 8px rgba(85, 230, 193, 0.7); /* Sombreado interno más intenso al pasar el mouse */ 
+  box-shadow: inset 0 0 8px #7ecab2; /* Sombreado interno más intenso al pasar el mouse */ 
   }
 
 
