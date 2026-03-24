@@ -38,7 +38,7 @@ body {
   transition: color 0.3s;
 }
 .nav a:hover {
-  color: #55e6c1;
+  color: #7ecab2;
 }
 
 .nav a::after {
@@ -48,7 +48,7 @@ body {
   bottom: -5px;
   width: 0;
   height: 1.5px;
-  background-color: #55e6c1;
+  background-color: #7ecab2;
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -60,14 +60,14 @@ body {
 
 .nav a::before {
   content: attr(data-index) " "; /* Añade el número antes del texto */
-  color: #55e6c1;
+  color: #7ecab2;
   font-weight: bold;
   margin-right: 5px;
 }
 
 .button {
   background-color: transparent;
-  border: 2px solid #55e6c1;
+  border: 2px solid #7ecab2;
   padding: 0.5rem 0.1rem;
   border-radius: 5px;
   color: #000;
@@ -131,7 +131,7 @@ body {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #55e6c1;
+  color: #7ecab2;
   cursor: pointer;
 }
 
@@ -162,7 +162,7 @@ body {
 .close-button {
   background: none;
   border: none;
-  color: #55e6c1;
+  color: #7ecab2;
   font-size: 2rem;
   cursor: pointer;
   position: absolute;
@@ -185,13 +185,13 @@ body {
 }
 .mobile-menu a::before {
   content: attr(data-index) " ";
-  color: #55e6c1;
+  color: #7ecab2;
   font-weight: bold;
   margin-right: 10px;
   font-size: 1.5rem;
 }
 .number {
-  color: #55e6c1; /* Cambia este color al del borde del botón */
+  color: #7ecab2; /* Cambia este color al del borde del botón */
   font-weight: bold;
 }
 /* Responsive - Solo afecta a móviles */

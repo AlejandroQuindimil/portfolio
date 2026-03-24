@@ -22,7 +22,7 @@
     margin: 10px 0;
 }
 .aboutme a {
-    color: #55E6C1;
+    color: #265C4F ;
     text-decoration: none;
 }
 .buttons {
@@ -31,7 +31,7 @@
     flex-wrap: wrap;
 }
 .button {
-    background-color: #55E6C1;
+    background-color: #265C4F ;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -103,7 +103,7 @@ h2 {
 }
 
 .number{
-    color: #55E6C1;
+    color: #265C4F ;
 }
 ul {
     list-style-type: none;
@@ -113,7 +113,7 @@ li {
     margin-bottom: 5px;
 }
 a {
-    color: #55E6C1;
+    color: #265C4F ;
     text-decoration: none;
 }
 @media (min-width: 
@@ -144,10 +144,10 @@ a {
 
 
 #dynamic-text {
-    border-right: 2px solid #55E6C1;
+    border-right: 2px solid #265C4F;
     padding-right: 5px;
     animation: blink-caret 0.7s step-end infinite;
-    color: #55E6C1;
+    color: #ffde59 ;
 }
 .carousel-control-prev,
 .carousel-control-next {

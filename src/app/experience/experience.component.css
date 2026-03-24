@@ -168,8 +168,8 @@
 
 .experience-button {
     background-color: #1a1a1a;
-    border: 2px solid #55E6C1;
-    color: #00ffcc;
+    border: 2px solid #7ecab2;
+    color: #7ecab2 ;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
@@ -181,7 +181,7 @@
     }
 
     &.selected {
-        background-color: #00ffcc;
+        background-color: #7ecab2;
         color: #1a1a1a;
     }
 }
@@ -207,7 +207,7 @@ h2 {
     margin-bottom: 20px;
 }
 .number{
-    color: #55E6C1;
+    color: #265C4F;
 }
 
 .accordion {
@@ -230,7 +230,7 @@ h2 {
 .accordion-content {
     display: none; /* Ocultar contenido por defecto */
     padding: 10px;
-    border: 1px solid #55E6C1; /* Borde del contenido */
+    border: 1px solid #7ecab2; /* Borde del contenido */
     border-radius: 5px;
     margin-bottom: 10px;
 }
