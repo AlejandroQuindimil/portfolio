@@ -65,24 +65,26 @@ export class ExperienceComponent implements OnInit {
   public work1: string = 'ctBarbanza - Centro Tecnoloxíco do Barbanza Sociedade Cooperativa Galega';
   public work2: string = 'Juan Flórez 129 S.L. ';
   public work3: string = 'ESC SERVICIOS GENERALES S.L.';
-  public exp1_resum1: string = 'Formé parte de 2 proyectos como desarrollador full stack, donde utilicé tecnologías como HTML, CSS, JavaScript y Angular para la creación de la interfaz de usuario en el frontend.';
-  public exp1_resum2: string = 'En el backend me encargué del mantenimiento de bases de datos con mongoDB, optimizando las consultas y mejorando el rendimiento del backend';
-  public exp1_resum3: string = 'También realicé pruebas exploratorias y unitarias, identificando y resolviendo más de 20 errores para garantizar la calidad y el correcto funcionamiento de software .';
-  public exp1_resum4: string = 'Colaboré con un equipo de desarrolladores en la implementación de nuevas funcionalidades, mejorando mis habilidades en desarrollo web y control de versiones (Git).';
-  public exp1_resum5: string = '';
-  public exp1_resum6: string = '';
+  public exp1_resum1: string = 'Funciones:';
+  public exp1_resum2: string = 'Desarrollo web utilizando Angular como framework.';
+  public exp1_resum3: string = 'Programación en tecnologías JavaScript, Html, Css.';
+  public exp1_resum4: string = 'Realización de tareas de testing identificando y resolviendo más de 20 errores.';
+  public exp1_resum5: string = 'Optimización de consultas en la base de datos con MongoDB.';
+  public exp1_resum6: string = 'Tecnologias:';
+  public exp1_resum7: string = 'Angular, JavaScript, Html, Css , MongoDB y Nodejs.';
 
-  public exp2_resum1: string = 'Introducción y gestión de apuntes contables de forma eficiente y precisa para más de 30 empresas utilizando el programa de A3Asesor.';
+  public exp2_resum1: string = 'Introducir y gestionar apuntes contables utilizando A3Asesor.';
   public exp2_resum2: string = 'Realización liquidaciones y presentación de impuestos, asegurando el cumplimiento riguroso de las normativas fiscales vigentes (ejemplo: IRPF, IVA, Sociedades, Etc.) .';
-  public exp2_resum3: string = ' Gestión y archivo de documentación contable y administrativa.';
-  public exp2_resum4: string = 'Realización de trámites y presentación de documentos ante distintas administraciones públicas, tanto por vía telemática como presencial (ejemplo: legalización de libros mercantiles y societarios ante el Registro Mercantil).';
-  public exp2_resum5: string = 'Atención al cliente (presencial, telefónica, telemática...): recepción, revisión, requerimiento, seguimiento... de documentación.';
+  public exp2_resum3: string = 'Gestionar y archivar documentación contable y administrativa.';
+  public exp2_resum4: string = 'Tramitar y presentar documentación ante administraciones públicas, tanto por vía telemática como presencial .';
+  public exp2_resum5: string = 'Atender al cliente de forma presencial, telefónica y telemática, realizando recepción, revisión, requerimiento y seguimiento de documentación.';
   public exp2_resum6: string = '';
   public selectedExperience: string = 'experience1';
 
 
-  public exp3_resum1: string = 'Control y Verificación de Accesos: Responsable de la identificación y control de entradas para miles de asistentes, asegurando la correcta validación de tickets y el cumplimiento de las normas de seguridad.';
-  public exp3_resum2: string = 'Gestión de Situaciones de Estrés: Habilidad demostrada para tratar y mediar con clientes en ambientes de alta afluencia y potencialmente conflictivos, priorizando siempre la seguridad del evento y la satisfacción del cliente.';
+  public exp3_resum1: string = 'Controlar y verificar accesos, gestionando la identificación y validación de entradas para miles de asistentes.';
+  public exp3_resum2: string = 'Gestionar situaciones de estrés en entornos de alta afluencia.';
+  public exp3_resum3: string = 'Mediar y resolver conflictos con clientes, priorizando la seguridad y la satisfacción del asistente.';
   
 
   ngOnInit() {
