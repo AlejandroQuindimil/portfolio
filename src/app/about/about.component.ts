@@ -11,10 +11,25 @@ import { Title } from '@angular/platform-browser';
 export class AboutComponent {
   
   public hello: string = 'Hola! Mi nombre es ';
-  public summaryAbout: string = 'Desarrollador Junior especializado en entornos Full Stack (Angular, Node.js, Spring Boot), con formación en Big Data , IA y Ciberseguridad. Apasionado por el desarrollo web eficiente y orientado a buenas prácticas. Busco un puesto donde pueda aplicar mis habilidades y contribuir al desarrollo de soluciones eficientes, a la vez que sigo aprendiendo y creciendo como profesional. En este portfolio puedes observer proyectos que he ido realizando a lo largo de estos años.';
-  public summaryAbout2: string = 'Durante mis prácticas profesionales, participé activamente en el desarrollo de funcionalidades en fronted utilizando Java, JavaScript y Angular, así como en el mantenimiento de bases de datos con Node.js y MongoDB. Además, trabajé en pruebas y depuración de código para garantizar la calidad del software. Me comprometo profundamente con cada proyecto, desde la planificación hasta su implementación, siempre enfocado en la excelencia y la mejora continua.';
-  public summaryAbout3: string = '';
+  public intro: string = 'Soy un Desarrollador enfocado en datos con mentalidad de atleta.';
+  public summaryAbout: string = `
+  Entiendo el código como una <b>carrera de fondo</b> donde la <b>constancia y la disciplina</b> siempre superan al talento innato. 
+  Mi enfoque es simple: cumplir objetivos diarios, evaluar resultados y asegurar la máxima calidad en cada línea que escribo.
+  `;
 
+  public summaryAbout2: string = `
+    Mi viaje comenzó queriendo entender los mundos virtuales de mi infancia; hoy, esa misma curiosidad me impulsa a optimizar procesos complejos mediante mis conocimientos de programación e <b>IA y Big Data</b>. 
+    Gracias a mi formación previa en contabilidad y gestión, aporto una <b>visión 360º</b> que me permite alinear el desarrollo técnico con los objetivos operativos y económicos de la empresa.
+  `; 
+  public summaryAbout3: string = `
+    Mi trayectoria me ha permitido desarrollar una versatilidad real: desde la creación de interfaces <b>Frontend</b> intuitivas y la gestión de ecosistemas de <b>Big Data</b>, hasta la creación de arquitectura <b>Backend</b>. 
+    En este portfolio puedes explorar proyectos tanto de <b>Frontend con JavaScript y Angular</b>, como de <b>Backend con Java y Spring Boot</b> o <b>Inteligencia Artificial con Python</b>, que son la <b>implementación práctica de arquitecturas escalables</b>, desarrolladas bajo los estándares de rigor técnico.
+  `;
+
+  public summaryAbout4: string = `
+    Creo firmemente que un cuerpo entrenado y una mente curiosa rinden mejor ante retos complejos. Por eso, mi día a día se divide entre superar marcas en el gimnasio y resolver bugs en el servidor. 
+    <b>Si buscas a alguien con la disciplina necesaria para llevar tus proyectos al siguiente nivel, no dudes en ponerte en contacto.</b>
+  `;
   // public hello: string = 'Hola! Mi nombre es ';
   
   dynamicText: string = "";

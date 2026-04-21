@@ -2,8 +2,9 @@
     <p></p>
     <p>{{ hello }}</p>
     <h2 class="home-author">Alejandro Quindimil, <span id="dynamic-text">{{ dynamicText }}</span></h2>
-    <p>{{ summaryAbout }}</p>
-    <p> Mi stack principal incluye <a href="#">Angular</a>, <a href="#">Java</a>, <a href="#">JavaScript</a>, <a href="#">typescript</a>, <a href="#">Node.js</a> y a veces <a href="#">Python</a> aplicando buenas practicas y estandares de desarrollo para garantizar soluciones de alta calidad.</p>
+        <p [innerHTML]="intro"></p>
+        <p [innerHTML]="summaryAbout"></p>
+        <p [innerHTML]="summaryAbout2"></p>
     <div class="buttons">
         <button class="button" (click)="location.href='mailto:alejandro.quindimil.cancio@gmail.com'">Enviar correo</button>
         <button class="button" (click)="copiarAlPortapapeles('alejandro.quindimil.cancio@gmail.com')">Copiar correo</button>
@@ -14,14 +15,8 @@
 <div class="aboutme2">
     <div class="text">
         <h2><span class="number">01. </span> Sobre mí</h2>
-        <p> {{summaryAbout2}}</p>
-        <ul>
-            <li>Lenguajes de programación: <a href="#">Java</a>, <a href="#">JavaScript</a>, <a href="#">Python</a></li>
-            <li>Big Data: <a href="#">Hadoop</a>, <a href="#">PySpark</a>, <a href="#">HDFS</a>, <a href="#">Apache Kafka</a>, <a href="#">Flume</a></li>
-            <li>Bases de datos: <a href="#">SQL</a>, <a href="#">MongoDB</a></li>
-            <li>Frameworks: <a href="#">Spring</a>, <a href="#">Angular</a></li>
-            <li>Herramientas: <a href="#">Selenium</a></li>
-        </ul>
+        <p [innerHTML]="summaryAbout3"></p>
+        <p [innerHTML]="summaryAbout4"></p>
     </div>
     <div class="image">
         <img  src="imagenprueba.png">
