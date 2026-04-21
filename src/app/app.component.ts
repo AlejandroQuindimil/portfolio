@@ -9,6 +9,7 @@ import { ContactComponent } from "./contact/contact.component";
 import { ExperienceComponent } from "./experience/experience.component";
 import { CommonModule } from '@angular/common';
 import { OtherproyectsComponent } from './otherproyects/otherproyects.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @Component({
   selector: 'app-root',
@@ -16,14 +17,8 @@ import { OtherproyectsComponent } from './otherproyects/otherproyects.component'
   imports: [
     CommonModule,
     RouterOutlet,
-    AboutComponent,
-    HeaderComponent,
     NavComponent,
-    FooterComponent,
-    ProyectsComponent,
-    ContactComponent,
-    ExperienceComponent,
-    OtherproyectsComponent
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
