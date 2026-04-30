@@ -1,23 +1,153 @@
-<div id="contact" class="contact">
-    <h2>{{next}}</h2>
-    <h3>{{contactme}}</h3>
-    <div class="icon-row">
-        <a href="https://github.com/AlejandroQuindimil" class="icon-link">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:alejandro.quindimil.cancio@gmail.com" class="icon-link">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/alejandroquindimilcancio" class="icon-link">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.kaggle.com/alexquindi/code" class="icon-link">
-          <i class="fab fa-kaggle"></i>
-        </a>
+<div id="contact" class="contact-section">
+  <!-- Header -->
+  <div class="contact-header">
+    <h1 class="main-title">{{title}}</h1>
+    <p class="subtitle">{{subtitle}}</p>
+  </div>
+
+  <!-- Main Content - Two Columns -->
+  <div class="contact-container">
+    <!-- Left Column - Contact Info -->
+    <div class="contact-info-column">
+      <div class="info-card">
+        <h2 class="info-title">{{contactInfoTitle}}</h2>
+        <p class="info-description">{{contactDescription}}</p>
+
+        <!-- Contact List -->
+        <div class="contact-list">
+          <!-- Linkedin -->
+          <div class="contact-item">
+            <div class="icon-circle">
+              <a href="https://www.linkedin.com/in/alejandroquindimilcancio" >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            </div>
+            <span class="contact-text">{{linkedin}}</span>
+          </div>
+
+          <!-- Location -->
+          <div class="contact-item">
+            <div class="icon-circle">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <span class="contact-text">{{location}}</span>
+          </div>
+        </div>
+
+        <!-- Social Section -->
+        <div class="social-section">
+          <p class="social-title">{{followMe}}</p>
+          <div class="social-icons">
+            <!-- Github -->
+            <a href="https://github.com/AlejandroQuindimil" class="social-icon-circle" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/alejandroquindimilcancio" class="social-icon-circle" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <!-- Kaggle -->
+            <a href="https://www.kaggle.com/alexquindi/code" class="social-icon-circle" target="_blank">
+              <i class="fab fa-kaggle"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <p>{{contact_text}}</p>
-    <div class="buttons">
-        <a href="mailto:alejandro.quindimil.cancio@gmail.com" class="button">{{contactme2}}</a>
-        <a href="https://www.linkedin.com/in/alejandroquindimilcancio/" class="buttonLinkedin">{{dmlinkedin}}</a>
+
+<!-- Right Column - Form -->
+    <div class="contact-form-column">
+      <div class="form-card">
+        <h2 class="form-title">{{formTitle}}</h2>
+        
+        <!-- Success message -->
+        <div *ngIf="formSuccess" class="success-message">
+          <i class="fas fa-check-circle"></i>
+          <p>Mensaje enviado correctamente. ¡Gracias por contactar!</p>
+        </div>
+
+        <!-- Error message -->
+        <div *ngIf="formError" class="error-message">
+          <i class="fas fa-exclamation-circle"></i>
+          <p>{{formError}}</p>
+        </div>
+
+        <form (ngSubmit)="onSubmit()" *ngIf="!formSuccess">
+          <!-- Name and Email Row -->
+          <div class="form-row">
+            <div class="form-group">
+              <input 
+                type="text" 
+                [(ngModel)]="formData.name" 
+                name="name"
+                [placeholder]="namePlaceholder"
+                class="form-input"
+                required
+                maxlength="100"
+                autocomplete="name"
+              >
+            </div>
+            <div class="form-group">
+              <input 
+                type="email" 
+                [(ngModel)]="formData.email" 
+                name="email"
+                [placeholder]="emailPlaceholder"
+                class="form-input"
+                required
+                maxlength="100"
+                autocomplete="email"
+              >
+            </div>
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group">
+            <input 
+              type="text" 
+              [(ngModel)]="formData.subject" 
+              name="subject"
+              [placeholder]="subjectPlaceholder"
+              class="form-input"
+              maxlength="200"
+            >
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <textarea 
+              [(ngModel)]="formData.message" 
+              name="message"
+              [placeholder]="messagePlaceholder"
+              class="form-textarea"
+              rows="5"
+              required
+              maxlength="2000"
+            ></textarea>
+          </div>
+
+          <!-- Honeypot field (hidden, for anti-spam) -->
+          <input 
+            type="text" 
+            name="website" 
+            class="honeypot" 
+            tabindex="-1" 
+            autocomplete="off"
+          >
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-button" [disabled]="isLoading">
+            <ng-container *ngIf="!isLoading">
+              <i class="fas fa-paper-plane"></i>
+              {{sendButton}}
+            </ng-container>
+            <ng-container *ngIf="isLoading">
+              <i class="fas fa-spinner fa-spin"></i>
+              Enviando...
+            </ng-container>
+          </button>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
