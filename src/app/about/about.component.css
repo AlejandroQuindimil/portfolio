@@ -3,7 +3,7 @@
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #265C4F;
     border-radius: 8px;
     margin-bottom: 20px;
     margin-top: 100px;
@@ -11,6 +11,7 @@
 .aboutme h2 {
     margin: 0;
     font-size: 24px;
+    color: #ffffff;
 }
 .aboutme h3 {
     margin: 5px 0;
@@ -20,6 +21,7 @@
 .aboutme p {
     font-size: 16px;
     margin: 10px 0;
+    color: #ffffff;
 }
 .aboutme a {
     color: #265C4F ;
@@ -31,13 +33,21 @@
     flex-wrap: wrap;
 }
 .button {
-    background-color: #265C4F ;
-    color: white;
+    width: 20%;
+    padding: 15px 25px;
+    background-color: white;
+    color: #265C4F;
     border: none;
-    padding: 5px 10px;
-    margin: 5px 10px 5px 0;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 @media (max-width: 600px) {
     .aboutme {
@@ -48,7 +58,9 @@
         text-align: left;
         flex-direction: column;  /* Hace que los elementos se apilen verticalmente */
     }
-    
+    .button {
+    width: 50%;
+    }
     .text {
         width: 100% !important;
     }
@@ -98,7 +110,7 @@
     position: relative;
 }
 h2 {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ffffff;
     padding-bottom: 5px;
 }
 
@@ -147,7 +159,7 @@ a {
     border-right: 2px solid #265C4F;
     padding-right: 5px;
     animation: blink-caret 0.7s step-end infinite;
-    color: #265C4F ;
+    color: rgba(144, 238, 144, 0.45) ;
 }
 .carousel-control-prev,
 .carousel-control-next {
