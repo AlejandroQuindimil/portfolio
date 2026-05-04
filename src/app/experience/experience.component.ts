@@ -15,7 +15,7 @@ export class ExperienceComponent implements OnInit {
   public gal: string = 'Galego';
   public eng: string = 'Ingles';
   public nat: string = 'Nativo';
-  public eng_lvl: string = 'Intermedio-Avanzado | B1 ';
+  public eng_lvl: string = 'Nivel Avanzado B2 | C1 ';
   public studies: string = 'Estudios';
   public studies1: string = 'Curso de Especialización en Intelixencia Artificial e BigData.';
   public studies2: string = 'FP de Grado Superior en Desarrollo de Aplicaciones Multiplataforma.';

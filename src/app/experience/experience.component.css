@@ -167,9 +167,10 @@
 }
 
 .experience-button {
-    background-color: #1a1a1a;
-    border: 2px solid #7ecab2;
-    color: #7ecab2 ;
+    background-color: #265C4F;
+    border: 2px solid #000000;
+    
+    color: #ffffff ;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
