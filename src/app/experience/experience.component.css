@@ -45,6 +45,7 @@
     justify-content: center;
     margin: 10px 0;
     padding: 10px;
+    color: #265C4F; /*Color del texto Tecnologias que uso*/
 }
 
 .tech-icon i, 
@@ -53,13 +54,14 @@
     margin-bottom: 10px;
     max-width: 40px;
     height: auto;
+    color: #265C4F;
 }
 
 @media (min-width: 768px) {
     .tech-icon i,
     .tech-icon img {
-        font-size: 60px;
-        max-width: 60px;
+        font-size: 160px;
+        max-width: 160px;
     }
     
     .tech-icons {
@@ -182,7 +184,7 @@
     }
 
     &.selected {
-        background-color: #7ecab2;
+        background-color:  #4b997e; /*Experiecia sselecionada*/
         color: #1a1a1a;
     }
 }
@@ -192,7 +194,7 @@
 }
 
 .work {
-    color: #55E6C1;
+    color: #265C4F;
 }
 /* src/app/education/education.component.css */
 .education-section {
