@@ -18,7 +18,29 @@ export class ExperienceComponent implements OnInit {
   public eng_lvl: string = 'Nivel Avanzado B2 | C1 ';
   public studies: string = 'Estudios';
   public studies1: string = 'Curso de Especialización en Intelixencia Artificial e BigData.';
+  public studies1resumen1: string = `
+    <li>
+        <a><strong style="color: #265C4F;">Inteligencia Artificial y Análisis:</strong> Desarrollo de modelos predictivos y visión artificial con <strong style="color: #265C4F;">TensorFlow</strong>, <strong style="color: #265C4F;">Keras</strong> y <strong style="color: #265C4F;">OpenCV</strong>. Dominio del stack científico de <strong style="color: #265C4F;">Python</strong> (<strong style="color: #265C4F;">Pandas</strong>, <strong style="color: #265C4F;">NumPy</strong>, <strong style="color: #265C4F;">Matplotlib</strong>) y extracción de datos con <strong style="color: #265C4F;">Selenium</strong>.</a>
+    </li>
+    <li>
+        <a><strong style="color: #265C4F;">Ecosistema Big Data:</strong> Gestión de almacenamiento distribuido en <strong style="color: #265C4F;">Hadoop HDFS</strong> y procesamiento de datos con <strong style="color: #265C4F;">Apache Spark</strong> (<strong style="color: #265C4F;">Python/RDDs</strong>). Implementación de arquitecturas de mensajería en tiempo real con <strong style="color: #265C4F;">Kafka</strong> y <strong style="color: #265C4F;">Flume</strong>.</a>
+    </li>
+    <li>
+        <a><strong style="color: #265C4F;">Bases de Datos:</strong> Diseño y consulta de bases de datos relacionales (<strong style="color: #265C4F;">MySQL</strong>, <strong style="color: #265C4F;">SQLite</strong>) y <strong style="color: #265C4F;">NoSQL</strong> (<strong style="color: #265C4F;">MongoDB/Atlas</strong>). Manejo de herramientas de integración y consulta como <strong style="color: #265C4F;">Hive</strong>, <strong style="color: #265C4F;">Sqoop</strong> y <strong style="color: #265C4F;">SPARQL</strong>.</a>
+    </li>
+`;
   public studies2: string = 'FP de Grado Superior en Desarrollo de Aplicaciones Multiplataforma.';
+  studies2resumen2: string = `
+    <li>
+        <a>Programación en lenguajes orientados a objetos <strong style="color: #265C4F;">C</strong>, <strong style="color: #265C4F;">Java</strong>, <strong style="color: #265C4F;">Android</strong> y <strong style="color: #265C4F;">JavaScript</strong>.</a>
+    </li>
+    <li>
+        <a>Creación, modificación y ejecución de consultas en <strong style="color: #265C4F;">MySQL</strong>.</a>
+    </li>
+    <li>
+        <a>Administración de máquinas virtuales con <strong style="color: #265C4F;">VirtualBox</strong> en entornos <strong style="color: #265C4F;">Windows</strong> y <strong style="color: #265C4F;">Linux</strong>.Y programacion en C en maquinas virtuales de <strong style="color: #265C4F;">Linux</strong></a>
+    </li>
+`;
   public studies3: string = 'FP de Grado Medio en Gestión Administrativa.';
   public coleg1: string = ' -  IES Fernando Wirtz';
   public coleg2: string = ' - CPR Castelao.';

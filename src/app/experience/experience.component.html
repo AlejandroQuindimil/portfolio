@@ -33,15 +33,44 @@
             <button class="accordion-button">{{studies}}<span class="arrow">↓</span></button>
             <div class="accordion-content">
                 
-                <p>2023 - 2024  <strong>{{studies1}}</strong>{{coleg1}}</p>
-                <ul>
-                    <li><a href="" target="_blank">Malaria Detector</a></li>
-                </ul>
-                <p>2019 - 2021 - <strong>{{studies2}}</strong>{{coleg2}}</p>
-                <ul>
-                    <li><a href="" target="_blank">My Fit Meal</a></li>
-                </ul>
-                    <p>2017 - 2019 - <strong>{{studies3}}</strong>{{coleg3}}</p>
+            <div class="language-card">
+                <div class="language-icon" >🤖</div>
+                <div class="language-info">
+                    <p style="font-size: 0.8rem; color: #666; margin: 0;">2023 - 2024</p>
+                    <h4 style="margin: 5px 0;">{{studies1}}</h4>
+                    <p style="font-style: italic; font-size: 0.9rem; text-align: left; margin-bottom: 10px;">{{coleg1}}</p>
+                    <ul style="padding-left: 15px; margin-top: 5px;">
+                        <div [innerHTML]="studies1resumen1" style="text-align: left;"></div>
+                    </ul>  
+                    <strong style="color: #265C4F; text-align: center">Proyecto:</strong> 
+                    <a href="URL_AQUI" target="_blank" style="text-decoration: underline; color: inherit;">Malaria Detector</a>
+                </div>
+            </div>
+
+            <div class="language-card">
+                <div class="language-icon" >💻</div>
+                <div class="language-info">
+                    <p style="font-size: 0.8rem; color: #666; margin: 0;">2019 - 2021</p>
+                    <h4 style="margin: 5px 0;">{{studies2}}</h4>
+                    <p style="font-style: italic; font-size: 0.9rem; margin-bottom: 10px;">{{coleg2}}</p>
+                    <ul style="padding-left: 15px; margin-top: 5px;">
+                        <div [innerHTML]="studies2resumen2" style="text-align: left;" ></div>
+                    </ul>
+                    <strong style="color: #265C4F; position: center">Proyecto:</strong> 
+                    <a href="URL_AQUI" target="_blank" style="text-decoration: underline; color: inherit;">My Fit Meal</a>   
+                </div>
+            </div>
+
+            <div class="language-card">
+                <div class="language-icon" >📋</div>
+                <div class="language-info">
+                    <p style="font-size: 0.8rem; color: #666; margin: 0;">2017 - 2019</p>
+                    <h4 style="margin: 5px 0;">{{studies3}}</h4>
+                    <p style="margin: 0;">{{coleg3}}</p>
+                </div>
+            </div>
+
+
                 
             </div>
   

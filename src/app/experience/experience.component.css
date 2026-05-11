@@ -156,7 +156,11 @@
     }
 
 }
-
+.li strong{
+    color: #265C4F;
+    display: flex;
+    
+} 
 .experience-wrapper {
     display: flex;
 }
