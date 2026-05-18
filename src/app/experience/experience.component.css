@@ -129,6 +129,19 @@
         margin-top: 30px;
     }
     
+    i.devicon-python-plain{
+        margin-top: 60px;
+    }
+    
+    i.devicon-c-plain-wordmark{
+        margin-top: 100px;
+    }
+
+    i.devicon-typescript-plain{
+        margin-top: 60px;
+    }
+
+
     .tech-icon {
         margin: 15px;
         display: flex;
@@ -151,8 +164,11 @@
         text-align: center;
     }
     .tech-icon img {
-        width: 55px !important; /* Ajusta el ancho de la imagen */
-        height: 55px !important; /* Ajusta la altura de la imagen */
+        display: block !important;
+        width: 80px !important;       /* Sube este número si la quieres aún más grande */
+        min-width: 80px !important;   /* Evita que se encoja */
+        height: auto !important;       /* Mantiene la proporción */
+        max-width: none !important;
     }
 
 }
