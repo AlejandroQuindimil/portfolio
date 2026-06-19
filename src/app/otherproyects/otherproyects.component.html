@@ -1,174 +1,102 @@
 <div id="other-projects" class="other-projects-section">
-    <h2><span class="number">04. </span> Other Projects</h2>
-    <div class="row justify-content-center"> <!-- Nuevo contenedor -->
-      
-      <!-- Proyecto 1 -->
-      <div class="col-md-4 d-flex">
-        <div class="project-card2" 
-             (mouseenter)="setHover(1, true)" 
-             (mouseleave)="setHover(1, false)" 
-             (click)="handleClick(1, 'https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy')">
-          <div class="project-header">
-            <i class='far fa-folder-open' style='font-size:36px'></i>
-            <h3>{{titleotherproyect1}}</h3>
-          </div>
-          <p>{{otherproyect1}}</p>
-          
-          <div class="project-tags default-tags" id="defaultTags" [class.hidden]="isExpanded[1] || hover[1]">
-            <span class="badge">Python</span>
-            <span class="badge">TensorFlow & Keras</span>
-            <span class="badge">OpenCV (cv2)</span>
-            <span class="badge">Matplotlib & Seaborn</span>
-            <span class="badge">Scikit-learn</span>
-          </div>
-          <div class="project-icons" [class.hidden]="isExpanded[1] || hover[1]">
-            <a href="https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy" class="icon-link"><i class="fa fa-link"></i></a>
-            <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
-          </div>
-      
-          <!-- Contenido oculto al inicio -->
-          <div class="extra-content" id="extraContent">
-            <div class="project-tags" style="display: flex;">
-              <div class="tech-row">
-                <span class="badge">Python</span>
-                <p>Lenguaje de programación</p>
+  <h2><span class="number">04. </span> Other Projects</h2>
+
+  <div class="carousel-outer">
+    <!-- Flecha izquierda (fuera del área de la tarjeta) -->
+    <button
+      class="carousel-arrow carousel-arrow--left"
+      type="button"
+      aria-label="Proyecto anterior"
+      (click)="prev()"
+    >
+      <i class="fa fa-chevron-left"></i>
+    </button>
+
+    <div
+      class="carousel-viewport"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
+      (pointerdown)="onPointerDown($event)"
+      (pointermove)="onPointerMove($event)"
+      (pointerup)="onPointerUp($event)"
+      (pointercancel)="onPointerUp($event)"
+    >
+      <div class="carousel-wrapper">
+        <div
+          class="carousel-container"
+          [class.no-transition]="!transitionEnabled"
+          [style.transform]="trackTransform"
+          (transitionend)="onTrackTransitionEnd()"
+        >
+          <div
+            class="carousel-item"
+            [class.is-active]="i === trackIndex"
+            *ngFor="let project of extendedProjects; let i = index"
+          >
+            <div class="project-card2" (click)="!dragHandled && openProject(project.link)">
+              <div class="project-header">
+                <i class='far fa-folder-open' style='font-size:36px'></i>
+                <h3>{{ project.title }}</h3>
               </div>
-              <div class="tech-row">
-                <span class="badge">TensorFlow & Keras</span>
-                <p>Construcción y entrenamiento de la CNN.</p>
+              <p class="project-description-text">{{ project.description }}</p>
+
+              <div class="project-tags">
+                <span class="badge" *ngFor="let tag of project.tags">{{ tag }}</span>
               </div>
-              <div class="tech-row">
-                <span class="badge">OpenCV (cv2)</span>
-                <p>Preprocesamiento y manipulación de imágenes.</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">Matplotlib & Seaborn</span>
-                <p>Análisis y visualización de resultados.</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">Scikit-learn</span>
-                <p>Evaluación y validación del modelo.</p>
+              <div class="project-icons">
+                <a
+                  *ngIf="project.link"
+                  [href]="project.link"
+                  class="icon-link"
+                  target="_blank"
+                  (click)="$event.stopPropagation()"
+                >
+                  <i class="fa fa-link"></i>
+                </a>
+                <a
+                  *ngIf="project.github"
+                  [href]="project.github"
+                  class="icon-link"
+                  target="_blank"
+                  (click)="$event.stopPropagation()"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
               </div>
             </div>
-            <p>🎯 <strong>Objetivo:</strong></p>
-            <p>{{infootherproyect1}}</p>
-          </div>
-          <div class="project-icons">
-            <a href="https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy" class="icon-link"><i class="fa fa-link"></i></a>
-            <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
           </div>
         </div>
       </div>
-  
-      <!-- Proyecto 2 -->
-      <div class="col-md-4 d-flex">
-        <div class="project-card2" (mouseenter)="setHover(2, true)" (mouseleave)="setHover(2, false)" (click)="toggleExpand(2)">
-          <div class="project-header">
-            <i class='far fa-folder-open' style='font-size:36px'></i>
-            <h3>{{titleotherproyect1}}</h3>
-          </div>
-          <p>{{otherproyect1}}</p>
-          
-          <div class="project-tags default-tags" id="defaultTags" [class.hidden]="isExpanded[2] || hover[2]">
-            <span class="badge">Python</span>
-            <span class="badge">TensorFlow & Keras</span>
-            <span class="badge">OpenCV (cv2)</span>
-            <span class="badge">Matplotlib & Seaborn</span>
-            <span class="badge">Scikit-learn</span>
-          </div>
-          <div class="project-icons" [class.hidden]="isExpanded[2] || hover[2]">
-            <a href="#https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy" class="icon-link"><i class="fa fa-link"></i></a>
-            <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
-          </div>
-      
-          <!-- Contenido oculto al inicio -->
-          <div class="extra-content" id="extraContent">
-            <div class="project-tags" style="display: flex;">
-              <div class="tech-row">
-                <span class="badge">Python</span>
-                <p>Lenguaje de programación</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">TensorFlow & Keras</span>
-                <p>Construcción y entrenamiento de la CNN.</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">OpenCV (cv2)</span>
-                <p>Preprocesamiento y manipulación de imágenes.</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">Matplotlib & Seaborn</span>
-                <p>Análisis y visualización de resultados.</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">Scikit-learn</span>
-                <p>Evaluación y validación del modelo.</p>
-              </div>
-            </div>
-            <p>🎯 <strong>Objetivo:</strong></p>
-            <p>{{infootherproyect1}}</p>
-          </div>
-          <div class="project-icons">
-            <a href="#https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy" class="icon-link"><i class="fa fa-link"></i></a>
-            <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Proyecto 3 -->
-      <div class="col-md-4 d-flex">
-        <div class="project-card2" (mouseenter)="setHover(3, true)" (mouseleave)="setHover(3, false)" (click)="toggleExpand(3)">
-          <div class="project-header">
-            <i class='far fa-folder-open' style='font-size:36px'></i>
-            <h3>{{titleotherproyect1}}</h3>
-          </div>
-          <p>{{otherproyect1}}</p>
-          
-          <div class="project-tags default-tags" id="defaultTags" [class.hidden]="isExpanded[3] || hover[3]">
-            <span class="badge">Python</span>
-            <span class="badge">TensorFlow & Keras</span>
-            <span class="badge">OpenCV (cv2)</span>
-            <span class="badge">Matplotlib & Seaborn</span>
-            <span class="badge">Scikit-learn</span>
-          </div>
-          <div class="project-icons" [class.hidden]="isExpanded[3] || hover[3]">
-            <a href="#" class="icon-link"><i class="fa fa-link"></i></a>
-            <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
-          </div>
-      
-          <!-- Contenido oculto al inicio -->
-          <div class="extra-content" id="extraContent">
-            <div class="project-tags" style="display: flex;">
-              <div class="tech-row">
-                <span class="badge">Python</span>
-                <p>Lenguaje de programación</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">TensorFlow & Keras</span>
-                <p>Construcción y entrenamiento de la CNN.</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">OpenCV (cv2)</span>
-                <p>Preprocesamiento y manipulación de imágenes.</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">Matplotlib & Seaborn</span>
-                <p>Análisis y visualización de resultados.</p>
-              </div>
-              <div class="tech-row">
-                <span class="badge">Scikit-learn</span>
-                <p>Evaluación y validación del modelo.</p>
-              </div>
-            </div>
-            <p>🎯 <strong>Objetivo:</strong></p>
-            <p>{{infootherproyect1}}</p>
-          </div>
-          <div class="project-icons">
-            <a href="#" class="icon-link"><i class="fa fa-link"></i></a>
-            <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-  
-    </div> <!-- Cierre de .row -->
+    </div>
+
+    <!-- Flecha derecha (fuera del área de la tarjeta) -->
+    <button
+      class="carousel-arrow carousel-arrow--right"
+      type="button"
+      aria-label="Siguiente proyecto"
+      (click)="next()"
+    >
+      <i class="fa fa-chevron-right"></i>
+    </button>
   </div>
+
+  <!-- Indicadores (puntos): funcionan como un mini slider — se puede
+       deslizar (arrastrar) sobre ellos para cambiar de proyecto en vivo,
+       además del click directo en cada punto -->
+  <div
+    class="carousel-dots"
+    (pointerdown)="onDotsPointerDown($event)"
+    (pointermove)="onDotsPointerMove($event)"
+    (pointerup)="onDotsPointerUp($event)"
+    (pointercancel)="onDotsPointerUp($event)"
+  >
+    <button
+      *ngFor="let project of projects; let i = index"
+      class="carousel-dot"
+      [class.active]="i === currentIndex"
+      type="button"
+      [attr.aria-label]="'Ir al proyecto ' + (i + 1)"
+      (click)="goTo(i)"
+    ></button>
+  </div>
+</div>

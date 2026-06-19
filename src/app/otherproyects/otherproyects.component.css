@@ -1,90 +1,139 @@
 .other-projects-section {
-    width:70%; /* Ocupa el 70% de la pantalla */
-    margin: 0 auto; /* Centra la sección */
-    padding: 20px; /* Espaciado interno */
-    margin-bottom: 50px; /* Espacio inferior para evitar superposición */
-}
-  
-  .other-projects-container {
-    width: 40%; /* Limitar el ancho del contenedor al 70% */
-    margin: 0 auto; /* Centrar el contenedor horizontalmente */
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    overflow-x: auto;
-    justify-content: center; /* Centrar las tarjetas de proyecto */
+    width: 70%;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-
-  @media (max-width: 768px) {
-    .other-projects-section {
-        width: 90%; /* Ajusta el ancho al 90% en pantallas pequeñas */
-    }
+    margin-bottom: 50px;
 }
 
+/* --- Contenedor exterior: flecha | carrusel | flecha ---
+   El recorte (overflow: hidden) vive en .carousel-viewport. Cada slide
+   ocupa solo un 76% del ancho del viewport (ver .carousel-item), así
+   que al centrar el slide activo, el 24% restante se reparte a los
+   lados dejando asomar (peek) el borde de las tarjetas vecinas, igual
+   que en un carrusel de cartas estilo "coverflow". */
+.carousel-outer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.carousel-viewport {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  overflow: hidden;
+  padding: 15px 0;
+  /* Difumina suavemente el borde donde se cortan las tarjetas vecinas,
+     en vez de un corte seco. Banda de difuminado más ancha (12%) para
+     que la transición sea perceptible y no un corte duro. */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  /* Zona táctil para swipe en móvil/trackpad */
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.carousel-viewport:active {
+  cursor: grabbing;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: stretch;
+  /* Cada slide mide un 76% del viewport; el 24% restante se reparte
+     como hueco a izquierda y derecha, dejando asomar (peek) el borde
+     de las tarjetas vecinas. */
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Desactiva la transición durante el salto invisible del loop infinito */
+.carousel-container.no-transition {
+  transition: none;
+}
+
+.carousel-item {
+  flex: 0 0 76%;
+  max-width: 76%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Estilos base de las Tarjetas --- */
 .project-card2 {
-  padding: 20px;
+  padding: 25px;
   background-color: #f0f0f0;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: auto;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  max-height: 360px; /* Altura inicial para mostrar solo la descripción */
+  height: 400px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, opacity 0.4s ease;
   cursor: pointer;
+  width: 100%;
+  margin: 0 12px;
+  box-sizing: border-box;
 }
 
-/* Oculta las etiquetas y los íconos al hacer hover */
-.project-card2:hover .tags-and-icons {
-  opacity: 0; /* Desvanece el contenido al hacer hover */
-  transition: opacity 0.3s ease-in-out; /* Transición suave */
+/* Las tarjetas que asoman a los lados (no activas) se ven más tenues
+   para reforzar el foco visual en la tarjeta central */
+.carousel-item:not(.is-active) .project-card2 {
+  opacity: 0.45;
+  transform: scale(0.94);
 }
 
-/* Expande la tarjeta al hacer hover */
 .project-card2:hover {
-  max-height: 900px; /* Se expande */
+  transform: translateY(-5px);
   background-color: #e6f7f2;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Descripción visible por defecto */
-.project-card2 .description {
-  opacity: 1;
-  max-height: 100px;
-  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
-}
-
-/* Sección de etiquetas que se reutiliza */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
-  gap: 5px;
+  margin-top: 15px;
+  gap: 8px;
 }
 
-/* Por defecto, las etiquetas muestran solo los nombres */
 .project-tags .badge {
-  padding: 5px 10px;
-  font-size: 0.9rem;
+  padding: 6px 12px;
+  font-size: 0.85rem;
   border-radius: 0.75rem;
-  color: #265C4F;
-  background-color: #000;
+  color: #fff;
+  background-color: #265C4F;
 }
 
-/* Íconos de enlace */
 .project-icons {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: auto; 
+  gap: 12px;
 }
 
 .project-icons a {
   color: #265C4F;
-  margin-left: 10px;
   transition: color 0.3s ease;
 }
 
@@ -92,176 +141,144 @@
   color: #007bff;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
+.icon-link i { font-size: 1.3rem; }
+h2 { text-align: center; margin-bottom: 25px; }
+.number{ color: #265C4F; }
+h3 { color: #265C4F; border-bottom: 1px solid #000; padding-bottom: 5px; text-align: left; margin-top: 0; }
+.project-description-text { color: #333; font-size: 0.95rem; margin-bottom: 10px; text-align: start; line-height: 1.5; }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.number{
-  color: #265C4F;
-}
-
-h3 {
-    color: #265C4F;
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
-    text-align: left;
-}
-
-p {
-    color: #333;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    text-align: start;
-}
-
-.project-icons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.icon-link {
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.icon-link:hover {
-    color: #007bff;
-}
-
-.icon-link i {
-    font-size: 1.2rem;
-}
-
-.icon-size {
-  font-size: 1.5rem; 
-}
-
-.project-card {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-card h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #265C4F;
-  margin-bottom: 15px;
-}
-
-.project-description {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.project-tags {
+/* --- Flechas de navegación (fuera del área de la tarjeta, no se superponen) --- */
+.carousel-arrow {
+  flex: 0 0 auto;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #265C4F;
+  color: #fff;
+  font-size: 1rem;
   display: flex;
-  flex-wrap: wrap; /* Permite que las etiquetas se ajusten en varias líneas si es necesario */
-  margin-top: 10px;
-  
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.25s ease;
+  opacity: 0.55;
+  z-index: 2;
 }
 
-.project-tags .badge {
-  margin-right: 5px; /* Espacio entre las etiquetas */
-  margin-bottom: 5px; /* Espacio entre filas de etiquetas */
-  padding: 5px 10px; /* Espaciado interno para las etiquetas */
-  font-size: 0.9rem; /* Tamaño de fuente ajustado */
-  border-radius: 0.75rem; /* Bordes redondeados */
-  color: #7ecab2 ;
-  background-color: #000;
+.carousel-outer:hover .carousel-arrow {
+  opacity: 0.9;
 }
 
-.row {
-    display: flex; /* Asegura que los elementos en la fila se alineen horizontalmente */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
-    justify-content:  center; /* Espacio entre columnas */
+.carousel-arrow:hover {
+  background-color: #1b4439;
+  transform: scale(1.08);
+  opacity: 1 !important;
 }
 
-.col-md-4 {
-    flex: 0 0 25%; /* Permite que ocupen el 30% y se ajusten */
-    max-width: 22%;
-    margin-bottom: 50px; /* Espaciado entre filas */
-    margin-inline: 15px;
+.carousel-arrow:focus-visible {
+  opacity: 1;
+  outline: 2px solid #265C4F;
+  outline-offset: 2px;
 }
 
+.carousel-arrow:active {
+  transform: scale(0.96);
+}
+
+/* --- Indicadores (puntos): actúan como mini slider/scrubber --- */
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 8px 4px;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+
+.carousel-dots:active {
+  cursor: grabbing;
+}
+
+.carousel-dot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  padding: 0;
+  /* transform sin "ease" largo: al arrastrar, el dot activo debe
+     responder casi al instante, no con retraso perceptible */
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* Área táctil ampliada (invisible) para que sea más fácil mantener el
+   dedo "dentro" de un dot mientras se arrastra, sin agrandar el punto
+   visualmente */
+.carousel-dot::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+}
+
+.carousel-dot:hover {
+  background-color: #7fb3a4;
+}
+
+.carousel-dot.active {
+  background-color: #265C4F;
+  transform: scale(1.3);
+}
+
+/* --- Versión móvil --- */
 @media (max-width: 768px) {
-  .col-md-4 {
-      flex: 0 0 90%; /* Ocupa el 90% del ancho */
-      max-width: 100%; /* Máximo ancho */
-      margin-inline: 15px; /* Espaciado lateral */
-      margin-top: 10px;
+  .other-projects-section {
+      width: 92%;
+      padding: 20px 8px;
   }
-  
+
+  .carousel-outer {
+    gap: 4px;
+  }
+
+  .carousel-item {
+    flex: 0 0 88%;
+    max-width: 88%;
+  }
 
   .project-card2 {
-      margin: 20px 0; /* Espaciado arriba y abajo */
-      padding: 15px; /* Ajusta el padding interno */
-      text-align: center; /* Centra el contenido */
+      margin: 0 6px;
+      padding: 20px;
+      text-align: center;
+      height: auto;
+      min-height: 360px;
+  }
+
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+    opacity: 0.7;
   }
 
   .project-header {
-      display: flex; /* Usar flexbox para alinear el ícono y el título */
-      align-items: center; /* Centra verticalmente */
-      justify-content: center; /* Centra horizontalmente */
-      margin-bottom: 5px; /* Espacio inferior */
-  }
-
-  .project-header h3 {
-      margin-left: 10px; /* Espacio entre el ícono y el título */
-      color: #7ecab2; /* Color del título */
-  }
-
-  .project-tags {
-      margin-top: 10px;
       display: flex;
-      flex-wrap: wrap; /* Permite que las etiquetas se acomoden mejor */
+      align-items: center;
       justify-content: center;
-      gap: 5px; /* Espaciado entre etiquetas */
+      margin-bottom: 10px;
   }
 
-  .project-icons {
-      justify-content: center;
-  }
-
-  .other-projects-section {
-      width: 100%;
-      max-width: 90%;
-      margin: 30px auto; /* Espaciado superior e inferior */
-      padding: 20px 0; /* Espaciado superior e inferior adicional */
-  }
-}
-
-@media (max-width: 768px) {
-  .project-card2 {
-    max-height: 380px; /* Reducir altura inicial */
-  }
-
-  .project-card2:hover, .project-card2:focus-within {
-    max-height: 900px; /* Expandirse menos en pantallas pequeñas */
-  }
-}
-.hidden {
-  display: none; /* Oculta el contenido */
-}
-
-
-.tech-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.tech-row .badge {
-  margin-right: 10px;
+  .project-header h3 { margin-left: 10px; }
+  .project-tags { justify-content: center; }
+  .project-icons { justify-content: center; }
 }
