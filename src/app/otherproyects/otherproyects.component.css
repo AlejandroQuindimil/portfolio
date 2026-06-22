@@ -42,9 +42,7 @@
   will-change: transform;
 }
 
-.carousel-container.no-transition {/* Desactiva la transición durante el salto invisible del loop infinito */
-  transition: none;
-}
+.carousel-container.no-transition {/* Desactiva la transición durante el salto invisible del loop infinito */transition: none;}
 .carousel-item {
   flex: 0 0 76%;
   max-width: 76%;
@@ -129,9 +127,7 @@
   color: #265C4F;
   transition: color 0.3s ease;
 }
-.project-icons a:hover {
-  color: #007bff;
-}
+.project-icons a:hover {color: #007bff;}
 .icon-link i { font-size: 1.3rem; }
 h2 { text-align: center; margin-bottom: 25px; }
 .number{ color: #265C4F; }
@@ -157,9 +153,7 @@ h3 { color: #265C4F; text-align: left; margin-top: 0; margin-bottom: 0; }
   opacity: 0.55;
   z-index: 2;
 }
-.carousel-outer:hover .carousel-arrow {
-  opacity: 0.9;
-}
+.carousel-outer:hover .carousel-arrow {opacity: 0.9;}
 .carousel-arrow:hover {
   background-color: #1b4439;
   transform: scale(1.08);
@@ -170,9 +164,7 @@ h3 { color: #265C4F; text-align: left; margin-top: 0; margin-bottom: 0; }
   outline: 2px solid #265C4F;
   outline-offset: 2px;
 }
-.carousel-arrow:active {
-  transform: scale(0.96);
-}
+.carousel-arrow:active {transform: scale(0.96);}
 /*  Indicadores (puntos): actúan como mini slider/scrubber */
 .carousel-dots {
   display: flex;
@@ -185,9 +177,7 @@ h3 { color: #265C4F; text-align: left; margin-top: 0; margin-bottom: 0; }
   user-select: none;
   cursor: grab;
 }
-.carousel-dots:active {
-  cursor: grabbing;
-}
+.carousel-dots:active {cursor: grabbing;}
 .carousel-dot {
   position: relative;
   width: 10px;
