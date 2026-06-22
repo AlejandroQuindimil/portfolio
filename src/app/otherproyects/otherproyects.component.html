@@ -33,10 +33,13 @@
             [class.is-active]="i === trackIndex"
             *ngFor="let project of extendedProjects; let i = index"
           >
-            <div class="project-card2" (click)="!dragHandled && openProject(project.link)">
+            <div class="project-card2" [class.has-dev-badge]="project.inDevelopment" (click)="!dragHandled && openProject(project.link)">
               <div class="project-header">
-                <i class='far fa-folder-open' style='font-size:36px'></i>
-                <h3>{{ project.title }}</h3>
+                <div class="project-header-left">
+                  <i class='far fa-folder-open' style='font-size:36px'></i>
+                  <h3>{{ project.title }}</h3>
+                </div>
+                <span class="badge-dev" *ngIf="project.inDevelopment">🚧 En desarrollo</span>
               </div>
               <p class="project-description-text">{{ project.description }}</p>
 

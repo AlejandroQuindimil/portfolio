@@ -7,6 +7,7 @@ interface Project {
   tags: string[];
   link: string;
   github?: string;
+  inDevelopment?: boolean;
 }
 
 @Component({
@@ -24,60 +25,59 @@ export class OtherproyectsComponent implements OnDestroy {
   public otherproyect3: string = 'Idiomas';
   public otherproyect4: string = 'Idiomas';
 
-  // Lista de proyectos reales que conforman el carrusel.
-  // Si añades más proyectos, simplemente agrega más objetos aquí.
-  // NOTA: de momento hay 6 entradas de ejemplo (algunas reutilizan el
-  // contenido de Malaria Detector solo para probar visualmente el slider
-  // con más slides) — sustitúyelas por los proyectos reales cuando los
-  // tengas listos.
+
   public projects: Project[] = [
     {
       title: this.titleotherproyect1,
       description: this.otherproyect1,
       tags: ['Python', 'TensorFlow & Keras', 'OpenCV (cv2)', 'Matplotlib & Seaborn', 'Scikit-learn'],
       link: 'https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy',
-      github: '#'
+      github: '#',
+      inDevelopment: false
     },
     {
       title: '📊 Proyecto 2',
       description: this.otherproyect1,
       tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
       link: '#',
-      github: '#'
+      github: '#',
+      inDevelopment: true 
     },
     {
       title: '🌐 Proyecto 3',
       description: this.otherproyect1,
       tags: ['Angular', 'TypeScript', 'HTML5', 'CSS3'],
       link: '#',
-      github: '#'
+      github: '#',
+      inDevelopment: true 
     },
     {
       title: '🤖 Proyecto 4',
       description: this.otherproyect1,
       tags: ['Python', 'TensorFlow & Keras', 'Scikit-learn'],
       link: '#',
-      github: '#'
+      github: '#',
+      inDevelopment: true 
     },
     {
       title: '📱 Proyecto 5',
       description: this.otherproyect1,
       tags: ['Angular', 'TypeScript', 'Bootstrap'],
       link: '#',
-      github: '#'
+      github: '#',
+      inDevelopment: true 
     },
     {
       title: '🦠 Proyecto 6',
       description: this.otherproyect1,
       tags: ['Python', 'OpenCV (cv2)', 'Matplotlib & Seaborn'],
       link: '',
-      github: '#'
+      github: '#',
+      inDevelopment: true 
     }
   ];
 
   // Track "extendido" con un clon del último al inicio y un clon del primero al final.
-  // Esto permite que el loop sea infinito y fluido en ambas direcciones,
-  // sin el salto brusco al volver del último al primero.
   public extendedProjects: Project[] = [];
 
   // Índice dentro de extendedProjects (empieza en 1 = primer proyecto real)
@@ -89,16 +89,9 @@ export class OtherproyectsComponent implements OnDestroy {
   // Controla si la transición CSS está activa (se desactiva durante el salto invisible)
   public transitionEnabled: boolean = true;
 
-  // Evita que se acumulen varios "trackIndex++/--" mientras una transición
-  // ya está en curso. Sin esto, clics rápidos en las flechas (o el autoplay
-  // disparando mientras el usuario interactúa) pueden empujar trackIndex
-  // muy lejos del rango válido [0, total+1] si algún transitionend se pierde
-  // (pestaña en background, transiciones interrumpidas, etc.), dejando el
-  // track desplazado a una posición vacía del array extendedProjects.
+
   private isTransitioning: boolean = false;
-  // Watchdog: por si transitionend nunca llega a disparar (pestaña en
-  // background, reduced-motion, etc.), liberamos el lock igualmente tras
-  // un tiempo prudente, y de paso forzamos el trackIndex a un valor válido.
+  // Watchdog: por si transitionend nunca llega a disparar 
   private transitionWatchdog: any = null;
 
   public isAutoPlaying: boolean = true;
@@ -124,10 +117,7 @@ export class OtherproyectsComponent implements OnDestroy {
   private readonly SWIPE_THRESHOLD_PX: number = 40;
 
   // --- Estado para el "scrubber" de puntos (deslizar sobre los dots) ---
-  // A diferencia del swipe del carrusel (que necesita superar un umbral
-  // para disparar UN cambio), aquí el dedo/ratón controla directamente
-  // qué punto está activo en todo momento mientras se arrastra, como un
-  // mini slider.
+ 
   public isDraggingDots: boolean = false;
   private dotsTrackEl: HTMLElement | null = null;
 
