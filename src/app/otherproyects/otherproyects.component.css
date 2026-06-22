@@ -219,46 +219,15 @@ h3 { color: #265C4F; text-align: left; margin-top: 0; margin-bottom: 0; }
 }
 /* --- Versión móvil --- */
 @media (max-width: 768px) {
-  .other-projects-section {
-      width: 92%;
-      padding: 20px 8px;
-  }
-  .carousel-outer {
-    gap: 4px;
-  }
-  .carousel-item {
-    flex: 0 0 88%;
-    max-width: 88%;
-  }
-  .project-card2 {
-      margin: 0 6px;
-      padding: 20px;
-      text-align: center;
-      height: auto;
-      min-height: 360px;
-  }
-  .carousel-arrow {
-    width: 32px;
-    height: 32px;
-    font-size: 0.85rem;
-    opacity: 0.7;
-  }
-  .project-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 10px;
-  }
-  .project-header-left {
-      justify-content: center;
-  }
+  .other-projects-section {width: 92%; padding: 20px 8px;}
+  .carousel-outer {gap: 4px;}
+  .carousel-item {flex: 0 0 88%; max-width: 88%;}
+  .project-card2 {margin: 0 6px;padding: 20px;text-align: center;height: auto;min-height: 360px;}
+  .carousel-arrow {width: 32px;height: 32px;font-size: 0.85rem;opacity: 0.7;}
+  .project-header {display: flex;flex-wrap: wrap;align-items: center;justify-content: center;gap: 8px;margin-bottom: 10px;}
+  .project-header-left {justify-content: center;}
   .project-header h3 { margin-left: 10px; }
   .project-tags { justify-content: center; }
   .project-icons { justify-content: center; }
-  .badge-dev {
-    font-size: 0.95rem;
-    padding: 5px 12px;
-  }
+  .badge-dev {font-size: 0.95rem;padding: 5px 12px; }
 }
