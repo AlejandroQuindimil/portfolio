@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 export class AboutComponent {
   
   public hello: string = 'Hola! Mi nombre es ';
-  public intro: string = 'Soy un Desarrollador enfocado en datos con mentalidad de atleta.';
+  public intro: string = 'Soy un Desarrollador Frontend Junior con formación en Big Data e IA.';
   public summaryAbout: string = `
   Entiendo el código como una <b>carrera de fondo</b> donde la <b>constancia y la disciplina</b> siempre superan al talento innato. 
   Mi enfoque es simple: cumplir objetivos diarios, evaluar resultados y asegurar la máxima calidad en cada línea que escribo.
@@ -27,17 +27,17 @@ export class AboutComponent {
   `;
 
   public summaryAbout4: string = `
-    Creo firmemente que un cuerpo entrenado y una mente curiosa rinden mejor ante retos complejos. Por eso, mi día a día se divide entre superar marcas en el gimnasio y resolver bugs en el servidor. 
+    Desde 2021 compagino el desarrollo con el gimnasio — al menos esa es mi experiencia. Por eso, mi día a día se divide entre superar marcas en el gimnasio y resolver bugs en el servidor. 
     <b>Si buscas a alguien con la disciplina necesaria para llevar tus proyectos al siguiente nivel, no dudes en ponerte en contacto.</b>
   `;
   // public hello: string = 'Hola! Mi nombre es ';
   
   dynamicText: string = "";
   phrases: string[] =[
-    "Team Player.",
-    "Software Developer.",
-    "Data Engineer.",
-    "Specialised in Big Data and IA",
+    "Desarrollador Frontend Junior.",
+    "Angular · Java · Spring Boot.",
+    "Formación en Big Data e IA.",
+    "Visión 360º: código y negocio.",
   ];
 
   currentPhraseIndex: number = 0;
