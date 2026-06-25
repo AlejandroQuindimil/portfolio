@@ -1,27 +1,16 @@
 .other-projects-section {
-  width: 70%;
-  max-width: 1100px;
-  margin: 0 auto 50px;
-  padding: 20px;
+  width: 70%;max-width: 1100px;margin: 0 auto 50px;padding: 20px;
 }
 .carousel-outer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
+  display: flex; align-items: center;gap: 12px;width: 100%;
 }
 .carousel-viewport {
   position: relative;
   flex: 1 1 auto;
   overflow: hidden;
   padding: 15px 0;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%, black 12%, black 88%, transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right, transparent 0%, black 12%, black 88%, transparent 100%
-  );
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
   /* Zona táctil para swipe en móvil/trackpad */
   touch-action: pan-y;
   cursor: grab;
@@ -69,10 +58,7 @@
   padding-bottom: 5px;
 }
 .project-header .project-header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
+  display: flex; align-items: center; gap: 10px; min-width: 0;
 }
 .badge-dev {
   /* Etiqueta "En desarrollo" */
