@@ -85,24 +85,10 @@
   border-radius: 0;
 }
 .project-image {
-  display: block;
-  width: 100%;
-  height: 260px;
-  object-fit: contain;
-  object-position: center;
-  transition: transform .4s ease;
+  display: block; width: 100%; height: 260px; object-fit: contain; object-position: center; transition: transform .4s ease;
 }
 .project-card2:hover .project-image {transform: scale(1.04);}
-.project-description-text {
-  color: #333;
-  font-size: .95rem;
-  margin: 12px 0 10px;
-  text-align: start;
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+
 .project-tags .badge {
   padding: 6px 12px;
   font-size: .85rem;
