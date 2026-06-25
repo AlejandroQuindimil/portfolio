@@ -41,6 +41,15 @@
                 </div>
                 <span class="badge-dev" *ngIf="project.inDevelopment">🚧 En desarrollo</span>
               </div>
+
+               <div class="project-image-wrapper" *ngIf="project.image">
+                <img
+                  [src]="project.image"
+                  class="project-image"
+                  loading="lazy"
+                  (click)="$event.stopPropagation()"
+                />
+              </div>
               <p class="project-description-text">{{ project.description }}</p>
 
               <div class="project-tags">

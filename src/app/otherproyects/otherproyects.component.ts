@@ -8,6 +8,7 @@ interface Project {
   link: string;
   github?: string;
   inDevelopment?: boolean;
+  image?: string;
 }
 
 @Component({
@@ -20,7 +21,7 @@ interface Project {
 export class OtherproyectsComponent implements OnDestroy {
 
   public titleotherproyect1: string = '🦠 Malaria Detector';
-  public otherproyect1: string = 'Malaria Detector es una web app basada en Machine Learning que utiliza una Red Neuronal Convolucional (CNN) para la detección de malaria en imágenes microscópicas de células. Aprovecha el poder de TensorFlow y OpenCV para lograr una precisión del 95% en la clasificación de células infectadas y no infectadas.';
+  public otherproyect1: string = 'Modelo de clasificación de imágenes basado en CNN desarrollado con TensorFlow y Keras, entrenado para detectar malaria en imágenes microscópicas de células con un 95% de precisión. Publicado en Kaggle con 8 upvotes y 18 copias.';
   public infootherproyect1: string = 'Clasificar imágenes microscópicas de células como infectadas o no infectadas, proporcionando una herramienta de detección temprana de malaria.';
   public otherproyect3: string = 'Idiomas';
   public otherproyect4: string = 'Idiomas';
@@ -33,7 +34,8 @@ export class OtherproyectsComponent implements OnDestroy {
       tags: ['Python', 'TensorFlow & Keras', 'OpenCV (cv2)', 'Matplotlib & Seaborn', 'Scikit-learn'],
       link: 'https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy',
       github: '#',
-      inDevelopment: false
+      inDevelopment: false,
+      image: 'proyectomalaria.png'
     },
     {
       title: '📊 Proyecto 2',
@@ -41,7 +43,8 @@ export class OtherproyectsComponent implements OnDestroy {
       tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
       link: '#',
       github: '#',
-      inDevelopment: true 
+      inDevelopment: true,
+      image: 'assets/images/malariaproyects.png'
     },
     {
       title: '🌐 Proyecto 3',
@@ -49,7 +52,8 @@ export class OtherproyectsComponent implements OnDestroy {
       tags: ['Angular', 'TypeScript', 'HTML5', 'CSS3'],
       link: '#',
       github: '#',
-      inDevelopment: true 
+      inDevelopment: true,
+      image: 'assets/images/malariaproyects.png'
     },
     {
       title: '🤖 Proyecto 4',
@@ -57,7 +61,8 @@ export class OtherproyectsComponent implements OnDestroy {
       tags: ['Python', 'TensorFlow & Keras', 'Scikit-learn'],
       link: '#',
       github: '#',
-      inDevelopment: true 
+      inDevelopment: true,
+      image: 'assets/images/malariaproyects.png'
     },
     {
       title: '📱 Proyecto 5',
@@ -65,7 +70,8 @@ export class OtherproyectsComponent implements OnDestroy {
       tags: ['Angular', 'TypeScript', 'Bootstrap'],
       link: '#',
       github: '#',
-      inDevelopment: true 
+      inDevelopment: true,
+      image: 'assets/images/malariaproyects.png'
     },
     {
       title: '🦠 Proyecto 6',
@@ -73,7 +79,8 @@ export class OtherproyectsComponent implements OnDestroy {
       tags: ['Python', 'OpenCV (cv2)', 'Matplotlib & Seaborn'],
       link: '',
       github: '#',
-      inDevelopment: true 
+      inDevelopment: true,
+      image: 'assets/images/malariaproyects.png' 
     }
   ];
 
