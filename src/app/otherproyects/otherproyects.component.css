@@ -90,17 +90,8 @@
 }
 /* Desvanecimiento de tarjetas para que se vea más la actual */
 .carousel-item:not(.is-active) .project-card2 {opacity: .45;transform: scale(.94);}
-.project-card2:hover {
-  transform: translateY(-5px);
-  background-color: #e6f7f2;
-  box-shadow: 0 6px 12px rgba(0,0,0,.2);
-}
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 15px;
-  gap: 8px;
-}
+.project-card2:hover {transform: translateY(-5px);background-color: #e6f7f2; box-shadow: 0 6px 12px rgba(0,0,0,.2);}
+.project-tags {display: flex;flex-wrap: wrap;margin-top: 15px;gap: 8px;}
 .project-image-wrapper {
   width: calc(100% + 50px);
   margin: 10px -25px 0;
@@ -133,12 +124,7 @@
   color: #fff;
   background: #265C4F;
 }
-.project-icons {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: auto;
-  gap: 12px;
-}
+.project-icons {display: flex;justify-content: flex-end;margin-top: auto;gap: 12px;}
 .project-icons a { color: #265C4F;transition: color .3s ease;}
 .project-icons a:hover { color: #007bff; }
 .icon-link i { font-size: 1.3rem; }
@@ -167,11 +153,7 @@ h3 { color: #265C4F; text-align: left; margin: 0; }
 }
 .carousel-outer:hover .carousel-arrow { opacity: .9; }
 .carousel-arrow:hover {background: #1b4439;transform: scale(1.08);opacity: 1 !important;}
-.carousel-arrow:focus-visible {
-  opacity: 1;
-  outline: 2px solid #265C4F;
-  outline-offset: 2px;
-}
+.carousel-arrow:focus-visible {opacity: 1;outline: 2px solid #265C4F;outline-offset: 2px;}
 .carousel-arrow:active { transform: scale(.96); }
 /* Indicadores (puntos): actúan como mini slider/scrubber */
 .carousel-dots {
