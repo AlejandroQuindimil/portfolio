@@ -1,280 +1,285 @@
-<!-- src/app/education/education.component.html -->
+<!-- src/app/experience/experience.component.html -->
 <section id="education" class="education-section">
-    <div class="container">
-        <h2 class="text-center"><span class="number">02.</span> {{edu}}</h2>
-        <p>{{infoeducation}}</p>
-        
-        <div class="accordion">
-            <button class="accordion-button">{{lang}}<span class="arrow">↓</span></button>
-            <div class="accordion-content">
-                <div class="language-card">
-                    <img src="Flag_of_Spain.svg.png" alt="Castellano" class="language-icon">
-                    <div class="language-info">
-                        <h4>{{esp}}</h4>
-                        <p>{{nat}}</p>
-                    </div>
-                </div>
-                <div class="language-card">
-                    <img src="Flag_of_Galicia.svg.png" alt="Gallego" class="language-icon">
-                    <div class="language-info">
-                        <h4>{{gal}}</h4>
-                        <p>{{nat}} | Celga 4</p>
-                    </div>
-                </div>
-                <div class="language-card">
-                    <img src="Flag_of_uk.png" alt="Inglés" class="language-icon">
-                    <div class="language-info">
-                        <h4>{{eng}}</h4>
-                        <p>{{eng_lvl}}</p>
-                    </div>
-                </div>
-            </div>
-  
-            <button class="accordion-button">{{studies}}<span class="arrow">↓</span></button>
-            <div class="accordion-content">
-                
-            <div class="language-card">
-                <div class="language-icon" >🤖</div>
-                <div class="language-info">
-                    <p style="font-size: 0.8rem; color: #666; margin: 0;">2023 - 2024</p>
-                    <h4 style="margin: 5px 0;">{{studies1}}</h4>
-                    <p style="font-style: italic; font-size: 0.9rem; text-align: left; margin-bottom: 10px;">{{coleg1}}</p>
-                    <ul style="padding-left: 15px; margin-top: 5px;">
-                        <div [innerHTML]="studies1resumen1" style="text-align: left;"></div>
-                    </ul>  
-                    <strong style="color: #265C4F; text-align: center">Proyecto:</strong> 
-                    <a href="URL_AQUI" target="_blank" style="text-decoration: underline; color: inherit;">Malaria Detector</a>
-                </div>
-            </div>
+  <div class="container">
+    <h2 class="text-center"><span class="number">02.</span> {{edu}}</h2>
+    <p>{{infoeducation}}</p>
 
-            <div class="language-card">
-                <div class="language-icon" >💻</div>
-                <div class="language-info">
-                    <p style="font-size: 0.8rem; color: #666; margin: 0;">2019 - 2021</p>
-                    <h4 style="margin: 5px 0;">{{studies2}}</h4>
-                    <p style="font-style: italic; font-size: 0.9rem; margin-bottom: 10px;">{{coleg2}}</p>
-                    <ul style="padding-left: 15px; margin-top: 5px;">
-                        <div [innerHTML]="studies2resumen2" style="text-align: left;" ></div>
-                    </ul>
-                    <strong style="color: #265C4F; position: center">Proyecto:</strong> 
-                    <a href="URL_AQUI" target="_blank" style="text-decoration: underline; color: inherit;">My Fit Meal</a>   
-                </div>
-            </div>
-
-            <div class="language-card">
-                <div class="language-icon" >📋</div>
-                <div class="language-info">
-                    <p style="font-size: 0.8rem; color: #666; margin: 0;">2017 - 2019</p>
-                    <h4 style="margin: 5px 0;">{{studies3}}</h4>
-                    <p style="margin: 0;">{{coleg3}}</p>
-                </div>
-            </div>
-
-
-                
-            </div>
-  
-            <button class="accordion-button">{{curses}}<span class="arrow">↓</span></button>
-            <div class="accordion-content">
-                <p>{{curses1}}<strong>{{curses2}}</strong> - 253h</p>
-                <p>{{resumcurse}}</p>
-               
-            </div>
-  
-            <button class="accordion-button">{{tec}}<span class="arrow">↓</span></button>
-            <div class="accordion-content">
-            <div><h2 class="section-title">{{lang_programing}}</h2> </div>
-            <div class="tech-icons">
-                <div class="tech-icon">
-                    <i class="devicon-java-plain-wordmark"></i>
-                    <p>{{java}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-javascript-plain"></i>
-                    <p>{{javascripts}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-python-plain"></i>
-                    <p>{{python}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-c-plain-wordmark"></i>
-                    <p>{{c}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-typescript-plain"></i>
-                    <p>{{typescript}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-html5-plain"></i>
-                    <p>{{html}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-css3-plain"></i>
-                    <p>{{css}}</p>
-                </div>
-            </div>
-            
-            <div><h2 class="section-title">{{bbdd}}</h2></div>
-            <div><h2 class="section-title">SQL</h2></div>
-            <div class="tech-icons">
-                <div class="tech-icon">
-                    <i class="devicon-mysql-plain-wordmark"></i>
-                    <p>{{mysql}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-mariadb-original-wordmark colored"></i>
-                    <p>{{mariadb}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-sqlite-plain-wordmark"></i>
-                    <p>{{sqlito}}</p>
-                </div>
-            </div>
-            
-            <div><h2 class="section-title">No SQL</h2></div>
-            <div class="tech-icons">
-                <div class="tech-icon">
-                    <i class="devicon-mongodb-plain-wordmark"></i>
-                    <p>{{mondongo}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-firebase-plain"></i>
-                    <p>{{firebase}}</p>
-                </div>
-            </div>
-            
-            <div><h2 class="section-title">FRAMEWORKS</h2></div>
-            <div class="tech-icons">
-                <div class="tech-icon">
-                    <i class="devicon-angularjs-plain colored"></i>
-                    <p>{{angular}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-spring-original"></i>
-                    <p>{{spring}}</p>
-                </div>
-            </div>
-            
-            <div><h2 class="section-title">{{data_manage}}</h2></div>
-            <div class="tech-icons">
-                <div class="tech-icon">
-                    <i class="devicon-hadoop-plain-wordmark"></i>
-                    <p>{{hadoop}}</p>
-                </div>
-                <div class="tech-icon">
-                    <i class="devicon-apachespark-plain-wordmark colored"></i>
-                    <p>{{spark}}</p>
-                </div>
-                <div class="tech-icon">
-                    <img src="sparql.png" alt="SPARQL">
-                    <p>{{sparql}}</p>
-                </div>
-                <div class="tech-icon">
-                    <img src="hive.png" alt="Hive">
-                    <p>{{hive}}</p>
-                </div>
-                <div class="tech-icon">
-                    <img src="sqoop.png" alt="Sqoop">
-                    <p>{{sqoop}}</p>
-                </div>
-            </div>
-            
-            <div><h2 class="section-title">{{data_treat}}</h2></div>
-            <div class="tech-icons">
-                <div class="tech-icon">
-                    <i class="devicon-apachekafka-original colored"></i>
-                    <p>{{kafka}}</p>
-                </div>
-                <div class="tech-icon">
-                    <img src="flume.png" alt="Flume">
-                    <p>{{flume}}</p>
-                </div>
-            </div>
+    <div class="accordion">
+      <button class="accordion-button">{{lang}}<span class="arrow">↓</span></button>
+      <div class="accordion-content">
+        <div class="language-card">
+          <img src="Flag_of_Spain.svg.png" alt="Castellano" class="language-icon">
+          <div class="language-info"><h4>{{esp}}</h4><p>{{nat}}</p></div>
         </div>
+        <div class="language-card">
+          <img src="Flag_of_Galicia.svg.png" alt="Gallego" class="language-icon">
+          <div class="language-info"><h4>{{gal}}</h4><p>{{nat}} | Celga 4</p></div>
         </div>
+        <div class="language-card">
+          <img src="Flag_of_uk.png" alt="Inglés" class="language-icon">
+          <div class="language-info"><h4>{{eng}}</h4><p>{{eng_lvl}}</p></div>
+        </div>
+      </div>
+
+      <button class="accordion-button">{{studies}}<span class="arrow">↓</span></button>
+      <div class="accordion-content">
+        <div class="language-card">
+          <div class="language-icon">🤖</div>
+          <div class="language-info">
+            <p style="font-size:.8rem;color:#666;margin:0">2023 - 2024</p>
+            <h4 style="margin:5px 0">{{studies1}}</h4>
+            <p style="font-style:italic;font-size:.9rem;text-align:left;margin-bottom:10px">{{coleg1}}</p>
+            <ul style="padding-left:15px;margin-top:5px">
+              <div [innerHTML]="studies1resumen1" style="text-align:left"></div>
+            </ul>
+            <strong style="color:#265C4F">Proyecto:</strong>
+            <a href="URL_AQUI" target="_blank" style="text-decoration:underline;color:inherit">Malaria Detector</a>
+          </div>
+        </div>
+        <div class="language-card">
+          <div class="language-icon">💻</div>
+          <div class="language-info">
+            <p style="font-size:.8rem;color:#666;margin:0">2019 - 2021</p>
+            <h4 style="margin:5px 0">{{studies2}}</h4>
+            <p style="font-style:italic;font-size:.9rem;margin-bottom:10px">{{coleg2}}</p>
+            <ul style="padding-left:15px;margin-top:5px">
+              <div [innerHTML]="studies2resumen2" style="text-align:left"></div>
+            </ul>
+            <strong style="color:#265C4F">Proyecto:</strong>
+            <a href="URL_AQUI" target="_blank" style="text-decoration:underline;color:inherit">My Fit Meal</a>
+          </div>
+        </div>
+        <div class="language-card">
+          <div class="language-icon">📋</div>
+          <div class="language-info">
+            <p style="font-size:.8rem;color:#666;margin:0">2017 - 2019</p>
+            <h4 style="margin:5px 0">{{studies3}}</h4>
+            <p style="margin:0">{{coleg3}}</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="accordion-button">{{curses}}<span class="arrow">↓</span></button>
+      <div class="accordion-content">
+        <p>{{curses1}}<strong>{{curses2}}</strong> - 253h</p>
+        <p>{{resumcurse}}</p>
+      </div>
+
+      <button class="accordion-button">{{tec}}<span class="arrow">↓</span></button>
+      <div class="accordion-content">
+         <!-- Tabs de navegación -->
+                <div class="tech-tabs">
+                    <button class="tech-tab active" data-tab="lenguajes">{{lang_programing}}</button>
+                    <button class="tech-tab" data-tab="bbdd">{{bbdd}}</button>
+                    <button class="tech-tab" data-tab="frameworks">Frameworks</button>
+                    <button class="tech-tab" data-tab="datos">{{data_manage}}</button>
+                    <button class="tech-tab" data-tab="tratamiento">{{data_treat}}</button>
+                </div>
+
+                <!-- Panel: Lenguajes -->
+                <div class="tech-panel" id="tab-lenguajes">
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-java-plain-wordmark"></i>
+                            <p>{{java}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-javascript-plain"></i>
+                            <p>{{javascripts}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-python-plain"></i>
+                            <p>{{python}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-c-plain-wordmark"></i>
+                            <p>{{c}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-typescript-plain"></i>
+                            <p>{{typescript}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-html5-plain"></i>
+                            <p>{{html}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-css3-plain"></i>
+                            <p>{{css}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel: BBDD -->
+                <div class="tech-panel" id="tab-bbdd" style="display:none">
+                    <h2 class="section-title">SQL</h2>
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-mysql-plain-wordmark"></i>
+                            <p>{{mysql}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-mariadb-original-wordmark colored"></i>
+                            <p>{{mariadb}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-sqlite-plain-wordmark"></i>
+                            <p>{{sqlito}}</p>
+                        </div>
+                    </div>
+                    <h2 class="section-title">No SQL</h2>
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-mongodb-plain-wordmark"></i>
+                            <p>{{mondongo}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-firebase-plain"></i>
+                            <p>{{firebase}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel: Frameworks -->
+                <div class="tech-panel" id="tab-frameworks" style="display:none">
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-angularjs-plain colored"></i>
+                            <p>{{angular}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-spring-original"></i>
+                            <p>{{spring}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel: Manejo de datos -->
+                <div class="tech-panel" id="tab-datos" style="display:none">
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-hadoop-plain-wordmark"></i>
+                            <p>{{hadoop}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-apachespark-plain-wordmark colored"></i>
+                            <p>{{spark}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="sparql.png" alt="SPARQL">
+                            <p>{{sparql}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="hive.png" alt="Hive">
+                            <p>{{hive}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="sqoop.png" alt="Sqoop">
+                            <p>{{sqoop}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel: Tratamiento de datos -->
+                <div class="tech-panel" id="tab-tratamiento" style="display:none">
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-apachekafka-original colored"></i>
+                            <p>{{kafka}}</p>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="flume.png" alt="Flume">
+                            <p>{{flume}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- fin acordeón tecnologías -->
     </div>
+  </div>
 </section>
+
 <section id="experience" class="experience-section">
-    <div class="container">
-        <h2 class="text-center"><span class="number">03. </span>{{exp}}</h2>
-        <div class="experience-wrapper">
-            <div class="experience-buttons">
-                <button 
-                    class="experience-button" data-target="experience1"
-                    [class.selected]="selectedExperience === 'experience1'" 
-                    (click)="selectExperience('experience1')">
-                    {{exp1}}
-                </button>
-                <button 
-                    class="experience-button" data-target="experience2"
-                    [class.selected]="selectedExperience === 'experience2'" 
-                    (click)="selectExperience('experience2')">
-                    {{exp2}}
-                </button>
-                <button 
-                    class="experience-button" data-target="experience3"
-                    [class.selected]="selectedExperience === 'experience3'" 
-                    (click)="selectExperience('experience3')">
-                    {{exp3}}
-                </button>
-            </div>
-            <div class="experience-content">
-                <div id="experience1" class="experience-item">
-                    <h3>{{exp1}}</h3>
-                    <p class="text-muted">{{exp1_date}}</p>
-                    <p class="work">{{work1}}</p>
-                    <ul>
-                        <h4>{{exp1_resum1}}</h4>
-                        <li>{{exp1_resum2}}</li>
-                        <li>{{exp1_resum3}}</li>
-                        <li>{{exp1_resum4}}</li>
-                        <li>{{exp1_resum5}}</li>
-                        <h4>{{exp1_resum6}}</h4>
-                        <li>{{exp1_resum7}}</li>
-                    </ul>
-                </div>
-                <div id="experience2" class="experience-item" style="display: none;">
-                    <h3>{{exp2}}</h3>
-                    <p class="text-muted">{{exp2_date}}</p>
-                    <p class="work">{{work2}}</p>
-                    <ul>
-                        <li>{{exp2_resum1}}</li>
-                        <li>{{exp2_resum2}}</li>
-                        <li>{{exp2_resum3}}</li>
-                        <li>{{exp2_resum4}}</li>
-                        <li>{{exp2_resum5}}</li>
-                    </ul>
-                </div>
-                <div id="experience3" class="experience-item"style="display: none;">
-                    <h3>{{exp3}}</h3>
-                    <p class="text-muted">{{exp3_date}}</p>
-                    <p class="work">{{work3}}</p>
-                    <ul>
-                        <li>{{exp3_resum1}}</li>
-                        <li>{{exp3_resum2}}</li>
-                        <li>{{exp3_resum3}}</li>
-                    </ul>
-                </div>
-            </div>
-            
+  <div class="container">
+    <h2 class="text-center"><span class="number">03. </span>{{exp}}</h2>
+    <div class="experience-wrapper">
+
+      <div class="experience-buttons">
+        <button class="experience-button"
+          [class.selected]="selectedExperience === 'experience1'"
+          (click)="selectExperience('experience1')">{{exp1}}</button>
+        <button class="experience-button"
+          [class.selected]="selectedExperience === 'experience2'"
+          (click)="selectExperience('experience2')">{{exp2}}</button>
+        <button class="experience-button"
+          [class.selected]="selectedExperience === 'experience3'"
+          (click)="selectExperience('experience3')">{{exp3}}</button>
+      </div>
+
+      <div class="experience-content">
+
+        <div id="experience1" class="experience-item" [class.active]="selectedExperience === 'experience1'">
+          <h3>{{exp1}}</h3>
+          <p class="work">{{work1}}</p>
+          <p class="experience-role-date">📆{{exp1_date}}</p>
+          <p class="exp-section-label">Funciones</p>
+          <ul>
+            <li>{{exp1_resum2}}</li>
+            <li>{{exp1_resum3}}</li>
+            <li>{{exp1_resum4}}</li>
+            <li>{{exp1_resum5}}</li>
+          </ul>
+          <p class="exp-section-label">{{exp1_resum6}}</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Angular</span>
+            <span class="exp-tag">JavaScript</span>
+            <span class="exp-tag">Github</span>
+            <span class="exp-tag">HTML</span>
+            <span class="exp-tag">CSS</span>
+            <span class="exp-tag">MongoDB</span>
+            <span class="exp-tag">Node.js</span>
+          </div>
         </div>
+
+        <div id="experience2" class="experience-item" [class.active]="selectedExperience === 'experience2'">
+          <h3>{{exp2}}</h3>
+          <p class="work">{{work2}}</p>
+          <p class="experience-role-date">📆{{exp2_date}}</p>
+          <p class="exp-section-label">Funciones</p>
+          <ul>
+            <li>{{exp2_resum1}}</li>
+            <li>{{exp2_resum2}}</li>
+            <li>{{exp2_resum3}}</li>
+            <li>{{exp2_resum4}}</li>
+            <li>{{exp2_resum5}}</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">A3Asesor</span>
+            <span class="exp-tag">Contabilidad</span>
+            <span class="exp-tag">Fiscalidad</span>
+            <span class="exp-tag">Atención al cliente</span>
+          </div>
+        </div>
+
+        <div id="experience3" class="experience-item" [class.active]="selectedExperience === 'experience3'">
+          <h3>{{exp3}}</h3>
+          <p class="work">{{work3}}</p>
+          <p class="experience-role-date">📆{{exp3_date}}</p>
+          <p class="exp-section-label">Funciones</p>
+          <ul>
+            <li>{{exp3_resum1}}</li>
+            <li>{{exp3_resum2}}</li>
+            <li>{{exp3_resum3}}</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Control de accesos</span>
+            <span class="exp-tag">Gestión de equipos</span>
+            <span class="exp-tag">Resolución de conflictos</span>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
 </section>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const buttons = document.querySelectorAll('.accordion-button');
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                } else {
-                    content.style.display = 'block';
-                }
-            });
-        });
-    });
-</script>

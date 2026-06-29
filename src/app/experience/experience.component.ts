@@ -1,9 +1,10 @@
-import { Component, AfterViewInit , OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css'
 })
@@ -38,7 +39,7 @@ export class ExperienceComponent implements OnInit {
         <a>Creación, modificación y ejecución de consultas en <strong style="color: #265C4F;">MySQL</strong>.</a>
     </li>
     <li>
-        <a>Administración de máquinas virtuales con <strong style="color: #265C4F;">VirtualBox</strong> en entornos <strong style="color: #265C4F;">Windows</strong> y <strong style="color: #265C4F;">Linux</strong>.Y programacion en C en maquinas virtuales de <strong style="color: #265C4F;">Linux</strong></a>
+        <a>Administración de máquinas virtuales con <strong style="color: #265C4F;">VirtualBox</strong> en entornos <strong style="color: #265C4F;">Windows</strong> y <strong style="color: #265C4F;">Linux</strong>. Y programacion en C en maquinas virtuales de <strong style="color: #265C4F;">Linux</strong></a>
     </li>
 `;
   public studies3: string = 'FP de Grado Medio en Gestión Administrativa.';
@@ -75,15 +76,14 @@ export class ExperienceComponent implements OnInit {
   public data_treat: string = 'TRATAMIENTO DE DATOS';
   public kafka: string = 'Manejo de mensajes enviados a través del patrón de diseño Cliente-Consumidor';
   public flume: string = 'Sistema de log sencillo para Kafka y que se pueden almacenar los datos en Hadoop';
-  
+
   public exp: string = 'Experiencia';
   public exp1: string = 'Programador Junior';
   public exp2: string = 'Administrativo';
   public exp3: string = 'Auxiliar de Servicios (Fines de Semana)';
   public exp1_date: string = 'sept. 2021 - dic. 2021 · 4 meses';
   public exp2_date: string = 'abr. 2022 - oct. 2022 · 7 meses';
-
-  public exp3_date: string = 'Agosto. 204 - mayo. 2025 · 9 meses';
+  public exp3_date: string = 'Agosto. 2024 - mayo. 2025 · 9 meses';
   public work1: string = 'ctBarbanza - Centro Tecnoloxíco do Barbanza Sociedade Cooperativa Galega';
   public work2: string = 'Juan Flórez 129 S.L. ';
   public work3: string = 'ESC SERVICIOS GENERALES S.L.';
@@ -94,65 +94,43 @@ export class ExperienceComponent implements OnInit {
   public exp1_resum5: string = 'Optimización de consultas en la base de datos con MongoDB.';
   public exp1_resum6: string = 'Tecnologias:';
   public exp1_resum7: string = 'Angular, JavaScript, Html, Css , MongoDB y Nodejs.';
-
   public exp2_resum1: string = 'Introducir y gestionar apuntes contables utilizando A3Asesor.';
-  public exp2_resum2: string = 'Realización liquidaciones y presentación de impuestos, asegurando el cumplimiento riguroso de las normativas fiscales vigentes (ejemplo: IRPF, IVA, Sociedades, Etc.) .';
+  public exp2_resum2: string = 'Realización liquidaciones y presentación de impuestos, asegurando el cumplimiento riguroso de las normativas fiscales vigentes (ejemplo: IRPF, IVA, Sociedades, Etc.).';
   public exp2_resum3: string = 'Gestionar y archivar documentación contable y administrativa.';
-  public exp2_resum4: string = 'Tramitar y presentar documentación ante administraciones públicas, tanto por vía telemática como presencial .';
+  public exp2_resum4: string = 'Tramitar y presentar documentación ante administraciones públicas, tanto por vía telemática como presencial.';
   public exp2_resum5: string = 'Atender al cliente de forma presencial, telefónica y telemática, realizando recepción, revisión, requerimiento y seguimiento de documentación.';
   public exp2_resum6: string = '';
   public selectedExperience: string = 'experience1';
-
-
   public exp3_resum1: string = 'Controlar y verificar accesos, gestionando la identificación y validación de entradas para miles de asistentes.';
   public exp3_resum2: string = 'Gestionar situaciones de estrés en entornos de alta afluencia.';
   public exp3_resum3: string = 'Mediar y resolver conflictos con clientes, priorizando la seguridad y la satisfacción del asistente.';
-  
-
-  ngOnInit() {
-    // Lógica del acordeón
-    const accordionButtons = document.querySelectorAll('.accordion-button');
-    accordionButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const content = button.nextElementSibling as HTMLElement;
-        const arrow = button.querySelector('.arrow') as HTMLElement;
-        if (content.style.display === 'block') {
-          content.style.display = 'none';
-          arrow.textContent = '↓';
-        } else {
-          content.style.display = 'block';
-          arrow.textContent = '−';
-        }
-      });
-    });
-
-    // Lógica de experiencia
-    const experienceButtons = document.querySelectorAll('.experience-button');
-    const contents = document.querySelectorAll('.experience-item');
-
-    // Mostrar la primera experiencia por defecto
-    (contents[0] as HTMLElement).style.display = 'block';
-
-    experienceButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const targetId = button.getAttribute('data-target');
-
-        // Ocultar todos los contenidos
-        contents.forEach(content => {
-          (content as HTMLElement).style.display = 'none';
-        });
-
-        // Mostrar el contenido correspondiente
-        const targetContent = document.getElementById(targetId || '');
-        if (targetContent) {
-          targetContent.style.display = 'block';
-        }
-      });
-    });
-
-}
 
   selectExperience(experience: string) {
     this.selectedExperience = experience;
+  }
+
+  ngOnInit() {
+    // FIX 3: selector acotado al acordeón directo, no pilla nada dentro de los paneles
+    document.querySelectorAll('.accordion > .accordion-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling as HTMLElement;
+        const arrow = btn.querySelector('.arrow') as HTMLElement;
+        const isOpen = content.style.display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
+        if (arrow) arrow.textContent = isOpen ? '↓' : '−';
+      });
+    });
+
+    // FIX 1: listener de los tabs de tecnologías
+    document.querySelectorAll('.tech-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tech-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tech-panel').forEach(p => (p as HTMLElement).style.display = 'none');
+        tab.classList.add('active');
+        const id = 'tab-' + (tab as HTMLElement).dataset['tab'];
+        const panel = document.getElementById(id) as HTMLElement;
+        if (panel) panel.style.display = 'block';
+      });
+    });
   }
 }

@@ -85,11 +85,12 @@
 }
 
 .project-tags .badge {/* Por defecto, las etiquetas muestran solo los nombres */
-  padding: 5px 10px;
-  font-size: 0.9rem;
-  border-radius: 0.75rem;
-  color: #265C4F;
-  background-color: #000;
+  font-size:.78rem;
+  padding:3px 10px;
+  border-radius:999px;
+  background:#e6f7f2;
+  color:#1b4439;
+  border:.5px solid #7fb3a4;
 }
 
 .project-icons {/* Íconos de enlace */
@@ -190,11 +191,12 @@ p {
 .project-tags .badge {
   margin-right: 5px; /* Espacio entre las etiquetas */
   margin-bottom: 5px; /* Espacio entre filas de etiquetas */
-  padding: 5px 10px; /* Espaciado interno para las etiquetas */
-  font-size: 0.9rem; /* Tamaño de fuente ajustado */
-  border-radius: 0.75rem; /* Bordes redondeados */
-  color: #7ecab2 ;
-  background-color: #000;
+  font-size:.78rem;
+  padding:3px 10px;
+  border-radius:999px;
+  background:#e6f7f2;
+  color:#1b4439;
+  border:.5px solid #7fb3a4;
 }
 
 .row {
