@@ -20,7 +20,7 @@ export class ProyectsComponent {
   public infootherproyect1: string = 'Clasificar imágenes microscópicas de células como infectadas o no infectadas, proporcionando una herramienta de detección temprana de malaria.';
   public otherproyect3: string = 'Idiomas';
   public otherproyect4: string = 'Idiomas';
-  public resumen_app1: string ='My Fit Meal es una aplicación innovadora que permite a los usuarios gestionar su alimentación de manera personalizada, calculando su requerimiento calórico y distribuyendo macronutrientes de forma equilibrada. Desarrollada en Ionic con Angular y utilizando Firebase para almacenamiento, ofrece un seguimiento detallado del progreso en tiempo real. Ideal para nutricionistas, deportistas y cualquier persona interesada en mejorar su bienestar, la app facilita la planificación de dietas y optimiza el rendimiento físico. Con un mercado en constante crecimiento, My Fit Meal destaca como un desarrollo tecnológico con gran impacto en la salud digital.';
+  public resumen_app1: string ='My Fit Meal es una aplicación móvil desarrollada con Ionic + Angular y Firebase como backend en tiempo real. Calcula el requerimiento calórico diario a partir del metabolismo basal (TMB) del usuario y distribuye los macronutrientes —proteínas, carbohidratos y grasas— según el objetivo: pérdida de peso, mantenimiento o ganancia muscular. Permite registrar comidas con su aporte nutricional y visualizar el progreso mediante gráficos de evolución.';
 
   images = [
     'proyecto1parte1.png',
