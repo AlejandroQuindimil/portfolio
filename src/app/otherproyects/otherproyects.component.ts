@@ -23,9 +23,9 @@ export class OtherproyectsComponent implements OnDestroy {
   public titleotherproyect1: string = '🦠 Malaria Detector';
   public otherproyect1: string = 'Modelo de clasificación de imágenes basado en CNN desarrollado con TensorFlow y Keras, entrenado para detectar malaria en imágenes microscópicas de células con un 95% de precisión. Publicado en Kaggle con 8 upvotes y 18 copias.';
   public infootherproyect1: string = 'Clasificar imágenes microscópicas de células como infectadas o no infectadas, proporcionando una herramienta de detección temprana de malaria.';
-  public otherproyect3: string = 'Idiomas';
+  public otherproyect2: string = 'DRIP es un marketplace de moda full-stack inspirado en plataformas como Zalando, donde los usuarios pueden explorar un catálogo de productos, buscar y filtrar por categoría, gestionar favoritos y realizar pedidos con gestión automática de stock.';
   public otherproyect4: string = 'Idiomas';
-
+  public otherproyect5: string = 'Idiomas';
 
   public projects: Project[] = [
     {
@@ -33,20 +33,20 @@ export class OtherproyectsComponent implements OnDestroy {
       description: this.otherproyect1,
       tags: ['Python', 'TensorFlow & Keras', 'OpenCV (cv2)', 'Matplotlib & Seaborn', 'Scikit-learn'],
       link: 'https://www.kaggle.com/code/alexquindi/detecting-malaria-cnn-95-accuracy',
-      github: '#',
+      github: 'https://github.com/AlejandroQuindimil/Kaggle_proyects',
       inDevelopment: false,
       image: 'proyectomalaria.png'
     },
     {
-      title: '📊 Proyecto 2',
-      description: this.otherproyect1,
-      tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
-      link: '#',
-      github: '#',
+      title: '📊 Drip Marketplace',
+      description: this.otherproyect2,
+      tags: ['Angular', 'Java', 'Spring Boot', 'MongoDB', 'TypeScript', 'HTML5', 'CSS3'],
+      link: 'https://github.com/AlejandroQuindimil/marketplace',
+      github: 'https://github.com/AlejandroQuindimil/marketplace',
       inDevelopment: true,
-      image: 'assets/images/malariaproyects.png'
+      image: 'diseñomarketplace.png'
     },
-    {
+    /*{
       title: '🌐 Proyecto 3',
       description: this.otherproyect1,
       tags: ['Angular', 'TypeScript', 'HTML5', 'CSS3'],
@@ -81,7 +81,7 @@ export class OtherproyectsComponent implements OnDestroy {
       github: '#',
       inDevelopment: true,
       image: 'assets/images/malariaproyects.png' 
-    }
+    }*/
   ];
 
   // Track "extendido" con un clon del último al inicio y un clon del primero al final.
@@ -103,7 +103,7 @@ export class OtherproyectsComponent implements OnDestroy {
 
   public isAutoPlaying: boolean = true;
 
-  private autoPlayIntervalMs: number = 4000;
+  private autoPlayIntervalMs: number = 8000;
   // Tiempo de pausa tras interactuar manualmente (flechas, dots, swipe)
   private readonly RESUME_DELAY_MS: number = 3000;
   // Tiempo de pausa tras hacer click en una tarjeta para abrir el proyecto.

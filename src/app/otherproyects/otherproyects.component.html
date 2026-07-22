@@ -56,23 +56,20 @@
                 <span class="badge" *ngFor="let tag of project.tags">{{ tag }}</span>
               </div>
               <div class="project-icons">
-                <a
-                  *ngIf="project.link"
-                  [href]="project.link"
-                  class="icon-link"
+                 <a
+                  *ngIf="project.github"
+                  class="fa fa-link"
                   target="_blank"
-                  (click)="$event.stopPropagation()"
-                >
-                  <i class="fa fa-link"></i>
-                </a>
+                  [href]="project.link"
+                  (click)="$event.stopPropagation()">
+                  </a>
                 <a
                   *ngIf="project.github"
-                  [href]="project.github"
-                  class="icon-link"
+                  [href]="project.github" 
+                  class="fab fa-github"
                   target="_blank"
                   (click)="$event.stopPropagation()"
                 >
-                  <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
