@@ -69,6 +69,7 @@
         width: 100%;
         order: 2;  /* Coloca la imagen después del texto */
         margin: 20px auto;
+        size: 50%;
     }
    
     .aboutme h2 {
