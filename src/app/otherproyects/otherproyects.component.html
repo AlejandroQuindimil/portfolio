@@ -47,7 +47,7 @@
                   [src]="project.image"
                   class="project-image"
                   loading="lazy"
-                  (click)="$event.stopPropagation()"
+                  (click)="openProject(project.link)"
                 />
               </div>
               <p class="project-description-text">{{ project.description }}</p>
@@ -57,10 +57,12 @@
               </div>
               <div class="project-icons">
                  <a
-                  *ngIf="project.github"
+                  *ngIf="project.link"
                   class="fa fa-link"
                   target="_blank"
+                  rel="noopener noreferrer"
                   [href]="project.link"
+                  (pointerdown)="$event.stopPropagation()"
                   (click)="$event.stopPropagation()">
                   </a>
                 <a
@@ -68,6 +70,8 @@
                   [href]="project.github" 
                   class="fab fa-github"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  (pointerdown)="$event.stopPropagation()"
                   (click)="$event.stopPropagation()"
                 >
                 </a>
