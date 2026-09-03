@@ -20,13 +20,26 @@ export class ProyectsComponent {
   public infootherproyect1: string = 'Clasificar imágenes microscópicas de células como infectadas o no infectadas, proporcionando una herramienta de detección temprana de malaria.';
   public otherproyect3: string = 'Idiomas';
   public otherproyect4: string = 'Idiomas';
-  public resumen_app1: string ='My Fit Meal es una aplicación móvil desarrollada con Ionic + Angular y Firebase como backend en tiempo real. Calcula el requerimiento calórico diario a partir del metabolismo basal (TMB) del usuario y distribuye los macronutrientes —proteínas, carbohidratos y grasas— según el objetivo: pérdida de peso, mantenimiento o ganancia muscular. Permite registrar comidas con su aporte nutricional y visualizar el progreso mediante gráficos de evolución.';
+  public resumen_app1: string ='DRIP es un marketplace de moda full-stack inspirado en plataformas como Zalando, donde los usuarios pueden explorar un catálogo de productos, buscar y filtrar por categoría, gestionar favoritos y realizar pedidos con gestión automática de stock.';
+  public isDripInDevelopment: boolean = true;
 
-  images = [
-    'proyecto1parte1.png',
-    'proyecto1parte2.png'
+  media = [
+  { type: 'image', src: 'diseñomarketplace.png' },
+  { type: 'video', src: 'dripportatilvideo.mp4' },
+  { type: 'video', src: 'dripversionmovil.mp4' }
+  // más vídeos aquí
   ];
+
   currentIndex = 0;
+
+  next() {
+    this.currentIndex = (this.currentIndex + 1) % this.media.length;
+  }
+
+  prev() {
+    this.currentIndex = (this.currentIndex - 1 + this.media.length) % this.media.length;
+  }
+ 
 
   images2 = [
     'descarga.jpg',
@@ -44,14 +57,6 @@ export class ProyectsComponent {
     window.addEventListener('resize', () => {
       this.isMobile = window.innerWidth <= 768;
     });
-  }
-
-  next() {
-    this.currentIndex = (this.currentIndex + 1) % this.images.length;
-  }
-
-  prev() {
-    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
   next2() {

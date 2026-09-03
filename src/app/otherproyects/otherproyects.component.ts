@@ -23,7 +23,7 @@ export class OtherproyectsComponent implements OnDestroy {
   public titleotherproyect1: string = '🦠 Malaria Detector';
   public otherproyect1: string = 'Modelo de clasificación de imágenes basado en CNN desarrollado con TensorFlow y Keras, entrenado para detectar malaria en imágenes microscópicas de células con un 95% de precisión. Publicado en Kaggle con 8 upvotes y 18 copias.';
   public infootherproyect1: string = 'Clasificar imágenes microscópicas de células como infectadas o no infectadas, proporcionando una herramienta de detección temprana de malaria.';
-  public otherproyect2: string = 'DRIP es un marketplace de moda full-stack inspirado en plataformas como Zalando, donde los usuarios pueden explorar un catálogo de productos, buscar y filtrar por categoría, gestionar favoritos y realizar pedidos con gestión automática de stock.';
+  public otherproyect2: string = 'My Fit Meal es una aplicación móvil desarrollada con Ionic + Angular y Firebase como backend en tiempo real. Calcula el requerimiento calórico diario a partir del metabolismo basal (TMB) del usuario y distribuye los macronutrientes —proteínas, carbohidratos y grasas— según el objetivo: pérdida de peso, mantenimiento o ganancia muscular. Permite registrar comidas con su aporte nutricional y visualizar el progreso mediante gráficos de evolución.';
   public otherproyect4: string = 'Idiomas';
   public otherproyect5: string = 'Idiomas';
 
@@ -38,50 +38,14 @@ export class OtherproyectsComponent implements OnDestroy {
       image: 'proyectomalaria.png'
     },
     {
-      title: '📊 Drip Marketplace',
+      title: '🍽️ My Fit Meal',
       description: this.otherproyect2,
-      tags: ['Angular', 'Java', 'Spring Boot', 'MongoDB', 'TypeScript', 'HTML5', 'CSS3'],
-      link: 'https://github.com/AlejandroQuindimil/marketplace',
-      github: 'https://github.com/AlejandroQuindimil/marketplace',
-      inDevelopment: true,
-      image: 'diseñomarketplace.png'
+      tags: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Ionic'],
+      link: 'https://github.com/AlejandroQuindimil/MyFitMeal',
+      github: 'https://github.com/AlejandroQuindimil/MyFitMeal',
+      inDevelopment: false,
+      image: 'proyecto1parte1.png'
     },
-    /*{
-      title: '🌐 Proyecto 3',
-      description: this.otherproyect1,
-      tags: ['Angular', 'TypeScript', 'HTML5', 'CSS3'],
-      link: '#',
-      github: '#',
-      inDevelopment: true,
-      image: 'assets/images/malariaproyects.png'
-    },
-    {
-      title: '🤖 Proyecto 4',
-      description: this.otherproyect1,
-      tags: ['Python', 'TensorFlow & Keras', 'Scikit-learn'],
-      link: '#',
-      github: '#',
-      inDevelopment: true,
-      image: 'assets/images/malariaproyects.png'
-    },
-    {
-      title: '📱 Proyecto 5',
-      description: this.otherproyect1,
-      tags: ['Angular', 'TypeScript', 'Bootstrap'],
-      link: '#',
-      github: '#',
-      inDevelopment: true,
-      image: 'assets/images/malariaproyects.png'
-    },
-    {
-      title: '🦠 Proyecto 6',
-      description: this.otherproyect1,
-      tags: ['Python', 'OpenCV (cv2)', 'Matplotlib & Seaborn'],
-      link: '',
-      github: '#',
-      inDevelopment: true,
-      image: 'assets/images/malariaproyects.png' 
-    }*/
   ];
 
   // Track "extendido" con un clon del último al inicio y un clon del primero al final.
