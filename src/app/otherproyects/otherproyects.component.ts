@@ -1,5 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
+import { NgForOf } from '@angular/common';
 import { CommonModule } from '@angular/common';
+
+
 
 interface Project {
   title: string;
@@ -14,7 +17,7 @@ interface Project {
 @Component({
   selector: 'app-otherproyects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgForOf, CommonModule],
   templateUrl: './otherproyects.component.html',
   styleUrls: ['./otherproyects.component.css']
 })
@@ -22,10 +25,12 @@ export class OtherproyectsComponent implements OnDestroy {
 
   public titleotherproyect1: string = '🦠 Malaria Detector';
   public otherproyect1: string = 'Modelo de clasificación de imágenes basado en CNN desarrollado con TensorFlow y Keras, entrenado para detectar malaria en imágenes microscópicas de células con un 95% de precisión. Publicado en Kaggle con 8 upvotes y 18 copias.';
-  public infootherproyect1: string = 'Clasificar imágenes microscópicas de células como infectadas o no infectadas, proporcionando una herramienta de detección temprana de malaria.';
+  
+  public titleotherproyect2: string = '🍽️ My Fit Meal';
   public otherproyect2: string = 'My Fit Meal es una aplicación móvil desarrollada con Ionic + Angular y Firebase como backend en tiempo real. Calcula el requerimiento calórico diario a partir del metabolismo basal (TMB) del usuario y distribuye los macronutrientes —proteínas, carbohidratos y grasas— según el objetivo: pérdida de peso, mantenimiento o ganancia muscular. Permite registrar comidas con su aporte nutricional y visualizar el progreso mediante gráficos de evolución.';
-  public otherproyect4: string = 'Idiomas';
-  public otherproyect5: string = 'Idiomas';
+
+  public titleotherproyect3: string = '📦 OrderTracker-Stream';
+  public otherproyect3: string = 'OrderTracker-Stream es una plataforma de rastreo de pedidos en tiempo real basada en una arquitectura de microservicios orientada a eventos. El usuario crea un pedido desde la web y sigue su estado y posición en vivo, sin recargar la página. Un servicio gestiona los pedidos y publica eventos en Apache Kafka, y otro los consume, mantiene el estado en Redis y lo emite al navegador mediante WebSockets.';
 
   public projects: Project[] = [
     {
@@ -38,7 +43,7 @@ export class OtherproyectsComponent implements OnDestroy {
       image: 'proyectomalaria.png'
     },
     {
-      title: '🍽️ My Fit Meal',
+      title: this.titleotherproyect2,
       description: this.otherproyect2,
       tags: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Ionic'],
       link: 'https://github.com/AlejandroQuindimil/MyFitMeal',
@@ -46,7 +51,16 @@ export class OtherproyectsComponent implements OnDestroy {
       inDevelopment: false,
       image: 'proyecto1parte1.png'
     },
-  ];
+    {
+      title: this.titleotherproyect3,
+      description: this.otherproyect3,
+      tags: ['Angular', 'Spring Boot', 'Kafka', 'Redis', 'PostgreSQL', 'Docker', 'Java'],
+      link: '',
+      github: 'https://github.com/AlejandroQuindimil/OrderTracker-Stream',
+      inDevelopment: true,
+      image: 'ordertracker-arquitectura.png'
+    },
+  ]; 
 
   // Track "extendido" con un clon del último al inicio y un clon del primero al final.
   public extendedProjects: Project[] = [];
@@ -59,7 +73,6 @@ export class OtherproyectsComponent implements OnDestroy {
 
   // Controla si la transición CSS está activa (se desactiva durante el salto invisible)
   public transitionEnabled: boolean = true;
-
 
   private isTransitioning: boolean = false;
   // Watchdog: por si transitionend nunca llega a disparar 
