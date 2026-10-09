@@ -1,14 +1,16 @@
 /* Contact Section - Dark Green Theme */
 .contact-section {
+  box-sizing: border-box;
   min-height: 600px;
-  width: 50%;
+  width: 70%;                    /* más ancho: antes 50% */
+  min-width: 760px;              /* en portátil no se estrecha más de esto */
+  max-width: 1180px;             /* en monitores grandes no se estira de más */
   border-radius: 15px;
   margin: 0 auto;
   align-self: center;
   margin-bottom: 1.25%;
-  padding-left: 20;
   background-color: #265C4F;
-  padding: 80px 100px 200px;
+  padding: 64px 40px 80px;       /* antes 80px 100px 200px: los laterales se comían el espacio útil */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
 }
@@ -47,6 +49,7 @@
   border-radius: 16px;
   padding: 35px;
   height: 100%;
+  box-sizing: border-box;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
@@ -144,6 +147,7 @@
   background: rgba(30, 80, 60, 0.7);
   border-radius: 16px;
   padding: 35px;
+  box-sizing: border-box;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
@@ -153,10 +157,10 @@
   color: white;
 }
 
-/* Form Row */
+/* Form Row: nombre y email en 2 columnas si caben, si no se apilan */
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 15px;
 }
 
@@ -301,7 +305,13 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
+  .contact-section {
+    width: 92%;
+    min-width: 0;
+    padding: 48px 24px 40px;
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -311,13 +321,9 @@
     font-size: 2rem;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
   .info-card {
     padding: 25px;
-    margin-bottom:5%;
+    margin-bottom: 5%;
   }
 
   .form-card {
