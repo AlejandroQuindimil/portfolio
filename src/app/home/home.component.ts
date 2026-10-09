@@ -6,11 +6,21 @@ import { ExperienceComponent } from '../experience/experience.component';
 import { ProyectsComponent } from '../proyects/proyects.component';
 import { OtherproyectsComponent } from '../otherproyects/otherproyects.component';
 import { ContactComponent } from '../contact/contact.component';
+import { TopoFondoComponent } from '../topo-fondo/topo-fondo.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, AboutComponent, ExperienceComponent, ProyectsComponent, OtherproyectsComponent, ContactComponent],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    AboutComponent,
+    ExperienceComponent,
+    ProyectsComponent,
+    OtherproyectsComponent,
+    ContactComponent,
+    TopoFondoComponent,
+  ],
   templateUrl: './home.component.html'
 })
 export class HomeComponent {}
