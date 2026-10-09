@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 export class AboutComponent {
   
   public hello: string = 'Hola! Mi nombre es ';
-  public intro: string = 'Soy un Desarrollador Frontend Junior con formación en Big Data e IA.';
+  public intro: string = 'Soy un Desarrollador Full Stack Junior con formación en Big Data e IA.';
   public summaryAbout: string = `
   Entiendo el código como una <b>carrera de fondo</b> donde la <b>constancia y la disciplina</b> siempre superan al talento innato. 
   Mi enfoque es simple: cumplir objetivos diarios, evaluar resultados y asegurar la máxima calidad en cada línea que escribo.
@@ -34,7 +34,7 @@ export class AboutComponent {
   
   dynamicText: string = "";
   phrases: string[] =[
-    "Desarrollador Frontend Junior.",
+    "Desarrollador Full Stack Junior.",
     "Angular · Java · Spring Boot.",
     "Formación en Big Data e IA.",
     "Visión 360º: código y negocio.",

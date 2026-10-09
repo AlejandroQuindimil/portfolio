@@ -1,15 +1,16 @@
+/* ── Tarjeta de presentación (verde) ── */
 .aboutme {
+    box-sizing: border-box;
     width: 50%;
-    margin: 0 auto;
+    min-width: 760px;              /* en portátil no se estrecha más de esto */
+    margin: 100px auto 40px;
     padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #265C4F;
     border-radius: 8px;
-    margin-bottom: 20px;
-    margin-top: 100px;
 }
 .aboutme h2 {
-    margin: 0;
+    margin: 20px 0;
     font-size: 24px;
     color: #ffffff;
 }
@@ -20,27 +21,29 @@
 }
 .aboutme p {
     font-size: 16px;
-    margin: 10px 0;
+    margin: 10px 0 20px;
     color: #ffffff;
 }
 .aboutme a {
-    color: #265C4F ;
+    color: #265C4F;
     text-decoration: none;
 }
+
 .buttons {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
 }
 .button {
-    width: 20%;
-    padding: 15px 25px;
+    width: auto;                   /* antes 20%: "Enviar correo" se partía en dos líneas */
+    padding: 15px 32px;
     background-color: white;
     color: #265C4F;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
+    white-space: nowrap;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -49,74 +52,52 @@
     transition: all 0.3s ease;
     margin-top: 10px;
 }
-@media (max-width: 600px) {
-    .aboutme {
-        width: 90%;
-    }
-    .aboutme2 {
-        width: 90% !important;
-        text-align: left;
-        flex-direction: column;  /* Hace que los elementos se apilen verticalmente */
-    }
-    .button {
-    width: 50%;
-    }
-    .text {
-        width: 100% !important;
-    }
-    
-    .image {
-        width: 100%;
-        order: 2;  /* Coloca la imagen después del texto */
-        margin: 20px auto;
-        size: 50%;
-    }
-   
-    .aboutme h2 {
-        text-align: center; /* Asegura que todos los elementos de texto estén centrados */
-    }
-}
-/* Eliminar flechas en la sección "Sobre mí" */
-.carousel-control-prev,
-.carousel-control-next {
-  display: none; /* Oculta las flechas */
-}
+
+/* ── Sobre mí: tarjeta translúcida con texto + foto ── */
 .aboutme2 {
+    box-sizing: border-box;
     width: 50%;
-    margin: 0 auto;
+    min-width: 760px;
+    margin: 0 auto 40px;
+    padding: 32px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
+    align-items: center;           /* foto centrada respecto al texto */
+    gap: 40px;
     font-family: Arial, sans-serif;
+    background: rgba(248, 249, 250, 0.92);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
 }
-.text, .image {
-    width: 100%;
+.text {
+    flex: 1 1 0;
+    min-width: 0;
+}
+.aboutme2 h2 {
+    margin-top: 0;
 }
 .image {
+    box-sizing: border-box;
+    flex: 0 0 clamp(240px, 38%, 400px);
     aspect-ratio: 1 / 1;
-    width: 50%;
-    max-width: 500px;
-    height: auto;
     border-radius: 50%;
-    margin: 0 auto;
     overflow: hidden;
     border: 5px solid black;
+    background: #fff;              /* si la foto no carga, el círculo no deja ver las curvas */
 }
 .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: relative;
+    display: block;
 }
+
 h2 {
     border-bottom: 1px solid #ffffff;
     padding-bottom: 5px;
 }
-
-.number{
-    color: #265C4F ;
+.number {
+    color: #265C4F;
 }
 ul {
     list-style-type: none;
@@ -126,48 +107,47 @@ li {
     margin-bottom: 5px;
 }
 a {
-    color: #265C4F ;
+    color: #265C4F;
     text-decoration: none;
 }
-@media (min-width: 
-
-68px) {
-    .text, .image {
-        width: 48%;
-    }
-    .image {
-        width: 100%;
-        max-width: 500px;
-    }
-}
-
-.aboutme {
-    margin-bottom: 40px; /* Espacio debajo de la sección */
-    padding: 20px; /* Espacio interno para evitar que el texto esté pegado a los bordes */
-}
-
-.aboutme h2 {
-    margin-top: 20px; /* Espacio superior para el título */
-    margin-bottom: 20px; /* Espacio inferior para el título */
-}
-
-.aboutme p {
-    margin-bottom: 20px; /* Espacio inferior para los párrafos */
-}
-
 
 #dynamic-text {
     border-right: 2px solid #265C4F;
     padding-right: 5px;
     animation: blink-caret 0.7s step-end infinite;
-    color: rgba(144, 238, 144, 0.45) ;
+    color: rgba(144, 238, 144, 0.45);
 }
-.carousel-control-prev,
-.carousel-control-next {
-    display: none; /* Oculta las flechas */
+
+/* ── Tablet y móvil: todo en una columna ── */
+@media (max-width: 820px) {
+    .aboutme,
+    .aboutme2 {
+        width: 92%;
+        min-width: 0;
+    }
+    .aboutme2 {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding: 24px 20px;
+    }
+    .text {
+        flex: none;
+        width: 100%;
+    }
+    .image {
+        flex: none;
+        width: min(70%, 320px);
+        margin: 0 auto;
+    }
+    .button {
+        width: 50%;
+        white-space: normal;
+    }
 }
-.flecha-izquierda,
-.flecha-derecha,
-.arrow {
-    display: none; /* Oculta las flechas */
+
+@media (max-width: 600px) {
+    .aboutme h2 {
+        text-align: center;
+    }
 }
